@@ -1,0 +1,2025 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/level1/Border.gd" type="Script" id=1]
+[ext_resource path="res://scenes/level1/Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://scenes/canvas_layer/CanvasLayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/nova/Nova.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/level4 - volcano/background/background.png" type="Texture" id=5]
+[ext_resource path="res://scenes/tiles/level4/VolcanoSquareTile.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/obstacles/level1/Spike.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/portal/Portal.tscn" type="PackedScene" id=8]
+
+[sub_resource type="SegmentShape2D" id=1]
+b = Vector2( 0, 601 )
+
+[node name="Level4" type="Node2D"]
+
+[node name="Border" type="StaticBody2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
+shape = SubResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1808, 0 )
+
+[node name="Background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 0.872587, 0.777062 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 904, 0 )
+scale = Vector2( 0.872587, 0.777062 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 301 )
+current = true
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+
+[node name="Portal" parent="." instance=ExtResource( 8 )]
+position = Vector2( 296, 78 )
+
+[node name="Nova" parent="." instance=ExtResource( 4 )]
+position = Vector2( 293, 87 )
+
+[node name="Spike" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1225, 210 )
+
+[node name="Spike2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1609, 210 )
+
+[node name="VolcanoSquareTile19" parent="." instance=ExtResource( 6 )]
+position = Vector2( -23, 1 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 48, 576 )
+
+[node name="VolcanoSquareTile6" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile7" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile8" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 432 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile9" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 480 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile10" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile11" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 384 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile12" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 240 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile13" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile14" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 144 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile15" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 192 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile16" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile17" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 0, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile122" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 432 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile124" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile125" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 384 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile126" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 240 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile127" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile128" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 144 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile129" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 192 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile130" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile18" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 48, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile20" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 144, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile21" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 96, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile22" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 192, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile23" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 288, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile24" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 240, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile25" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 336, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile26" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 432, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile27" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile120" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile28" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 480, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile29" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 576, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile30" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 528, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile31" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 624, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile32" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 672, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile33" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 768, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile34" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 720, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile35" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 816, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile36" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 912, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile37" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 864, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile38" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 960, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile39" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1056, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile223" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1056, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile224" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1056, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile40" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1008, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile41" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1104, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile42" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1200, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile43" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1152, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile44" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1248, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile45" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1344, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile46" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1296, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile47" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1392, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile48" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1488, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile49" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1440, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile225" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1440, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile226" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1440, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile50" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1536, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile51" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1632, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile52" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1584, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile53" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1680, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile54" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1728, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile55" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1824, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile56" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1776, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile57" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1872, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile58" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1968, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile59" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1920, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile60" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2016, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile61" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2112, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile62" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2064, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile63" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2208, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile64" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2160, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile65" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2256, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile66" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2352, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile67" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2304, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile68" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2400, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile69" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2496, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile70" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2448, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile71" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2544, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile72" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2640, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile73" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2592, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile74" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2688, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile75" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2736, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile76" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2832, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile77" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2784, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile78" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2880, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile79" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2976, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile80" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2928, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile81" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3024, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile82" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3120, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile83" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3072, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile84" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3168, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile278" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3120, 144 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile280" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3168, 144 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile282" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3120, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile301" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3168, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile302" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3120, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile305" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3072, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile309" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3024, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile303" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3168, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile304" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3216, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile308" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3264, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile306" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3072, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile307" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3216, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile85" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3264, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile86" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3216, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile87" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3312, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile88" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3408, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile89" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3360, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile90" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3456, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile91" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3552, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile92" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3504, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile93" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3600, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile94" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3696, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile352" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3696, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile353" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3696, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile354" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3696, 144 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile360" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3840, 144 )
+
+[node name="VolcanoSquareTile372" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3888, 144 )
+
+[node name="VolcanoSquareTile373" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3936, 144 )
+
+[node name="VolcanoSquareTile374" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3984, 144 )
+
+[node name="VolcanoSquareTile375" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 144 )
+
+[node name="VolcanoSquareTile376" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4080, 144 )
+
+[node name="VolcanoSquareTile377" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4128, 144 )
+
+[node name="VolcanoSquareTile378" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4176, 144 )
+
+[node name="VolcanoSquareTile379" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4224, 144 )
+
+[node name="VolcanoSquareTile355" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3696, 192 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile356" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3696, 240 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile357" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3696, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile358" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3792, 288 )
+
+[node name="VolcanoSquareTile359" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3744, 288 )
+
+[node name="VolcanoSquareTile361" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3888, 288 )
+
+[node name="VolcanoSquareTile362" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3840, 288 )
+
+[node name="VolcanoSquareTile380" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4176, 288 )
+
+[node name="VolcanoSquareTile381" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4272, 288 )
+
+[node name="VolcanoSquareTile382" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4224, 288 )
+
+[node name="VolcanoSquareTile412" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4656, 432 )
+
+[node name="VolcanoSquareTile413" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4704, 432 )
+
+[node name="VolcanoSquareTile414" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4848, 240 )
+
+[node name="VolcanoSquareTile415" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4896, 240 )
+
+[node name="VolcanoSquareTile416" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5808, 432 )
+
+[node name="VolcanoSquareTile417" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5856, 432 )
+
+[node name="VolcanoSquareTile418" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5616, 240 )
+
+[node name="VolcanoSquareTile419" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5664, 240 )
+
+[node name="VolcanoSquareTile420" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5040, 432 )
+
+[node name="VolcanoSquareTile421" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5088, 432 )
+
+[node name="VolcanoSquareTile424" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5424, 432 )
+
+[node name="VolcanoSquareTile425" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5472, 432 )
+
+[node name="VolcanoSquareTile422" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5232, 240 )
+
+[node name="VolcanoSquareTile423" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5280, 240 )
+
+[node name="VolcanoSquareTile383" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4368, 288 )
+
+[node name="VolcanoSquareTile384" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4320, 288 )
+
+[node name="VolcanoSquareTile95" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3648, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile96" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3744, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile97" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3792, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile98" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3888, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile99" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3840, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile100" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3936, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile101" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile102" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3984, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile103" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4080, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile104" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4176, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile105" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4128, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile385" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4224, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile386" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4272, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile387" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4368, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile388" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4320, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile389" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile431" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4464, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile432" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4560, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile433" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4512, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile434" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4608, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile435" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4704, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile436" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4656, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile437" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4752, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile451" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4848, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile452" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4800, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile453" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4896, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile454" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4992, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile455" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4944, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile456" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5040, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile457" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5136, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile461" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5088, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile462" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5184, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile463" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5232, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile464" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5328, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile465" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5280, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile466" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5376, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile467" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5472, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile468" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5424, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile469" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5520, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile470" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5616, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile471" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5568, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile472" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5664, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile473" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5712, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile474" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5808, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile475" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5760, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile476" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5856, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile477" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5904, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile478" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 5952, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile480" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6000, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile481" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6048, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile482" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6144, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile483" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6096, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile484" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6192, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile485" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6240, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile487" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6288, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile390" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile391" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile392" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 192 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile393" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 144 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile394" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile396" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4176, 432 )
+
+[node name="VolcanoSquareTile397" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4272, 432 )
+
+[node name="VolcanoSquareTile398" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4224, 432 )
+
+[node name="VolcanoSquareTile399" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4368, 432 )
+
+[node name="VolcanoSquareTile400" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4320, 432 )
+
+[node name="VolcanoSquareTile401" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 432 )
+
+[node name="VolcanoSquareTile395" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 240 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile3" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 144, 144 )
+
+[node name="VolcanoSquareTile4" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 96, 576 )
+
+[node name="VolcanoSquareTile5" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 95, 289 )
+
+[node name="VolcanoSquareTile19" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 192, 144 )
+
+[node name="VolcanoSquareTile106" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 144, 576 )
+
+[node name="VolcanoSquareTile107" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 143, 289 )
+
+[node name="VolcanoSquareTile108" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 240, 144 )
+
+[node name="VolcanoSquareTile109" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 192, 576 )
+
+[node name="VolcanoSquareTile110" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 191, 289 )
+
+[node name="VolcanoSquareTile111" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 288, 144 )
+
+[node name="VolcanoSquareTile112" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 240, 576 )
+
+[node name="VolcanoSquareTile121" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 336, 576 )
+
+[node name="VolcanoSquareTile123" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 288, 576 )
+
+[node name="VolcanoSquareTile131" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 384, 576 )
+
+[node name="VolcanoSquareTile132" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 432, 576 )
+
+[node name="VolcanoSquareTile133" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 480, 576 )
+
+[node name="VolcanoSquareTile134" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 528, 576 )
+
+[node name="VolcanoSquareTile135" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 576, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile136" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 624, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile137" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 672, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile138" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 720, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile139" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 768, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile164" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 816, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile165" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 864, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile166" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 912, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile167" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 960, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile168" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1008, 576 )
+
+[node name="VolcanoSquareTile169" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1056, 576 )
+
+[node name="VolcanoSquareTile170" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1104, 576 )
+
+[node name="VolcanoSquareTile171" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1152, 576 )
+
+[node name="VolcanoSquareTile172" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1200, 576 )
+
+[node name="VolcanoSquareTile233" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 576, 528 )
+
+[node name="VolcanoSquareTile234" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 624, 528 )
+
+[node name="VolcanoSquareTile235" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 672, 528 )
+
+[node name="VolcanoSquareTile236" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 720, 528 )
+
+[node name="VolcanoSquareTile237" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 768, 528 )
+
+[node name="VolcanoSquareTile238" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 816, 528 )
+
+[node name="VolcanoSquareTile239" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 864, 528 )
+
+[node name="VolcanoSquareTile240" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 912, 528 )
+
+[node name="VolcanoSquareTile241" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 960, 528 )
+
+[node name="VolcanoSquareTile173" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1248, 576 )
+
+[node name="VolcanoSquareTile174" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1296, 576 )
+
+[node name="VolcanoSquareTile175" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1392, 576 )
+
+[node name="VolcanoSquareTile176" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1344, 576 )
+
+[node name="VolcanoSquareTile177" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1440, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile178" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1488, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile179" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1536, 576 )
+
+[node name="VolcanoSquareTile231" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1440, 528 )
+
+[node name="VolcanoSquareTile232" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1488, 528 )
+
+[node name="VolcanoSquareTile180" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1584, 576 )
+
+[node name="VolcanoSquareTile181" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1632, 576 )
+
+[node name="VolcanoSquareTile182" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1680, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile183" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1728, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile184" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1776, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile185" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1824, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile186" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1872, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile187" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1920, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile188" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1968, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile189" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2016, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile190" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2064, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile191" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2112, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile192" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2160, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile253" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2064, 240 )
+
+[node name="VolcanoSquareTile254" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2112, 240 )
+
+[node name="VolcanoSquareTile256" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2352, 240 )
+
+[node name="VolcanoSquareTile257" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2400, 240 )
+
+[node name="VolcanoSquareTile193" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2208, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile194" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2256, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile245" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2304, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile246" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2352, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile247" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2400, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile248" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2448, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile249" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2496, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile250" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2544, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile251" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2592, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile252" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2640, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile265" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2688, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile266" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2736, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile140" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 576, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile141" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 624, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile142" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 672, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile143" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 720, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile144" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 768, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile145" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 816, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile146" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 864, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile147" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 912, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile148" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 576, 240 )
+
+[node name="VolcanoSquareTile149" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 624, 240 )
+
+[node name="VolcanoSquareTile150" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 672, 240 )
+
+[node name="VolcanoSquareTile151" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 720, 240 )
+
+[node name="VolcanoSquareTile152" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 768, 240 )
+
+[node name="VolcanoSquareTile153" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 816, 240 )
+
+[node name="VolcanoSquareTile154" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 864, 240 )
+
+[node name="VolcanoSquareTile155" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 912, 240 )
+
+[node name="VolcanoSquareTile203" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1200, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile204" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1248, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile205" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1296, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile206" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1200, 240 )
+
+[node name="VolcanoSquareTile207" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1248, 240 )
+
+[node name="VolcanoSquareTile208" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1296, 240 )
+
+[node name="VolcanoSquareTile156" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 576, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile157" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 624, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile158" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 672, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile159" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 720, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile160" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 768, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile161" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 816, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile162" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 864, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile163" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 912, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile195" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 960, 336 )
+
+[node name="VolcanoSquareTile196" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1008, 336 )
+
+[node name="VolcanoSquareTile197" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1056, 336 )
+
+[node name="VolcanoSquareTile198" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1104, 336 )
+
+[node name="VolcanoSquareTile199" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1152, 336 )
+
+[node name="VolcanoSquareTile200" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1200, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile201" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1248, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile202" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1296, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile209" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1584, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile210" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1632, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile211" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1680, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile242" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1728, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile243" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1728, 240 )
+
+[node name="VolcanoSquareTile244" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1776, 240 )
+
+[node name="VolcanoSquareTile212" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1584, 240 )
+
+[node name="VolcanoSquareTile213" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1632, 240 )
+
+[node name="VolcanoSquareTile214" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1680, 240 )
+
+[node name="VolcanoSquareTile215" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1344, 336 )
+
+[node name="VolcanoSquareTile216" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1392, 336 )
+
+[node name="VolcanoSquareTile217" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1440, 336 )
+
+[node name="VolcanoSquareTile218" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1488, 336 )
+
+[node name="VolcanoSquareTile219" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1536, 336 )
+
+[node name="VolcanoSquareTile220" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1584, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile221" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1632, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile222" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1680, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile227" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1680, 384 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile228" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1680, 432 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile229" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1680, 480 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile230" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 1680, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile255" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2784, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile258" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2736, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile259" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2688, 240 )
+
+[node name="VolcanoSquareTile260" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2784, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile267" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2784, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile268" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2736, 240 )
+
+[node name="VolcanoSquareTile269" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2784, 240 )
+
+[node name="VolcanoSquareTile270" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2832, 240 )
+
+[node name="VolcanoSquareTile271" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2880, 240 )
+
+[node name="VolcanoSquareTile272" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2832, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile261" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2784, 384 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile262" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2784, 432 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile263" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2784, 480 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile264" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2784, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile273" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2832, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile274" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2832, 528 )
+
+[node name="VolcanoSquareTile275" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2880, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile276" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2880, 528 )
+
+[node name="VolcanoSquareTile277" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2928, 576 )
+
+[node name="VolcanoSquareTile279" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 2976, 576 )
+
+[node name="VolcanoSquareTile281" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3024, 576 )
+
+[node name="VolcanoSquareTile283" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3072, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile284" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3072, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile285" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3120, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile286" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3120, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile287" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3168, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile288" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3168, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile289" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3216, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile291" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3264, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile292" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3312, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile293" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3360, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile294" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3408, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile332" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3456, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile333" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3504, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile334" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3552, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile335" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3600, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile336" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3648, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile337" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3696, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile338" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3744, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile339" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3792, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile340" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3840, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile341" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3888, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile342" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3936, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile343" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3984, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile290" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3216, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile295" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3072, 480 )
+
+[node name="VolcanoSquareTile296" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3120, 480 )
+
+[node name="VolcanoSquareTile297" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3168, 480 )
+
+[node name="VolcanoSquareTile299" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3120, 288 )
+
+[node name="VolcanoSquareTile300" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3168, 288 )
+
+[node name="VolcanoSquareTile298" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3216, 480 )
+
+[node name="VolcanoSquareTile310" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3504, 144 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile311" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3552, 144 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile312" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3504, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile313" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3552, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile314" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3504, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile315" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3456, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile316" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3408, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile317" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3552, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile318" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3600, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile319" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3648, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile320" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3456, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile321" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3600, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile322" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3456, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile323" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3504, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile324" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3552, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile325" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3600, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile326" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3456, 480 )
+
+[node name="VolcanoSquareTile327" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3504, 480 )
+
+[node name="VolcanoSquareTile328" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3504, 288 )
+
+[node name="VolcanoSquareTile329" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3552, 288 )
+
+[node name="VolcanoSquareTile330" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3600, 480 )
+
+[node name="VolcanoSquareTile331" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3552, 480 )
+
+[node name="VolcanoSquareTile344" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3840, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile345" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3888, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile346" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3936, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile347" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3984, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile348" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3840, 480 )
+
+[node name="VolcanoSquareTile349" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3888, 480 )
+
+[node name="VolcanoSquareTile350" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3984, 480 )
+
+[node name="VolcanoSquareTile363" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile402" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4080, 576 )
+
+[node name="VolcanoSquareTile403" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4128, 576 )
+
+[node name="VolcanoSquareTile404" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4176, 576 )
+
+[node name="VolcanoSquareTile405" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4224, 576 )
+
+[node name="VolcanoSquareTile406" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4272, 576 )
+
+[node name="VolcanoSquareTile407" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4320, 576 )
+
+[node name="VolcanoSquareTile408" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4368, 576 )
+
+[node name="VolcanoSquareTile409" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile410" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile411" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4416, 480 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile426" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6096, 288 )
+
+[node name="VolcanoSquareTile427" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6192, 288 )
+
+[node name="VolcanoSquareTile428" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6144, 288 )
+
+[node name="VolcanoSquareTile429" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6288, 288 )
+
+[node name="VolcanoSquareTile430" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6240, 288 )
+
+[node name="VolcanoSquareTile438" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile490" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6432, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile491" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6384, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile492" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6480, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile493" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6528, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile494" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6624, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile495" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6576, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile496" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6672, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile497" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6720, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile498" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6768, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile499" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6816, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile500" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6864, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile501" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6960, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile502" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6912, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile503" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7008, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile504" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7056, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile505" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7104, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile506" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7152, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile526" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7200, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile527" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7248, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile528" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7296, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile529" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7344, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile530" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7392, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile531" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 0 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile517" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6864, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile519" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6912, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile439" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile440" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile441" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 192 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile442" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 144 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile443" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile507" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7152, 336 )
+
+[node name="VolcanoSquareTile509" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7200, 336 )
+
+[node name="VolcanoSquareTile510" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6576, 336 )
+
+[node name="VolcanoSquareTile511" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6528, 336 )
+
+[node name="VolcanoSquareTile444" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6096, 432 )
+
+[node name="VolcanoSquareTile445" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6192, 432 )
+
+[node name="VolcanoSquareTile446" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6144, 432 )
+
+[node name="VolcanoSquareTile447" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6288, 432 )
+
+[node name="VolcanoSquareTile448" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6240, 432 )
+
+[node name="VolcanoSquareTile449" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 432 )
+
+[node name="VolcanoSquareTile450" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 240 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile532" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 96 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile533" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 48 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile534" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 192 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile535" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 144 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile536" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile537" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 240 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile538" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 384 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile539" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile540" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 480 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile541" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 432 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile542" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile543" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7440, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile458" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile459" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile460" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6336, 480 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile479" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6960, 480 )
+
+[node name="VolcanoSquareTile486" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6864, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile488" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6864, 480 )
+
+[node name="VolcanoSquareTile524" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6912, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile525" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6912, 480 )
+
+[node name="VolcanoSquareTile508" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6864, 192 )
+
+[node name="VolcanoSquareTile544" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6912, 192 )
+
+[node name="VolcanoSquareTile489" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6816, 480 )
+
+[node name="VolcanoSquareTile364" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 528 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile365" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 480 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile366" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 432 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile367" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 384 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile368" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 336 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile369" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 288 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile370" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 240 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile371" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 4032, 192 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile351" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 3936, 480 )
+
+[node name="VolcanoSquareTile115" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 144, 432 )
+
+[node name="VolcanoSquareTile116" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 192, 432 )
+
+[node name="VolcanoSquareTile117" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 240, 432 )
+
+[node name="VolcanoSquareTile118" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 288, 432 )
+
+[node name="VolcanoSquareTile119" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 336, 432 )
+
+[node name="VolcanoSquareTile113" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 239, 289 )
+
+[node name="VolcanoSquareTile114" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 336, 144 )
+
+[node name="VolcanoSquareTile2" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 47, 289 )

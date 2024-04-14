@@ -1,0 +1,291 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://assets/items/coin/coin1.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/ui_bar_text.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/canvas_layer/UI.gd" type="Script" id=3]
+[ext_resource path="res://assets/items/rage/rage-darken.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui/inventory.png" type="Texture" id=5]
+[ext_resource path="res://assets/items/fuel/fuel-darken.png" type="Texture" id=6]
+[ext_resource path="res://assets/items/fuel/fuel.png" type="Texture" id=7]
+[ext_resource path="res://assets/items/health/health.png" type="Texture" id=8]
+[ext_resource path="res://assets/items/shield/shield-darken.png" type="Texture" id=9]
+[ext_resource path="res://assets/items/speed/speed-darken.png" type="Texture" id=10]
+[ext_resource path="res://assets/items/health/health-darken.png" type="Texture" id=11]
+[ext_resource path="res://assets/items/cloak/cloak-darken.png" type="Texture" id=12]
+[ext_resource path="res://assets/fonts/coins_count_text.tres" type="DynamicFont" id=13]
+[ext_resource path="res://assets/fonts/item_count_text.tres" type="DynamicFont" id=14]
+[ext_resource path="res://assets/fonts/announcement_text.tres" type="DynamicFont" id=15]
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnnouncementLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "fade_in_out"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnnouncementLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0.658824, 0.113725, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 0 )
+corner_radius_top_left = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_right = 2.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0.494118, 0, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 0 )
+corner_radius_top_left = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="Animation" id=6]
+resource_name = "HideInventory"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 516 ), Vector2( 0, 600 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+
+[sub_resource type="Animation" id=8]
+resource_name = "ShowInventory"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 600 ), Vector2( 0, 516 ) ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="AnnouncementLabel" type="Label" parent="UI"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -560.0
+margin_bottom = -531.0
+custom_fonts/font = ExtResource( 15 )
+align = 1
+valign = 1
+
+[node name="AnnouncementAnimation" type="AnimationPlayer" parent="UI"]
+anims/RESET = SubResource( 4 )
+anims/fade_in_out = SubResource( 5 )
+
+[node name="CoinRect" type="TextureRect" parent="UI"]
+margin_left = 12.0
+margin_top = 112.0
+margin_right = 40.0
+margin_bottom = 144.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="CoinCount" type="Label" parent="UI"]
+margin_left = 54.0
+margin_top = 111.0
+margin_right = 174.0
+margin_bottom = 144.0
+custom_fonts/font = ExtResource( 13 )
+text = "0"
+valign = 1
+
+[node name="HealthRect" type="TextureRect" parent="UI"]
+margin_left = -1.0
+margin_top = 7.0
+margin_right = 53.0
+margin_bottom = 57.0
+texture = ExtResource( 8 )
+stretch_mode = 4
+
+[node name="HealthBar" type="ProgressBar" parent="UI"]
+margin_left = 53.0
+margin_top = 15.0
+margin_right = 245.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 2 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+value = 100.0
+
+[node name="FuelRect" type="TextureRect" parent="UI"]
+margin_left = 8.0
+margin_top = 61.0
+margin_right = 39.0
+margin_bottom = 99.0
+texture = ExtResource( 7 )
+stretch_mode = 4
+
+[node name="FuelBar" type="ProgressBar" parent="UI"]
+margin_left = 53.0
+margin_top = 63.0
+margin_right = 245.0
+margin_bottom = 97.0
+custom_fonts/font = ExtResource( 2 )
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 2 )
+value = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
+anims/HideInventory = SubResource( 6 )
+anims/RESET = SubResource( 7 )
+anims/ShowInventory = SubResource( 8 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+anchor_top = 0.993333
+anchor_right = 1.0
+anchor_bottom = 1.13333
+margin_top = 4.0
+margin_bottom = 4.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="InventoryRect" type="TextureRect" parent="UI/VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 84.0
+texture = ExtResource( 5 )
+stretch_mode = 4
+
+[node name="HealthSprite" type="Sprite" parent="UI/VBoxContainer/InventoryRect"]
+position = Vector2( 377.818, 42.7272 )
+scale = Vector2( 0.909091, 0.909091 )
+texture = ExtResource( 11 )
+
+[node name="CloakSprite" type="Sprite" parent="UI/VBoxContainer/InventoryRect"]
+position = Vector2( 430.545, 41.8182 )
+scale = Vector2( 0.909091, 0.909091 )
+texture = ExtResource( 12 )
+
+[node name="ShieldSprite" type="Sprite" parent="UI/VBoxContainer/InventoryRect"]
+position = Vector2( 485.091, 41.8182 )
+scale = Vector2( 0.909091, 0.909091 )
+texture = ExtResource( 9 )
+
+[node name="RageSprite" type="Sprite" parent="UI/VBoxContainer/InventoryRect"]
+position = Vector2( 538.727, 41.8182 )
+texture = ExtResource( 4 )
+
+[node name="SpeedSprite" type="Sprite" parent="UI/VBoxContainer/InventoryRect"]
+position = Vector2( 592.364, 41.8182 )
+scale = Vector2( 0.909091, 1.02273 )
+texture = ExtResource( 10 )
+
+[node name="FuelSprite" type="Sprite" parent="UI/VBoxContainer/InventoryRect"]
+position = Vector2( 645.091, 42.1023 )
+texture = ExtResource( 6 )
+
+[node name="HealthCount" type="Label" parent="UI/VBoxContainer/InventoryRect"]
+margin_left = 385.091
+margin_top = 38.1818
+margin_right = 399.091
+margin_bottom = 71.1818
+custom_fonts/font = ExtResource( 14 )
+text = "0"
+valign = 1
+
+[node name="CloakCount" type="Label" parent="UI/VBoxContainer/InventoryRect"]
+margin_left = 438.727
+margin_top = 38.1818
+margin_right = 452.727
+margin_bottom = 71.1818
+custom_fonts/font = ExtResource( 14 )
+text = "0"
+valign = 1
+
+[node name="ShieldCount" type="Label" parent="UI/VBoxContainer/InventoryRect"]
+margin_left = 493.273
+margin_top = 38.1818
+margin_right = 507.273
+margin_bottom = 71.1818
+custom_fonts/font = ExtResource( 14 )
+text = "0"
+valign = 1
+
+[node name="RageCount" type="Label" parent="UI/VBoxContainer/InventoryRect"]
+margin_left = 546.909
+margin_top = 38.1818
+margin_right = 560.909
+margin_bottom = 71.1818
+custom_fonts/font = ExtResource( 14 )
+text = "0"
+valign = 1
+
+[node name="SpeedCount" type="Label" parent="UI/VBoxContainer/InventoryRect"]
+margin_left = 601.454
+margin_top = 38.1818
+margin_right = 615.454
+margin_bottom = 71.1818
+custom_fonts/font = ExtResource( 14 )
+text = "0"
+valign = 1
+
+[node name="FuelCount" type="Label" parent="UI/VBoxContainer/InventoryRect"]
+margin_left = 655.091
+margin_top = 38.1818
+margin_right = 669.091
+margin_bottom = 71.1818
+custom_fonts/font = ExtResource( 14 )
+text = "0"
+valign = 1
