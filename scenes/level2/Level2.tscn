@@ -2198,337 +2198,270 @@ texture = ExtResource( 22 )
 
 [node name="Crystal3" type="Sprite" parent="Crystal2"]
 position = Vector2( 339.628, -4.0625 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal5" type="Sprite" parent="Crystal2"]
 position = Vector2( 225.627, 2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal23" type="Sprite" parent="Crystal2"]
 position = Vector2( 3474.65, 93.4375 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal24" type="Sprite" parent="Crystal2"]
 position = Vector2( 3360.65, 99.5313 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal48" type="Sprite" parent="Crystal2"]
 position = Vector2( 3018.65, -95.4687 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal25" type="Sprite" parent="Crystal2"]
 position = Vector2( 1707.64, -99.5312 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal26" type="Sprite" parent="Crystal2"]
 position = Vector2( 2049.64, -95.4687 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal49" type="Sprite" parent="Crystal2"]
 position = Vector2( 1935.64, 294.531 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal50" type="Sprite" parent="Crystal2"]
 position = Vector2( 2163.65, 290.469 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal27" type="Sprite" parent="Crystal2"]
 position = Vector2( 2391.65, -99.5312 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal28" type="Sprite" parent="Crystal2"]
 position = Vector2( 2505.65, -491.562 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal37" type="Sprite" parent="Crystal2"]
 position = Vector2( 3018.65, -489.531 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal39" type="Sprite" parent="Crystal2"]
 position = Vector2( 4006.66, -489.531 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal40" type="Sprite" parent="Crystal2"]
 position = Vector2( 4785.67, -489.531 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal51" type="Sprite" parent="Crystal2"]
 position = Vector2( 5583.68, -2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal52" type="Sprite" parent="Crystal2"]
 position = Vector2( 5925.68, -2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal41" type="Sprite" parent="Crystal2"]
 position = Vector2( 5127.67, -485.469 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal42" type="Sprite" parent="Crystal2"]
 position = Vector2( 4956.67, 288.437 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal43" type="Sprite" parent="Crystal2"]
 position = Vector2( 4044.66, 288.437 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal44" type="Sprite" parent="Crystal2"]
 position = Vector2( 4500.66, 93.4374 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal45" type="Sprite" parent="Crystal2"]
 position = Vector2( 3930.66, -192.969 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal46" type="Sprite" parent="Crystal2"]
 position = Vector2( 3645.65, -192.969 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal47" type="Sprite" parent="Crystal2"]
 position = Vector2( 4215.66, -192.969 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal38" type="Sprite" parent="Crystal2"]
 position = Vector2( 3436.66, -485.469 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal29" type="Sprite" parent="Crystal2"]
 position = Vector2( 2049.64, -485.469 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal30" type="Sprite" parent="Crystal2"]
 position = Vector2( 1479.64, -489.531 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal34" type="Sprite" parent="Crystal2"]
 position = Vector2( 1213.64, -483.437 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal31" type="Sprite" parent="Crystal2"]
 position = Vector2( 567.63, -489.531 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal32" type="Sprite" parent="Crystal2"]
 position = Vector2( 73.6255, -489.531 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal33" type="Sprite" parent="Crystal2"]
 position = Vector2( 206.627, -485.469 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal4" type="Sprite" parent="Crystal2"]
 position = Vector2( -589.005, 2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal8" type="Sprite" parent="Crystal2"]
 position = Vector2( -1254.01, 195 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal9" type="Sprite" parent="Crystal2"]
 position = Vector2( -1482.01, 190.937 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal11" type="Sprite" parent="Crystal2"]
 position = Vector2( -1482.01, -195 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal13" type="Sprite" parent="Crystal2"]
 position = Vector2( -2166.02, -387.969 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal15" type="Sprite" parent="Crystal2"]
 position = Vector2( -2850.02, 93.4374 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal16" type="Sprite" parent="Crystal2"]
 position = Vector2( -3199.15, -195 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal20" type="Sprite" parent="Crystal2"]
 position = Vector2( -4054.16, 2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal21" type="Sprite" parent="Crystal2"]
 position = Vector2( -3707.41, 2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal22" type="Sprite" parent="Crystal2"]
 position = Vector2( -3878.41, -4.0625 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal53" type="Sprite" parent="Crystal2"]
 position = Vector2( -5726.18, 2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal54" type="Sprite" parent="Crystal2"]
 position = Vector2( -5379.42, 2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal55" type="Sprite" parent="Crystal2"]
 position = Vector2( -5550.42, -4.0625 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal59" type="Sprite" parent="Crystal2"]
 position = Vector2( -6410.18, 2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal60" type="Sprite" parent="Crystal2"]
 position = Vector2( -6234.43, -4.0625 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal61" type="Sprite" parent="Crystal2"]
 position = Vector2( -6961.18, 2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal62" type="Sprite" parent="Crystal2"]
 position = Vector2( -6785.43, -4.0625 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal63" type="Sprite" parent="Crystal2"]
 position = Vector2( -6790.18, -485.469 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal64" type="Sprite" parent="Crystal2"]
 position = Vector2( -6614.43, -491.562 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal65" type="Sprite" parent="Crystal2"]
 position = Vector2( -6296.18, -485.469 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal67" type="Sprite" parent="Crystal2"]
 position = Vector2( -5289.17, -485.469 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal68" type="Sprite" parent="Crystal2"]
 position = Vector2( -4871.16, -485.469 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal66" type="Sprite" parent="Crystal2"]
 position = Vector2( -5968.42, -491.562 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal69" type="Sprite" parent="Crystal2"]
 position = Vector2( -5474.42, -491.562 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal56" type="Sprite" parent="Crystal2"]
 position = Vector2( -4985.17, 2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal57" type="Sprite" parent="Crystal2"]
 position = Vector2( -4638.41, 2.03125 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal58" type="Sprite" parent="Crystal2"]
 position = Vector2( -4809.42, -4.0625 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal17" type="Sprite" parent="Crystal2"]
 position = Vector2( -3199.15, 390 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal18" type="Sprite" parent="Crystal2"]
 position = Vector2( -2724.15, 385.937 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal19" type="Sprite" parent="Crystal2"]
 position = Vector2( -2515.15, 390 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal14" type="Sprite" parent="Crystal2"]
 position = Vector2( -342.003, -394.062 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal35" type="Sprite" parent="Crystal2"]
 position = Vector2( -912.008, -485.469 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal36" type="Sprite" parent="Crystal2"]
 position = Vector2( -1786.02, -489.531 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal10" type="Sprite" parent="Crystal2"]
 position = Vector2( -1026.01, 190.937 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal12" type="Sprite" parent="Crystal2"]
 position = Vector2( -1026.01, -195 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Crystal6" type="Sprite" parent="Crystal2"]
 position = Vector2( -439.378, -4.0625 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Crystal7" type="Sprite" parent="Crystal2"]
 position = Vector2( -344.378, -4.0625 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Bones" type="Sprite" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/level1/Border.gd" type="Script" id=1]
 [ext_resource path="res://scenes/level1/Camera2D.gd" type="Script" id=2]
@@ -8,6 +8,26 @@
 [ext_resource path="res://scenes/tiles/level4/VolcanoSquareTile.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/obstacles/level1/Spike.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/portal/Portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/level4 - volcano/objects/Lava2.png" type="Texture" id=9]
+[ext_resource path="res://scenes/lava/Lava.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/level4 - volcano/objects/barrel.png" type="Texture" id=11]
+[ext_resource path="res://assets/level4 - volcano/objects/background-tile2.png" type="Texture" id=12]
+[ext_resource path="res://assets/level4 - volcano/objects/background-tile1.png" type="Texture" id=13]
+[ext_resource path="res://assets/level4 - volcano/objects/background-tile5.png" type="Texture" id=14]
+[ext_resource path="res://assets/level4 - volcano/objects/background-tile4.png" type="Texture" id=15]
+[ext_resource path="res://assets/level4 - volcano/objects/background-tile6.png" type="Texture" id=16]
+[ext_resource path="res://assets/level4 - volcano/objects/background-tile3.png" type="Texture" id=17]
+[ext_resource path="res://assets/level4 - volcano/objects/base1.png" type="Texture" id=18]
+[ext_resource path="res://assets/level4 - volcano/objects/box2.png" type="Texture" id=19]
+[ext_resource path="res://assets/level4 - volcano/objects/crystal1.png" type="Texture" id=20]
+[ext_resource path="res://assets/level4 - volcano/objects/bone1.png" type="Texture" id=21]
+[ext_resource path="res://assets/level4 - volcano/objects/crystal2.png" type="Texture" id=22]
+[ext_resource path="res://assets/level4 - volcano/objects/box3.png" type="Texture" id=23]
+[ext_resource path="res://assets/level4 - volcano/objects/base2.png" type="Texture" id=24]
+[ext_resource path="res://assets/level4 - volcano/objects/base3.png" type="Texture" id=25]
+[ext_resource path="res://assets/level4 - volcano/objects/base4.png" type="Texture" id=26]
+[ext_resource path="res://scenes/pickable/GlowingOrb.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/pickable/Coin.tscn" type="PackedScene" id=28]
 
 [sub_resource type="SegmentShape2D" id=1]
 b = Vector2( 0, 601 )
@@ -46,14 +66,2024 @@ script = ExtResource( 2 )
 [node name="Portal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 296, 78 )
 
-[node name="Nova" parent="." instance=ExtResource( 4 )]
-position = Vector2( 293, 87 )
+[node name="Bone1" type="Sprite" parent="."]
+position = Vector2( 1084, 500 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 21 )
+
+[node name="Bone3" type="Sprite" parent="Bone1"]
+position = Vector2( -112, -584 )
+texture = ExtResource( 21 )
+
+[node name="Bone4" type="Sprite" parent="Bone1"]
+position = Vector2( 672, -584 )
+texture = ExtResource( 21 )
+
+[node name="Bone5" type="Sprite" parent="Bone1"]
+position = Vector2( 1632, -576 )
+texture = ExtResource( 21 )
+
+[node name="Bone6" type="Sprite" parent="Bone1"]
+position = Vector2( 2256, -576 )
+texture = ExtResource( 21 )
+
+[node name="Bone7" type="Sprite" parent="Bone1"]
+position = Vector2( 2880, -576 )
+texture = ExtResource( 21 )
+
+[node name="Bone8" type="Sprite" parent="Bone1"]
+position = Vector2( 3728, 0 )
+texture = ExtResource( 21 )
+
+[node name="Bone9" type="Sprite" parent="Bone1"]
+position = Vector2( 4464, -96 )
+texture = ExtResource( 21 )
+
+[node name="Bone10" type="Sprite" parent="Bone1"]
+position = Vector2( 5226, -96 )
+texture = ExtResource( 21 )
+
+[node name="Bone11" type="Sprite" parent="Bone1"]
+position = Vector2( 6842, -186 )
+texture = ExtResource( 21 )
+
+[node name="Bone12" type="Sprite" parent="Bone1"]
+position = Vector2( 7546, -186 )
+texture = ExtResource( 21 )
+
+[node name="Bone13" type="Sprite" parent="Bone1"]
+position = Vector2( 8314, -186 )
+texture = ExtResource( 21 )
+
+[node name="Bone14" type="Sprite" parent="Bone1"]
+position = Vector2( 9082, -186 )
+texture = ExtResource( 21 )
+
+[node name="Bone15" type="Sprite" parent="Bone1"]
+position = Vector2( 9754, -186 )
+texture = ExtResource( 21 )
+
+[node name="Bone16" type="Sprite" parent="Bone1"]
+position = Vector2( 10750, -84 )
+texture = ExtResource( 21 )
+
+[node name="Bone17" type="Sprite" parent="Bone1"]
+position = Vector2( 11086, -84 )
+texture = ExtResource( 21 )
+
+[node name="Bone18" type="Sprite" parent="Bone1"]
+position = Vector2( 12014, -84 )
+texture = ExtResource( 21 )
+
+[node name="Bone19" type="Sprite" parent="Bone1"]
+position = Vector2( 12350, -84 )
+texture = ExtResource( 21 )
+
+[node name="Bone2" type="Sprite" parent="Bone1"]
+position = Vector2( 372, 2 )
+texture = ExtResource( 21 )
+
+[node name="Background-tile1" type="Sprite" parent="."]
+position = Vector2( 553, 385 )
+scale = Vector2( 0.6, 0.61076 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile2" type="Sprite" parent="Background-tile1"]
+position = Vector2( 79.9999, 0 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile3" type="Sprite" parent="Background-tile1"]
+position = Vector2( 160, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile4" type="Sprite" parent="Background-tile1"]
+position = Vector2( 240, 0 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile5" type="Sprite" parent="Background-tile1"]
+position = Vector2( 320, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile6" type="Sprite" parent="Background-tile1"]
+position = Vector2( 400, 0 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile7" type="Sprite" parent="Background-tile1"]
+position = Vector2( 480, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile8" type="Sprite" parent="Background-tile1"]
+position = Vector2( 560, 0 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile9" type="Sprite" parent="Background-tile1"]
+position = Vector2( 640, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile28" type="Sprite" parent="Background-tile1"]
+position = Vector2( 720, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile10" type="Sprite" parent="Background-tile1"]
+position = Vector2( 79.9999, 78.5906 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile11" type="Sprite" parent="Background-tile1"]
+position = Vector2( 160, 78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile12" type="Sprite" parent="Background-tile1"]
+position = Vector2( 240, 78.5906 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile13" type="Sprite" parent="Background-tile1"]
+position = Vector2( 320, 78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile14" type="Sprite" parent="Background-tile1"]
+position = Vector2( 400, 78.5906 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile15" type="Sprite" parent="Background-tile1"]
+position = Vector2( 480, 78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile16" type="Sprite" parent="Background-tile1"]
+position = Vector2( 560, 78.5906 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile29" type="Sprite" parent="Background-tile1"]
+position = Vector2( 800, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile30" type="Sprite" parent="Background-tile1"]
+position = Vector2( 720, 78.5906 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile37" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1600, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile38" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1680, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile39" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1600, 78.5906 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile40" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1280, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile41" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1360, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile42" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1360, 78.5906 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile17" type="Sprite" parent="Background-tile1"]
+position = Vector2( 640, 78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile18" type="Sprite" parent="Background-tile1"]
+position = Vector2( 79.9999, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile26" type="Sprite" parent="Background-tile1"]
+position = Vector2( -0.00012207, 78.5906 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile27" type="Sprite" parent="Background-tile1"]
+position = Vector2( -0.00012207, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile19" type="Sprite" parent="Background-tile1"]
+position = Vector2( 160, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile20" type="Sprite" parent="Background-tile1"]
+position = Vector2( 240, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile21" type="Sprite" parent="Background-tile1"]
+position = Vector2( 320, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile22" type="Sprite" parent="Background-tile1"]
+position = Vector2( 400, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile23" type="Sprite" parent="Background-tile1"]
+position = Vector2( 480, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile24" type="Sprite" parent="Background-tile1"]
+position = Vector2( 560, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile25" type="Sprite" parent="Background-tile1"]
+position = Vector2( 640, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile31" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1440, 0 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile32" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1520, -6.10352e-05 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile33" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1440, 78.5906 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile34" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1520, 78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile35" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1440, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile36" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1520, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile43" type="Sprite" parent="Background-tile1"]
+position = Vector2( 880, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile44" type="Sprite" parent="Background-tile1"]
+position = Vector2( 960, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile45" type="Sprite" parent="Background-tile1"]
+position = Vector2( 960, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile46" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1040, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile47" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1120, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile48" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1040, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile49" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1120, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile52" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1040, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile53" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1120, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile50" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1040, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile51" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1120, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile54" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1200, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile59" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1280, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile60" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1360, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile58" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1280, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile55" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1200, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile56" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1200, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile57" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1200, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile99" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1520, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile100" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1600, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile101" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1600, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile102" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1680, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile103" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1760, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile104" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1680, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile105" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1760, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile106" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1680, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile107" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1760, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile108" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1680, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile109" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1760, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile117" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1840, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile118" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1920, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile119" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1840, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile120" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1920, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile121" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1840, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile122" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1920, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile123" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1840, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile124" type="Sprite" parent="Background-tile1"]
+position = Vector2( 1920, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile110" type="Sprite" parent="Background-tile1"]
+position = Vector2( 2000, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile111" type="Sprite" parent="Background-tile1"]
+position = Vector2( 2080, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile112" type="Sprite" parent="Background-tile1"]
+position = Vector2( 2160, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile113" type="Sprite" parent="Background-tile1"]
+position = Vector2( 2080, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile114" type="Sprite" parent="Background-tile1"]
+position = Vector2( 2000, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile115" type="Sprite" parent="Background-tile1"]
+position = Vector2( 2000, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile116" type="Sprite" parent="Background-tile1"]
+position = Vector2( 2000, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile125" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3360, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile126" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3440, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile127" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3440, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile128" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3520, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile129" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3600, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile130" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3520, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile131" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3600, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile132" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3520, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile133" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3600, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile134" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3520, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile135" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3600, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile136" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3680, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile137" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3760, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile138" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3680, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile139" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3760, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile140" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3680, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile141" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3760, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile142" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3680, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile143" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3760, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile144" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3840, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile145" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3920, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile146" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4000, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile147" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3920, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile148" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3840, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile151" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4240, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile152" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4240, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile153" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4320, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile154" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4320, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile155" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4240, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile156" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4240, -0.000213623 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile157" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4320, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile158" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4320, -0.000213623 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile159" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4240, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile161" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4160, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 17 )
+
+[node name="Background-tile160" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4320, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile162" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4400, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 15 )
+
+[node name="Background-tile163" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4880, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile164" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4880, -0.000213623 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile165" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4960, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile166" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4960, -0.000213623 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile275" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4880, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile280" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4800, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile276" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4880, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile277" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4960, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile279" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5040, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile278" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4960, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile167" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4880, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile168" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4800, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 17 )
+
+[node name="Background-tile169" type="Sprite" parent="Background-tile1"]
+position = Vector2( 4960, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile171" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5440, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile190" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5360, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile172" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5440, -0.000213623 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile173" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5520, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile174" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5520, -0.000213623 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile193" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5280, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile194" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5360, -0.000213623 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile175" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5440, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile176" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5520, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile177" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5600, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile178" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5600, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile179" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5680, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile180" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5680, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile189" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5440, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile191" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5520, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile192" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5520, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile214" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9200, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile226" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9200, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile237" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9280, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile238" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9280, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile242" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9200, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile243" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9280, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile244" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9200, -314.363 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile245" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9280, -314.363 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile246" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9200, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile247" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9280, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile248" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9360, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile249" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9440, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile250" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9360, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile251" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9440, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile252" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9360, -314.363 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile253" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9440, -314.363 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile254" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9360, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile255" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9440, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile259" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9520, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile260" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9520, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile261" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9520, -314.363 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile262" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9520, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile239" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9040, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile240" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9120, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile256" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9440, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile257" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9520, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile258" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9360, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile263" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9200, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile264" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9200, -0.000244141 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile265" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9280, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile266" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9280, -0.000244141 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile267" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9360, -0.000183105 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile268" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9440, -0.000183105 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile269" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9520, -0.000183105 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile270" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9440, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile271" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9520, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile273" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9600, -0.000183105 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile274" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9600, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile272" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9360, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile241" type="Sprite" parent="Background-tile1"]
+position = Vector2( 9120, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile181" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5600, -157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile182" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5680, -157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile183" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5600, -78.5908 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile184" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5680, -78.5908 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile185" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5600, -0.000244141 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile186" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5680, -0.000244141 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile187" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5600, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile188" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5680, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile195" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5840, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile196" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5840, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile197" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5840, -157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile198" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5840, -78.5908 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile199" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5840, -0.000244141 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile200" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5840, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile201" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5920, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile202" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5920, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile211" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6000, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile212" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6000, -235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile213" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6080, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile215" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6000, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile216" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6000, -0.000183105 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile217" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6080, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile218" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6080, -0.000183105 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile219" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6160, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile220" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6160, -0.000183105 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile221" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6240, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile222" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6240, -0.000183105 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile223" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6320, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile224" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6320, -0.000183105 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile227" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6000, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile228" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6000, 235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile229" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6080, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile230" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6080, 235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile231" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6160, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile232" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6160, 235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile233" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6240, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile234" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6240, 235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile235" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6320, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile236" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6320, 235.772 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile225" type="Sprite" parent="Background-tile1"]
+position = Vector2( 6400, -78.5905 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile203" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5920, -157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile204" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5920, -78.5908 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile205" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5920, -0.000244141 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile206" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5920, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile207" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5840, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile208" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5840, 235.771 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile209" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5920, 157.181 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile210" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5920, 235.771 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile170" type="Sprite" parent="Background-tile1"]
+position = Vector2( 5040, 78.5903 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 15 )
+
+[node name="Background-tile149" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3840, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile150" type="Sprite" parent="Background-tile1"]
+position = Vector2( 3840, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile61" type="Sprite" parent="Background-tile1"]
+position = Vector2( -160.001, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile62" type="Sprite" parent="Background-tile1"]
+position = Vector2( -79.9999, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile63" type="Sprite" parent="Background-tile1"]
+position = Vector2( -79.9999, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+
+[node name="Background-tile64" type="Sprite" parent="Background-tile1"]
+position = Vector2( 0.000183105, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile65" type="Sprite" parent="Background-tile1"]
+position = Vector2( 79.9995, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile66" type="Sprite" parent="Background-tile1"]
+position = Vector2( 0.000183105, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile67" type="Sprite" parent="Background-tile1"]
+position = Vector2( 79.9995, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile68" type="Sprite" parent="Background-tile1"]
+position = Vector2( 0.000183105, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile69" type="Sprite" parent="Background-tile1"]
+position = Vector2( 79.9995, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile70" type="Sprite" parent="Background-tile1"]
+position = Vector2( 0.000183105, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile71" type="Sprite" parent="Background-tile1"]
+position = Vector2( 79.9995, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile72" type="Sprite" parent="Background-tile1"]
+position = Vector2( 159.999, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile73" type="Sprite" parent="Background-tile1"]
+position = Vector2( 159.999, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile74" type="Sprite" parent="Background-tile1"]
+position = Vector2( 159.999, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile75" type="Sprite" parent="Background-tile1"]
+position = Vector2( 159.999, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile76" type="Sprite" parent="Background-tile1"]
+position = Vector2( 240, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile77" type="Sprite" parent="Background-tile1"]
+position = Vector2( 320, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile78" type="Sprite" parent="Background-tile1"]
+position = Vector2( 240, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile79" type="Sprite" parent="Background-tile1"]
+position = Vector2( 320, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile80" type="Sprite" parent="Background-tile1"]
+position = Vector2( 240, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile81" type="Sprite" parent="Background-tile1"]
+position = Vector2( 320, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile82" type="Sprite" parent="Background-tile1"]
+position = Vector2( 240, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile83" type="Sprite" parent="Background-tile1"]
+position = Vector2( 320, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile84" type="Sprite" parent="Background-tile1"]
+position = Vector2( 400, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile85" type="Sprite" parent="Background-tile1"]
+position = Vector2( 400, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile86" type="Sprite" parent="Background-tile1"]
+position = Vector2( 400, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile87" type="Sprite" parent="Background-tile1"]
+position = Vector2( 400, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile88" type="Sprite" parent="Background-tile1"]
+position = Vector2( 480, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile89" type="Sprite" parent="Background-tile1"]
+position = Vector2( 559.999, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile90" type="Sprite" parent="Background-tile1"]
+position = Vector2( 480, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile91" type="Sprite" parent="Background-tile1"]
+position = Vector2( 559.999, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile92" type="Sprite" parent="Background-tile1"]
+position = Vector2( 480, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile93" type="Sprite" parent="Background-tile1"]
+position = Vector2( 559.999, -392.953 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile94" type="Sprite" parent="Background-tile1"]
+position = Vector2( 480, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile95" type="Sprite" parent="Background-tile1"]
+position = Vector2( 559.999, -314.362 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Background-tile96" type="Sprite" parent="Background-tile1"]
+position = Vector2( 640, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Background-tile98" type="Sprite" parent="Background-tile1"]
+position = Vector2( 720, -550.134 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Background-tile97" type="Sprite" parent="Background-tile1"]
+position = Vector2( 640, -471.544 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 16 )
+
+[node name="Lava" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4473, 433 )
+
+[node name="Lava2" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 128, 0 )
+
+[node name="Lava38" type="Sprite" parent="Lava"]
+position = Vector2( -3236.5, -134.5 )
+scale = Vector2( 2.55859, 0.246094 )
+texture = ExtResource( 9 )
+
+[node name="Lava22" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -2635, -198 )
+
+[node name="Lava28" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -3482, 93 )
+
+[node name="Lava29" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -3354, 93 )
+
+[node name="Lava30" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -3226, 93 )
+
+[node name="Lava31" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -3098, 93 )
+
+[node name="Lava23" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -2507, -198 )
+
+[node name="Lava34" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -3115, -198 )
+
+[node name="Lava35" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -2987, -198 )
+
+[node name="Lava36" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -3507, -198 )
+
+[node name="Lava37" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -3379, -198 )
+
+[node name="Lava24" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -2323, -198 )
+
+[node name="Lava25" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -2195, -198 )
+
+[node name="Lava26" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -2017, -198 )
+
+[node name="Lava39" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -1584, 92 )
+
+[node name="Lava40" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -1456, 92 )
+
+[node name="Lava41" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -1224, 44 )
+
+[node name="Lava42" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -1096, 44 )
+
+[node name="Lava43" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -840, 44 )
+
+[node name="Lava44" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -712, 44 )
+
+[node name="Lava2" type="Sprite" parent="Lava/Lava44"]
+position = Vector2( -255, 72.5 )
+scale = Vector2( 2.28906, 0.300781 )
+texture = ExtResource( 9 )
+
+[node name="Lava27" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( -1889, -198 )
+
+[node name="Lava2" type="Sprite" parent="Lava/Lava27"]
+position = Vector2( -376, 179 )
+scale = Vector2( 4.17969, 1.17188 )
+texture = ExtResource( 9 )
+
+[node name="Lava3" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 256, 0 )
+
+[node name="Lava4" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 384, 0 )
+
+[node name="Lava5" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 512, 0 )
+
+[node name="Lava6" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 640, 0 )
+
+[node name="Lava7" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 768, 0 )
+
+[node name="Lava8" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 896, 0 )
+
+[node name="Lava9" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 1024, 0 )
+
+[node name="Lava10" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 1152, 0 )
+
+[node name="Lava11" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 1280, 0 )
+
+[node name="Lava12" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 1408, 0 )
+
+[node name="Lava14" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 2281, 50 )
+
+[node name="Lava15" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 2153, 50 )
+
+[node name="Lava16" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 2025, 50 )
+
+[node name="Lava17" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 1897, 50 )
+
+[node name="Lava18" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 2865, 50 )
+
+[node name="Lava19" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 2737, 50 )
+
+[node name="Lava20" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 2609, 50 )
+
+[node name="Lava21" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 2481, 50 )
+
+[node name="Lava3" type="Sprite" parent="Lava/Lava21"]
+position = Vector2( -73.7499, 75.75 )
+scale = Vector2( 4.31445, 0.330078 )
+texture = ExtResource( 9 )
+
+[node name="Lava13" parent="Lava" instance=ExtResource( 10 )]
+position = Vector2( 1536, 0 )
+
+[node name="Lava2" type="Sprite" parent="Lava/Lava13"]
+position = Vector2( -660.5, 101.5 )
+scale = Vector2( 7.36328, 0.511719 )
+texture = ExtResource( 9 )
+
+[node name="Crystal1" type="Sprite" parent="."]
+position = Vector2( 6937, 446 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 20 )
+
+[node name="Crystal2" type="Sprite" parent="Crystal1"]
+position = Vector2( -288, 0 )
+texture = ExtResource( 20 )
+
+[node name="Crystal4" type="Sprite" parent="Crystal1"]
+position = Vector2( 496, -288 )
+texture = ExtResource( 22 )
+
+[node name="Crystal3" type="Sprite" parent="Crystal1"]
+position = Vector2( -880, -288 )
+texture = ExtResource( 22 )
+
+[node name="Crystal5" type="Sprite" parent="Crystal1"]
+position = Vector2( -2332, -96 )
+texture = ExtResource( 20 )
+
+[node name="Crystal6" type="Sprite" parent="Crystal1"]
+position = Vector2( -3104, -96 )
+texture = ExtResource( 20 )
+
+[node name="Crystal7" type="Sprite" parent="Crystal1"]
+position = Vector2( -3862, -94 )
+texture = ExtResource( 22 )
+
+[node name="Crystal8" type="Sprite" parent="Crystal1"]
+position = Vector2( -4628, -94 )
+texture = ExtResource( 22 )
+
+[node name="Crystal9" type="Sprite" parent="Crystal1"]
+position = Vector2( -3344, -480 )
+texture = ExtResource( 20 )
+
+[node name="Crystal11" type="Sprite" parent="Crystal1"]
+position = Vector2( -2576, -478 )
+texture = ExtResource( 22 )
+
+[node name="Crystal10" type="Sprite" parent="Crystal1"]
+position = Vector2( -4112, -480 )
+texture = ExtResource( 20 )
+
+[node name="Crystal12" type="Sprite" parent="Crystal1"]
+position = Vector2( -7392, -724 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal13" type="Sprite" parent="Crystal1"]
+position = Vector2( -7488, -628 )
+rotation = 3.14159
+texture = ExtResource( 22 )
+
+[node name="Crystal16" type="Sprite" parent="Crystal1"]
+position = Vector2( -8160, -340 )
+rotation = 3.14159
+texture = ExtResource( 22 )
+
+[node name="Crystal17" type="Sprite" parent="Crystal1"]
+position = Vector2( -8256, -244 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal18" type="Sprite" parent="Crystal1"]
+position = Vector2( -10174, -820 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal26" type="Sprite" parent="Crystal1"]
+position = Vector2( -9982, -820 )
+rotation = 3.14159
+texture = ExtResource( 22 )
+
+[node name="Crystal27" type="Sprite" parent="Crystal1"]
+position = Vector2( -9566, -820 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal28" type="Sprite" parent="Crystal1"]
+position = Vector2( -9374, -820 )
+rotation = 3.14159
+texture = ExtResource( 22 )
+
+[node name="Crystal29" type="Sprite" parent="Crystal1"]
+position = Vector2( -8926, -820 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal30" type="Sprite" parent="Crystal1"]
+position = Vector2( -8734, -820 )
+rotation = 3.14159
+texture = ExtResource( 22 )
+
+[node name="Crystal19" type="Sprite" parent="Crystal1"]
+position = Vector2( -11040, -628 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal20" type="Sprite" parent="Crystal1"]
+position = Vector2( -11808, -628 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal21" type="Sprite" parent="Crystal1"]
+position = Vector2( -12766, -146 )
+rotation = 3.14159
+texture = ExtResource( 22 )
+
+[node name="Crystal22" type="Sprite" parent="Crystal1"]
+position = Vector2( -11812, -148 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal23" type="Sprite" parent="Crystal1"]
+position = Vector2( -11812, -146 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal24" type="Sprite" parent="Crystal1"]
+position = Vector2( -11524, -146 )
+rotation = 3.14159
+texture = ExtResource( 22 )
+
+[node name="Crystal25" type="Sprite" parent="Crystal1"]
+position = Vector2( -11236, -146 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal14" type="Sprite" parent="Crystal1"]
+position = Vector2( -7104, -724 )
+rotation = 3.14159
+texture = ExtResource( 20 )
+
+[node name="Crystal15" type="Sprite" parent="Crystal1"]
+position = Vector2( -7008, -628 )
+rotation = 3.14159
+texture = ExtResource( 22 )
+
+[node name="Base1" type="Sprite" parent="."]
+position = Vector2( 4008, 104 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="Base2" type="Sprite" parent="Base1"]
+position = Vector2( -936, 296 )
+texture = ExtResource( 24 )
+
+[node name="Base3" type="Sprite" parent="Base1"]
+position = Vector2( -1832, 672 )
+texture = ExtResource( 18 )
+
+[node name="Base4" type="Sprite" parent="Base1"]
+position = Vector2( -2298, 200 )
+texture = ExtResource( 24 )
+
+[node name="Base5" type="Sprite" parent="Base1"]
+position = Vector2( -2684, 192 )
+texture = ExtResource( 18 )
+
+[node name="Base6" type="Sprite" parent="Base1"]
+position = Vector2( -4700, 192 )
+texture = ExtResource( 18 )
+
+[node name="Base7" type="Sprite" parent="Base1"]
+position = Vector2( -6332, 212 )
+texture = ExtResource( 25 )
+
+[node name="Base8" type="Sprite" parent="Base1"]
+position = Vector2( -6732, 792 )
+texture = ExtResource( 26 )
+
+[node name="Base9" type="Sprite" parent="Base1"]
+position = Vector2( -7756, 600 )
+texture = ExtResource( 26 )
+
+[node name="Base11" type="Sprite" parent="Base1"]
+position = Vector2( -7292, 884 )
+texture = ExtResource( 25 )
+
+[node name="Base10" type="Sprite" parent="Base1"]
+position = Vector2( -7916, 312 )
+texture = ExtResource( 26 )
+
+[node name="Barrel" type="Sprite" parent="."]
+position = Vector2( 29, 532 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Barrel2" type="Sprite" parent="Barrel"]
+position = Vector2( 368, -576 )
+texture = ExtResource( 11 )
+
+[node name="Barrel3" type="Sprite" parent="Barrel"]
+position = Vector2( 1168, -672 )
+texture = ExtResource( 11 )
+
+[node name="Barrel4" type="Sprite" parent="Barrel"]
+position = Vector2( 1632, -96 )
+texture = ExtResource( 11 )
+
+[node name="Barrel5" type="Sprite" parent="Barrel"]
+position = Vector2( 3024, 0 )
+texture = ExtResource( 11 )
+
+[node name="Barrel6" type="Sprite" parent="Barrel"]
+position = Vector2( 5558, -96 )
+texture = ExtResource( 11 )
+
+[node name="Barrel7" type="Sprite" parent="Barrel"]
+position = Vector2( 6950, -192 )
+texture = ExtResource( 11 )
+
+[node name="Barrel8" type="Sprite" parent="Barrel"]
+position = Vector2( 8634, -576 )
+texture = ExtResource( 11 )
 
 [node name="Spike" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1225, 210 )
 
-[node name="Spike2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1609, 210 )
+[node name="Spike2" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 384, 0 )
+
+[node name="Spike3" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 479, 0 )
+
+[node name="Spike4" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 815, 0 )
+
+[node name="Spike5" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 1151, 0 )
+
+[node name="Spike6" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 1535, 0 )
+
+[node name="Spike7" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 1919, 48 )
+
+[node name="Spike13" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2255, 48 )
+
+[node name="Spike8" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 1823, 240 )
+
+[node name="Spike9" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 1967, 240 )
+
+[node name="Spike11" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2207, 240 )
+
+[node name="Spike12" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2351, 240 )
+
+[node name="Spike14" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2831, 336 )
+
+[node name="Spike15" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2879, 336 )
+
+[node name="Spike16" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2927, 336 )
+
+[node name="Spike17" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2975, 336 )
+
+[node name="Spike18" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2927, 192 )
+
+[node name="Spike19" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2975, 192 )
+
+[node name="Spike20" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2927, 48 )
+
+[node name="Spike21" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2975, 48 )
+
+[node name="Spike26" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 3599, 0 )
+
+[node name="Spike27" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 3983, 0 )
+
+[node name="Spike28" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 4367, 0 )
+
+[node name="Spike29" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 3455, 192 )
+
+[node name="Spike30" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 3839, 192 )
+
+[node name="Spike31" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 4223, 192 )
+
+[node name="Spike32" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 4607, 192 )
+
+[node name="Spike33" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 4847, 48 )
+
+[node name="Spike34" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 4895, 48 )
+
+[node name="Spike35" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 5327, 96 )
+
+[node name="Spike36" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 5663, -48 )
+
+[node name="Spike37" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 5903, 96 )
+
+[node name="Spike22" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2591, 48 )
+
+[node name="Spike23" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2639, 48 )
+
+[node name="Spike24" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2591, 240 )
+
+[node name="Spike25" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 2639, 240 )
+
+[node name="Spike10" parent="Spike" instance=ExtResource( 7 )]
+position = Vector2( 1631, 288 )
+
+[node name="Box3" type="Sprite" parent="."]
+position = Vector2( 578, 488 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 23 )
+
+[node name="Box4" type="Sprite" parent="Box3"]
+position = Vector2( -670, 96 )
+texture = ExtResource( 23 )
+
+[node name="Box5" type="Sprite" parent="Box3"]
+position = Vector2( 1392, -576 )
+texture = ExtResource( 23 )
+
+[node name="Box6" type="Sprite" parent="Box3"]
+position = Vector2( 3034, -574 )
+texture = ExtResource( 23 )
+
+[node name="Box7" type="Sprite" parent="Box3"]
+position = Vector2( 5032, -480 )
+texture = ExtResource( 23 )
+
+[node name="Box8" type="Sprite" parent="Box3"]
+position = Vector2( 6476, -766 )
+texture = ExtResource( 23 )
+
+[node name="Box9" type="Sprite" parent="Box3"]
+position = Vector2( 7628, -194 )
+texture = ExtResource( 23 )
+
+[node name="Box2" type="Sprite" parent="."]
+position = Vector2( 301, 379 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 19 )
+
+[node name="Box3" type="Sprite" parent="Box2"]
+position = Vector2( 384, 286 )
+texture = ExtResource( 19 )
+
+[node name="Box5" type="Sprite" parent="Box2"]
+position = Vector2( 1252, 192 )
+texture = ExtResource( 19 )
+
+[node name="Box6" type="Sprite" parent="Box2"]
+position = Vector2( 7300, 98 )
+texture = ExtResource( 19 )
+
+[node name="Box7" type="Sprite" parent="Box2"]
+position = Vector2( 7942, 288 )
+texture = ExtResource( 19 )
+
+[node name="Box8" type="Sprite" parent="Box2"]
+position = Vector2( 11882, -288 )
+texture = ExtResource( 19 )
+
+[node name="Box9" type="Sprite" parent="Box2"]
+position = Vector2( 11568, 2 )
+texture = ExtResource( 19 )
+
+[node name="Box4" type="Sprite" parent="Box2"]
+position = Vector2( -318, -574 )
+texture = ExtResource( 19 )
+
+[node name="Nova" parent="." instance=ExtResource( 4 )]
+position = Vector2( 298, 90 )
 
 [node name="VolcanoSquareTile19" parent="." instance=ExtResource( 6 )]
 position = Vector2( -23, 1 )
@@ -2023,3 +4053,131 @@ position = Vector2( 336, 144 )
 
 [node name="VolcanoSquareTile2" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
 position = Vector2( 47, 289 )
+
+[node name="Coin" parent="." instance=ExtResource( 28 )]
+position = Vector2( 4126, 89 )
+
+[node name="Coin2" parent="." instance=ExtResource( 28 )]
+position = Vector2( 3904, 88 )
+
+[node name="Coin3" parent="." instance=ExtResource( 28 )]
+position = Vector2( 3746, 225 )
+
+[node name="Coin6" parent="." instance=ExtResource( 28 )]
+position = Vector2( 3117, 383 )
+
+[node name="Coin7" parent="." instance=ExtResource( 28 )]
+position = Vector2( 2829, 163 )
+
+[node name="Coin8" parent="." instance=ExtResource( 28 )]
+position = Vector2( 2693, 163 )
+
+[node name="Coin9" parent="." instance=ExtResource( 28 )]
+position = Vector2( 2333, 163 )
+
+[node name="Coin10" parent="." instance=ExtResource( 28 )]
+position = Vector2( 2093, 163 )
+
+[node name="Coin11" parent="." instance=ExtResource( 28 )]
+position = Vector2( 1754, 163 )
+
+[node name="Coin12" parent="." instance=ExtResource( 28 )]
+position = Vector2( 1656, 163 )
+
+[node name="Coin13" parent="." instance=ExtResource( 28 )]
+position = Vector2( 1565, 163 )
+
+[node name="Coin14" parent="." instance=ExtResource( 28 )]
+position = Vector2( 1177, 163 )
+
+[node name="Coin15" parent="." instance=ExtResource( 28 )]
+position = Vector2( 1273, 163 )
+
+[node name="Coin17" parent="." instance=ExtResource( 28 )]
+position = Vector2( 857, 163 )
+
+[node name="Coin18" parent="." instance=ExtResource( 28 )]
+position = Vector2( 577, 163 )
+
+[node name="Coin21" parent="." instance=ExtResource( 28 )]
+position = Vector2( 881, 459 )
+
+[node name="Coin22" parent="." instance=ExtResource( 28 )]
+position = Vector2( 601, 459 )
+
+[node name="Coin24" parent="." instance=ExtResource( 28 )]
+position = Vector2( 305, 507 )
+
+[node name="Coin25" parent="." instance=ExtResource( 28 )]
+position = Vector2( 401, 507 )
+
+[node name="Coin26" parent="." instance=ExtResource( 28 )]
+position = Vector2( 121, 507 )
+
+[node name="Coin27" parent="." instance=ExtResource( 28 )]
+position = Vector2( 217, 507 )
+
+[node name="Coin28" parent="." instance=ExtResource( 28 )]
+position = Vector2( 177, 363 )
+
+[node name="Coin29" parent="." instance=ExtResource( 28 )]
+position = Vector2( 273, 363 )
+
+[node name="Coin30" parent="." instance=ExtResource( 28 )]
+position = Vector2( 41, 219 )
+
+[node name="GlowingOrb" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 176, -139 )
+
+[node name="GlowingOrb2" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 702, 238 )
+item = "Shield"
+
+[node name="GlowingOrb3" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 678, -58 )
+item = "Cloak"
+
+[node name="GlowingOrb4" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 1524, 248 )
+item = "Rage"
+
+[node name="GlowingOrb5" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 2721, -127 )
+item = "Speed"
+
+[node name="GlowingOrb6" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 2770, 198 )
+item = "Fuel"
+
+[node name="GlowingOrb11" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 3061, 1 )
+item = "Fuel"
+
+[node name="GlowingOrb7" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 3902, -2 )
+item = "Fuel"
+
+[node name="GlowingOrb8" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 4282, 284 )
+item = "Shield"
+
+[node name="GlowingOrb9" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 5215, -54 )
+item = "Shield"
+
+[node name="GlowingOrb10" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 6177, -29 )
+item = "Fuel"
+
+[node name="GlowingOrb12" parent="Coin30" instance=ExtResource( 27 )]
+position = Vector2( 6802, -96 )
+item = "Shield"
+
+[node name="Coin31" parent="." instance=ExtResource( 28 )]
+position = Vector2( 137, 219 )
+
+[node name="Coin4" parent="." instance=ExtResource( 28 )]
+position = Vector2( 3503, 383 )
+
+[node name="Coin5" parent="." instance=ExtResource( 28 )]
+position = Vector2( 3935, 381 )
