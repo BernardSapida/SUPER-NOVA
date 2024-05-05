@@ -150,1397 +150,1118 @@ texture = ExtResource( 13 )
 
 [node name="Background-tile2" type="Sprite" parent="Background-tile1"]
 position = Vector2( 79.9999, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile3" type="Sprite" parent="Background-tile1"]
 position = Vector2( 160, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile4" type="Sprite" parent="Background-tile1"]
 position = Vector2( 240, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile5" type="Sprite" parent="Background-tile1"]
 position = Vector2( 320, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile6" type="Sprite" parent="Background-tile1"]
 position = Vector2( 400, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile7" type="Sprite" parent="Background-tile1"]
 position = Vector2( 480, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile8" type="Sprite" parent="Background-tile1"]
 position = Vector2( 560, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile9" type="Sprite" parent="Background-tile1"]
 position = Vector2( 640, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile28" type="Sprite" parent="Background-tile1"]
 position = Vector2( 720, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile10" type="Sprite" parent="Background-tile1"]
 position = Vector2( 79.9999, 78.5906 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile11" type="Sprite" parent="Background-tile1"]
 position = Vector2( 160, 78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile12" type="Sprite" parent="Background-tile1"]
 position = Vector2( 240, 78.5906 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile13" type="Sprite" parent="Background-tile1"]
 position = Vector2( 320, 78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile14" type="Sprite" parent="Background-tile1"]
 position = Vector2( 400, 78.5906 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile15" type="Sprite" parent="Background-tile1"]
 position = Vector2( 480, 78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile16" type="Sprite" parent="Background-tile1"]
 position = Vector2( 560, 78.5906 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile29" type="Sprite" parent="Background-tile1"]
 position = Vector2( 800, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile30" type="Sprite" parent="Background-tile1"]
 position = Vector2( 720, 78.5906 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile37" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1600, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile38" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1680, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile39" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1600, 78.5906 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile40" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1280, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile41" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1360, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile42" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1360, 78.5906 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile17" type="Sprite" parent="Background-tile1"]
 position = Vector2( 640, 78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile18" type="Sprite" parent="Background-tile1"]
 position = Vector2( 79.9999, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile26" type="Sprite" parent="Background-tile1"]
 position = Vector2( -0.00012207, 78.5906 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile27" type="Sprite" parent="Background-tile1"]
 position = Vector2( -0.00012207, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile19" type="Sprite" parent="Background-tile1"]
 position = Vector2( 160, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile20" type="Sprite" parent="Background-tile1"]
 position = Vector2( 240, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile21" type="Sprite" parent="Background-tile1"]
 position = Vector2( 320, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile22" type="Sprite" parent="Background-tile1"]
 position = Vector2( 400, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile23" type="Sprite" parent="Background-tile1"]
 position = Vector2( 480, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile24" type="Sprite" parent="Background-tile1"]
 position = Vector2( 560, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile25" type="Sprite" parent="Background-tile1"]
 position = Vector2( 640, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile31" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1440, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile32" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1520, -6.10352e-05 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile33" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1440, 78.5906 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile34" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1520, 78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile35" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1440, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile36" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1520, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile43" type="Sprite" parent="Background-tile1"]
 position = Vector2( 880, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile44" type="Sprite" parent="Background-tile1"]
 position = Vector2( 960, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile45" type="Sprite" parent="Background-tile1"]
 position = Vector2( 960, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile46" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1040, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile47" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1120, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile48" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1040, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile49" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1120, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile52" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1040, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile53" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1120, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile50" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1040, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile51" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1120, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile54" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1200, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile59" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1280, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile60" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1360, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile58" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1280, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile55" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1200, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile56" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1200, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile57" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1200, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile99" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1520, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile100" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1600, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile101" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1600, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile102" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1680, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile103" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1760, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile104" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1680, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile105" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1760, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile106" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1680, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile107" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1760, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile108" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1680, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile109" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1760, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile117" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1840, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile118" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1920, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile119" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1840, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile120" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1920, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile121" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1840, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile122" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1920, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile123" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1840, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile124" type="Sprite" parent="Background-tile1"]
 position = Vector2( 1920, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile110" type="Sprite" parent="Background-tile1"]
 position = Vector2( 2000, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile111" type="Sprite" parent="Background-tile1"]
 position = Vector2( 2080, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile112" type="Sprite" parent="Background-tile1"]
 position = Vector2( 2160, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile113" type="Sprite" parent="Background-tile1"]
 position = Vector2( 2080, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile114" type="Sprite" parent="Background-tile1"]
 position = Vector2( 2000, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile115" type="Sprite" parent="Background-tile1"]
 position = Vector2( 2000, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile116" type="Sprite" parent="Background-tile1"]
 position = Vector2( 2000, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile125" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3360, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile126" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3440, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile127" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3440, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile128" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3520, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile129" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3600, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile130" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3520, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile131" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3600, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile132" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3520, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile133" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3600, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile134" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3520, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile135" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3600, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile136" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3680, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile137" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3760, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile138" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3680, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile139" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3760, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile140" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3680, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile141" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3760, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile142" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3680, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile143" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3760, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile144" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3840, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile145" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3920, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile146" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4000, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile147" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3920, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile148" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3840, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile151" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4240, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile152" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4240, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile153" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4320, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile154" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4320, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile155" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4240, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile156" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4240, -0.000213623 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile157" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4320, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile158" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4320, -0.000213623 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile159" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4240, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile161" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4160, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 17 )
 
 [node name="Background-tile160" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4320, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile162" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4400, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 
 [node name="Background-tile163" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4880, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile164" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4880, -0.000213623 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile165" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4960, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile166" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4960, -0.000213623 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile275" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4880, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile280" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4800, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile276" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4880, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile277" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4960, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile279" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5040, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile278" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4960, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile167" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4880, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile168" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4800, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 17 )
 
 [node name="Background-tile169" type="Sprite" parent="Background-tile1"]
 position = Vector2( 4960, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile171" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5440, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile190" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5360, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile172" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5440, -0.000213623 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile173" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5520, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile174" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5520, -0.000213623 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile193" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5280, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile194" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5360, -0.000213623 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile175" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5440, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile176" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5520, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile177" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5600, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile178" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5600, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile179" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5680, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile180" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5680, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile189" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5440, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile191" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5520, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile192" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5520, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile214" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9200, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile226" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9200, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile237" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9280, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile238" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9280, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile242" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9200, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile243" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9280, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile244" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9200, -314.363 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile245" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9280, -314.363 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile246" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9200, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile247" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9280, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile248" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9360, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile249" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9440, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile250" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9360, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile251" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9440, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile252" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9360, -314.363 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile253" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9440, -314.363 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile254" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9360, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile255" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9440, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile259" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9520, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile260" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9520, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile261" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9520, -314.363 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile262" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9520, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile239" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9040, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile240" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9120, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile256" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9440, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile257" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9520, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile258" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9360, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile263" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9200, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile264" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9200, -0.000244141 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile265" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9280, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile266" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9280, -0.000244141 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile267" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9360, -0.000183105 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile268" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9440, -0.000183105 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile269" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9520, -0.000183105 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile270" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9440, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile271" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9520, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile273" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9600, -0.000183105 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile274" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9600, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile272" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9360, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile241" type="Sprite" parent="Background-tile1"]
 position = Vector2( 9120, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile181" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5600, -157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile182" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5680, -157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile183" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5600, -78.5908 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile184" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5680, -78.5908 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile185" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5600, -0.000244141 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile186" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5680, -0.000244141 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile187" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5600, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile188" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5680, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile195" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5840, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile196" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5840, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile197" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5840, -157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile198" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5840, -78.5908 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile199" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5840, -0.000244141 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile200" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5840, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile201" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5920, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile202" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5920, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile211" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6000, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile212" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6000, -235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile213" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6080, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile215" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6000, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile216" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6000, -0.000183105 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile217" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6080, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile218" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6080, -0.000183105 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile219" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6160, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile220" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6160, -0.000183105 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile221" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6240, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile222" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6240, -0.000183105 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile223" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6320, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile224" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6320, -0.000183105 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile227" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6000, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile228" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6000, 235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile229" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6080, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile230" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6080, 235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile231" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6160, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile232" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6160, 235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile233" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6240, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile234" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6240, 235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile235" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6320, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile236" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6320, 235.772 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile225" type="Sprite" parent="Background-tile1"]
 position = Vector2( 6400, -78.5905 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile203" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5920, -157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile204" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5920, -78.5908 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile205" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5920, -0.000244141 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile206" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5920, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile207" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5840, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile208" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5840, 235.771 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile209" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5920, 157.181 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile210" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5920, 235.771 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile170" type="Sprite" parent="Background-tile1"]
 position = Vector2( 5040, 78.5903 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 
 [node name="Background-tile149" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3840, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile150" type="Sprite" parent="Background-tile1"]
 position = Vector2( 3840, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile61" type="Sprite" parent="Background-tile1"]
 position = Vector2( -160.001, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile62" type="Sprite" parent="Background-tile1"]
 position = Vector2( -79.9999, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile63" type="Sprite" parent="Background-tile1"]
 position = Vector2( -79.9999, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 14 )
 
 [node name="Background-tile64" type="Sprite" parent="Background-tile1"]
 position = Vector2( 0.000183105, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile65" type="Sprite" parent="Background-tile1"]
 position = Vector2( 79.9995, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile66" type="Sprite" parent="Background-tile1"]
 position = Vector2( 0.000183105, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile67" type="Sprite" parent="Background-tile1"]
 position = Vector2( 79.9995, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile68" type="Sprite" parent="Background-tile1"]
 position = Vector2( 0.000183105, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile69" type="Sprite" parent="Background-tile1"]
 position = Vector2( 79.9995, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile70" type="Sprite" parent="Background-tile1"]
 position = Vector2( 0.000183105, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile71" type="Sprite" parent="Background-tile1"]
 position = Vector2( 79.9995, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile72" type="Sprite" parent="Background-tile1"]
 position = Vector2( 159.999, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile73" type="Sprite" parent="Background-tile1"]
 position = Vector2( 159.999, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile74" type="Sprite" parent="Background-tile1"]
 position = Vector2( 159.999, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile75" type="Sprite" parent="Background-tile1"]
 position = Vector2( 159.999, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile76" type="Sprite" parent="Background-tile1"]
 position = Vector2( 240, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile77" type="Sprite" parent="Background-tile1"]
 position = Vector2( 320, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile78" type="Sprite" parent="Background-tile1"]
 position = Vector2( 240, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile79" type="Sprite" parent="Background-tile1"]
 position = Vector2( 320, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile80" type="Sprite" parent="Background-tile1"]
 position = Vector2( 240, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile81" type="Sprite" parent="Background-tile1"]
 position = Vector2( 320, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile82" type="Sprite" parent="Background-tile1"]
 position = Vector2( 240, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile83" type="Sprite" parent="Background-tile1"]
 position = Vector2( 320, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile84" type="Sprite" parent="Background-tile1"]
 position = Vector2( 400, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile85" type="Sprite" parent="Background-tile1"]
 position = Vector2( 400, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile86" type="Sprite" parent="Background-tile1"]
 position = Vector2( 400, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile87" type="Sprite" parent="Background-tile1"]
 position = Vector2( 400, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile88" type="Sprite" parent="Background-tile1"]
 position = Vector2( 480, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile89" type="Sprite" parent="Background-tile1"]
 position = Vector2( 559.999, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile90" type="Sprite" parent="Background-tile1"]
 position = Vector2( 480, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile91" type="Sprite" parent="Background-tile1"]
 position = Vector2( 559.999, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile92" type="Sprite" parent="Background-tile1"]
 position = Vector2( 480, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile93" type="Sprite" parent="Background-tile1"]
 position = Vector2( 559.999, -392.953 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile94" type="Sprite" parent="Background-tile1"]
 position = Vector2( 480, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile95" type="Sprite" parent="Background-tile1"]
 position = Vector2( 559.999, -314.362 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Background-tile96" type="Sprite" parent="Background-tile1"]
 position = Vector2( 640, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile98" type="Sprite" parent="Background-tile1"]
 position = Vector2( 720, -550.134 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Background-tile97" type="Sprite" parent="Background-tile1"]
 position = Vector2( 640, -471.544 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 16 )
 
 [node name="Lava" parent="." instance=ExtResource( 10 )]
@@ -4126,53 +3847,6 @@ position = Vector2( 273, 363 )
 [node name="Coin30" parent="." instance=ExtResource( 28 )]
 position = Vector2( 41, 219 )
 
-[node name="GlowingOrb" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 176, -139 )
-
-[node name="GlowingOrb2" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 702, 238 )
-item = "Shield"
-
-[node name="GlowingOrb3" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 678, -58 )
-item = "Cloak"
-
-[node name="GlowingOrb4" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 1524, 248 )
-item = "Rage"
-
-[node name="GlowingOrb5" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 2721, -127 )
-item = "Speed"
-
-[node name="GlowingOrb6" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 2770, 198 )
-item = "Fuel"
-
-[node name="GlowingOrb11" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 3061, 1 )
-item = "Fuel"
-
-[node name="GlowingOrb7" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 3902, -2 )
-item = "Fuel"
-
-[node name="GlowingOrb8" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 4282, 284 )
-item = "Shield"
-
-[node name="GlowingOrb9" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 5215, -54 )
-item = "Shield"
-
-[node name="GlowingOrb10" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 6177, -29 )
-item = "Fuel"
-
-[node name="GlowingOrb12" parent="Coin30" instance=ExtResource( 27 )]
-position = Vector2( 6802, -96 )
-item = "Shield"
-
 [node name="Coin31" parent="." instance=ExtResource( 28 )]
 position = Vector2( 137, 219 )
 
@@ -4181,3 +3855,50 @@ position = Vector2( 3503, 383 )
 
 [node name="Coin5" parent="." instance=ExtResource( 28 )]
 position = Vector2( 3935, 381 )
+
+[node name="GlowingOrb" parent="." instance=ExtResource( 27 )]
+position = Vector2( 217, 80 )
+
+[node name="GlowingOrb2" parent="." instance=ExtResource( 27 )]
+position = Vector2( 743, 457 )
+item = "Shield"
+
+[node name="GlowingOrb3" parent="." instance=ExtResource( 27 )]
+position = Vector2( 719, 161 )
+item = "Cloak"
+
+[node name="GlowingOrb4" parent="." instance=ExtResource( 27 )]
+position = Vector2( 1565, 467 )
+item = "Rage"
+
+[node name="GlowingOrb5" parent="." instance=ExtResource( 27 )]
+position = Vector2( 2762, 92 )
+item = "Speed"
+
+[node name="GlowingOrb6" parent="." instance=ExtResource( 27 )]
+position = Vector2( 2811, 417 )
+item = "Fuel"
+
+[node name="GlowingOrb11" parent="." instance=ExtResource( 27 )]
+position = Vector2( 3102, 220 )
+item = "Fuel"
+
+[node name="GlowingOrb7" parent="." instance=ExtResource( 27 )]
+position = Vector2( 3943, 217 )
+item = "Fuel"
+
+[node name="GlowingOrb8" parent="." instance=ExtResource( 27 )]
+position = Vector2( 4323, 503 )
+item = "Shield"
+
+[node name="GlowingOrb9" parent="." instance=ExtResource( 27 )]
+position = Vector2( 5256, 165 )
+item = "Shield"
+
+[node name="GlowingOrb10" parent="." instance=ExtResource( 27 )]
+position = Vector2( 6218, 190 )
+item = "Fuel"
+
+[node name="GlowingOrb12" parent="." instance=ExtResource( 27 )]
+position = Vector2( 6843, 123 )
+item = "Shield"
