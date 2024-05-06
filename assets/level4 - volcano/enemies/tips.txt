@@ -1,0 +1,15 @@
+Lava Monster
+- Melee ito and masakit damage
+- Pwede ka rin ma knockback / tulak every tatamaan ka suntok (If want mo ito)
+- Dalawa ang Area2D nito, yung malaki for detection kay Nova,
+pangalawa is yung maliit and pag pumasok si nova here matik susuntok siya.
+
+Slime
+- Walking lang ito
+- Pero masakit damage nito and makunat ;)
+
+Dragon (Boss)
+- Waiting dito kay Jewel
+
+Golem
+- Waiting dito kay Jewel

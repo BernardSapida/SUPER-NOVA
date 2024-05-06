@@ -1,0 +1,10 @@
+Drone Behavior
+- Static lang siya
+- If pumasok ang player sa loob ng circle (Area2D)
+- Doon siya magcacast ng laser
+- 1sec or 2secs cooldown before ulet maghit
+
+Shadow Creature
+- Nagwawalk siya
+- Mabilis siya magwalk
+- Melee
