@@ -2889,7 +2889,7 @@ texture = ExtResource( 27 )
 position = Vector2( 50, 403 )
 
 [node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 51, 427 )
+position = Vector2( 48, 424 )
 
 [node name="ThornyVines" parent="." instance=ExtResource( 17 )]
 position = Vector2( 913, 208 )
@@ -5500,7 +5500,7 @@ position = Vector2( 2151, 265 )
 item = "Fuel"
 
 [node name="GlowingOrb4" parent="." instance=ExtResource( 30 )]
-position = Vector2( 1085, 384 )
+position = Vector2( 1089, 382 )
 
 [node name="GlowingOrb2" parent="." instance=ExtResource( 30 )]
 position = Vector2( 4397, 81 )

@@ -2093,67 +2093,54 @@ texture = ExtResource( 15 )
 
 [node name="Base2" type="Sprite" parent="Base1"]
 position = Vector2( 2020.67, 724.595 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 
 [node name="Base4" type="Sprite" parent="Base1"]
 position = Vector2( 2986.67, 546.757 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 
 [node name="Base5" type="Sprite" parent="Base1"]
 position = Vector2( 5747.78, 181.622 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 
 [node name="Base10" type="Sprite" parent="Base1"]
 position = Vector2( 4777.11, 111.622 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="Base11" type="Sprite" parent="Base1"]
 position = Vector2( 6496, 382.162 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="Base12" type="Sprite" parent="Base1"]
 position = Vector2( 7094.89, 385.946 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Base13" type="Sprite" parent="Base1"]
 position = Vector2( 8064, 113.514 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Base14" type="Sprite" parent="Base1"]
 position = Vector2( 8810.67, 476.757 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Base6" type="Sprite" parent="Base1"]
 position = Vector2( 7838.45, 633.784 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 
 [node name="Base7" type="Sprite" parent="Base1"]
 position = Vector2( 8956.89, -90.8108 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 15 )
 
 [node name="Base3" type="Sprite" parent="Base1"]
 position = Vector2( 959.778, 552.432 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Base8" type="Sprite" parent="Base1"]
 position = Vector2( 2093.78, 7.56757 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Base9" type="Sprite" parent="Base1"]
 position = Vector2( 4256, 461.622 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="FactorySquareTile" parent="." instance=ExtResource( 6 )]

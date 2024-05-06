@@ -98,6 +98,7 @@ func use_heart_item():
 	
 	heart_item -= 1
 	ui.reduce_item("Heart")
+	ui.set_health(health)
 	
 func use_cloak_item():
 	if cloak_item <= 0:
