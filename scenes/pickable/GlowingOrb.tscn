@@ -18,6 +18,8 @@ animations = [ {
 radius = 18.0
 
 [node name="GlowingOrb" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

@@ -3,6 +3,7 @@ extends Area2D
 var direction = Vector2.ZERO
 var speed = 400
 var shot_color = "Green"
+var damage: int
 
 onready var shot = $AnimatedShot
 
@@ -33,5 +34,12 @@ func _process(delta):
 		shot.flip_h = true
 
 func _on_Shot_body_entered(body):
-	if body.name.find("Tile"):
+	#I dont know why this works when its supposed to run only
+	#when the body is not of TILE but it is what it is
+	if "Tile" in body.name or "Border" in body.name:
 		queue_free()
+		return
+	if body.dying:
+		return
+	body.hit(damage)
+	queue_free()

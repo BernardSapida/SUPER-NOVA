@@ -5,6 +5,9 @@ var health: float = 100
 var fuel: float = 100
 var is_raging: bool = false
 var is_unvulnerable: bool = false
+var is_invisible: bool = false
+var is_recently_hit: bool = false
+var is_allowed_to_move: bool = false
 
 # Nova items
 var heart_item = 0
@@ -39,18 +42,26 @@ func _process(delta):
 	regen_health()
 
 func _physics_process(delta):
-	velocity.x = 0
 	
 	if animated_sprite.animation == "dead":
 		return null
-		
-	if Input.is_action_pressed("ui_left"):
-		move_left()
-	elif Input.is_action_pressed("ui_right"):
-		move_right()
-	elif is_on_floor():
-		idle()
 	
+	if not is_allowed_to_move:
+		velocity.x = 0
+		
+		if Input.is_action_pressed("ui_left"):
+			move_left()
+		elif Input.is_action_pressed("ui_right"):
+			move_right()
+		elif is_on_floor():
+			idle()
+		
+		if Input.is_action_pressed("rocket"):
+			fly(delta)
+		
+		if is_on_floor() and Input.is_action_just_pressed("ui_up"):
+			jump()
+		
 	if Input.is_action_just_pressed("heart_item"):
 		use_heart_item()
 		
@@ -69,11 +80,6 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("fuel_item"):
 		use_fuel_item()
 	
-	if Input.is_action_pressed("rocket"):
-		fly(delta)
-	
-	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
-		jump()
 
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
@@ -84,7 +90,8 @@ func _physics_process(delta):
 	elif velocity.x > 0:
 		face_right()
 	
-	attack()
+	if Input.is_action_just_released("fire"):
+		deferred_attack()
 	sync_gun()
 
 func use_heart_item():
@@ -107,7 +114,11 @@ func use_cloak_item():
 	cloak_item -= 1
 	ui.reduce_item("Cloak")
 	
-	animation_player.play("invinsible")
+	animation_player.play("invisible")
+	
+	is_invisible = true
+	yield(get_tree().create_timer(10), "timeout")
+	is_invisible = false
 	
 func use_shield_item():
 	if shield_item <= 0:
@@ -288,32 +299,60 @@ func sync_gun():
 			4:
 				animated_gun.play("Red")
 
-func attack():
-	if Input.is_action_just_pressed("fire"):
-		var shot = shot_scene.instance()
-		
-#		laser_sound.play()
-		
-		shot.position.y = position.y-10
-		
-		if is_raging:
-			shot.set_shot_color("Rage")
-		else:
-			match current_level:
-				1:
-					shot.set_shot_color("Green")
-				2:
-					shot.set_shot_color("Blue")
-				3:
-					shot.set_shot_color("Violet")
-				4:
-					shot.set_shot_color("Red")
+func deferred_attack():
+	call_deferred("attack")
 
-		if animated_sprite.flip_h:
-			shot.direction = Vector2(-1, 0)
-			shot.position.x = position.x-50
-		else:
-			shot.direction = Vector2(1, 0)
-			shot.position.x = position.x+50
-			
-		get_parent().add_child(shot)
+func attack():
+	var shot = shot_scene.instance()
+	
+#		laser_sound.play()
+	
+	shot.position.y = position.y-10
+	shot.damage = damage
+	
+	if is_raging:
+		shot.set_shot_color("Rage")
+	else:
+		match current_level:
+			1:
+				shot.set_shot_color("Green")
+			2:
+				shot.set_shot_color("Blue")
+			3:
+				shot.set_shot_color("Violet")
+			4:
+				shot.set_shot_color("Red")
+
+	if animated_sprite.flip_h:
+		shot.direction = Vector2(-1, 0)
+		shot.position.x = position.x-50
+	else:
+		shot.direction = Vector2(1, 0)
+		shot.position.x = position.x+50
+		
+	get_parent().add_child(shot)
+
+func hit(enemyDirection: int, damage: int):
+	if is_recently_hit:
+		return
+	
+	print(enemyDirection)
+	
+	animation_player.play("Hit")
+	set_allowed_to_move()
+	set_recently_hit()
+	
+	reduce_life(damage)
+	velocity.x = 70 * enemyDirection
+	velocity.y = -200
+	
+
+func set_recently_hit():
+	is_recently_hit = true
+	yield(get_tree().create_timer(2), "timeout")
+	is_recently_hit = false 
+
+func set_allowed_to_move():
+	is_allowed_to_move = true
+	yield(get_tree().create_timer(0.5), "timeout")
+	is_allowed_to_move = false
