@@ -30,6 +30,7 @@ func die():
 	set_physics_process(false)
 	animation_player.play("Die")
 	
+	
 func remove_from_scene():
 	hide()
 	queue_free()
@@ -44,6 +45,7 @@ func hit(damage: int):
 
 func _on_DetectionRange_body_entered(body):
 	player_detected = true
+	print("Enter")
 
 func _on_DetectionRange_body_exited(body):
 	player_detected = false

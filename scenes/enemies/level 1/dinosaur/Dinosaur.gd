@@ -29,13 +29,13 @@ func move():
 		if not abs(player_ref.global_position.x - global_position.x) >= 10:	
 			return
 			
-		find_player()
+		face_player()
 	elif not ground_detection.is_colliding():
 		flip_me()
 	
 	velocity.x = speed * facing
 	
-func find_player():
+func face_player():
 	if player_ref.global_position.x > global_position.x and facing == FACING.LEFT:
 		flip_me()
 	elif player_ref.global_position.x < global_position.x and facing == FACING.RIGHT:

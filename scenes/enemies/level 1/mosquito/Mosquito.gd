@@ -18,8 +18,28 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, velocity)
 
 func move():
-	velocity.x = speed * facing
-
+	if player_detected:
+		velocity = (player_ref.global_position - global_position).normalized() * speed
+		face_player()
+	else:
+		velocity.x = speed * facing
+		
+func die():
+	if dying:
+		return
+		
+	dying = true
+	
+	set_physics_process(false)
+	animation_player.play("Die")
+	animated_sprite.play("die")
+	
+func face_player():
+	if player_ref.global_position.x > global_position.x and facing == FACING.LEFT:
+		flip_me()
+	elif player_ref.global_position.x < global_position.x and facing == FACING.RIGHT:
+		flip_me()
+	
 func flip_me():
 	animated_sprite.flip_h = !animated_sprite.flip_h
 	
@@ -36,3 +56,14 @@ func _on_StopTimer_timeout():
 	flip_me()
 	reverse_timer.start()
 	speed = speed_ref
+
+func _on_DetectionRange_body_entered(body):
+	player_detected = true
+	speed = speed_ref
+	reverse_timer.stop()
+	stop_timer.stop()
+
+func _on_DetectionRange_body_exited(body):
+	player_detected = false
+	speed = 0
+	stop_timer.start()
