@@ -13,11 +13,16 @@ func _ready():
 
 func _on_Spike_body_entered(body):
 	if body.name == "Nova":
-		touched = true
+		#touched = true
 	
-		while touched:
-			body.reduce_life(10)
-			yield(get_tree().create_timer(2), "timeout") 
+		#while touched:
+			#body.reduce_life(10)
+			#yield(get_tree().create_timer(2), "timeout")
+		var knockback_x_direction = global_position.x - body.global_position.x
+		if knockback_x_direction >= 0:
+			body.hit(-1, 10)
+		else:
+			body.hit(1, 10)
 
 func _on_Spike_body_exited(body):
 	if body.name == "Nova":
