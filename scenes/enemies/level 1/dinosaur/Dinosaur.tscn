@@ -30,7 +30,6 @@ extents = Vector2( 24, 36.5 )
 radius = 232.215
 
 [node name="Dinosaur" instance=ExtResource( 1 )]
-collision_mask = 33
 script = ExtResource( 2 )
 speed = 80.0
 damage = 10
@@ -39,7 +38,6 @@ gravity = 400
 [node name="AnimatedSprite" parent="." index="0"]
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
-animation = "walk"
 
 [node name="Body" parent="." index="1"]
 position = Vector2( -10, 13.5 )

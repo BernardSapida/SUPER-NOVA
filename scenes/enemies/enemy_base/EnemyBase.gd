@@ -12,6 +12,7 @@ export var damage: int = 20
 var facing = default_facing
 var dying: bool = false
 var player_detected: bool = false
+var hit_player: bool = false
 
 onready var player_ref = get_tree().get_nodes_in_group("Player")[0]
 onready var animated_sprite = $AnimatedSprite
@@ -52,9 +53,17 @@ func _on_DetectionRange_body_exited(body):
 
 func _on_Hitbox_body_entered(body):
 	if body.name == "Nova" and not dying:
-		print("Hit: ", body.name)
+		hit_player = true
 		var knockback_x_direction = global_position.x - body.global_position.x
-		if knockback_x_direction >= 0:
-			body.hit(-1, damage)
-		else:
-			body.hit(1, damage)
+		while hit_player:
+			if knockback_x_direction >= 0:
+				body.hit(-1, damage)
+			else:
+				body.hit(1, damage)
+			yield(get_tree().create_timer(2), "timeout")
+			
+
+
+
+func _on_Hitbox_body_exited(body):
+	hit_player = false
