@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/level2 - dungeon/objects/laser_bullets/Laser Sprites/09.png" type="Texture" id=1]
+[ext_resource path="res://scenes/enemies/bullets/laser/LaserBullet.gd" type="Script" id=2]
+[ext_resource path="res://assets/level3 - factory/enemies/gunner/bullet.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "drone",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "gunner",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 5.0
+height = 8.0
+
+[node name="LaserBullet" type="Area2D"]
+collision_layer = 0
+collision_mask = 3
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "drone"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2, 0 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_LaserBullet_body_entered"]

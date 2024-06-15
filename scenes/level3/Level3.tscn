@@ -30,7 +30,7 @@
 [ext_resource path="res://scenes/pickable/GlowingOrb.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/pickable/Coin.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/boundary/Boundary.tscn" type="PackedScene" id=30]
-[ext_resource path="res://scenes/enemies/level 3/melee/Melee.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scenes/enemies/level 3/gunner/Gunner.tscn" type="PackedScene" id=31]
 
 [sub_resource type="SegmentShape2D" id=1]
 b = Vector2( 0, 601 )
@@ -5005,5 +5005,5 @@ position = Vector2( 3984, -36 )
 [node name="Boundary17" parent="Boundary" instance=ExtResource( 30 )]
 position = Vector2( 3890, -76 )
 
-[node name="Melee" parent="." instance=ExtResource( 31 )]
-position = Vector2( 447, 127 )
+[node name="Gunner" parent="." instance=ExtResource( 31 )]
+position = Vector2( 384, 120 )

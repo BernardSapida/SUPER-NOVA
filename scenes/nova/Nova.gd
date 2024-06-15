@@ -4,7 +4,7 @@ var score: int = 0
 var health: float = 100
 var fuel: float = 100
 var is_raging: bool = false
-var is_unvulnerable: bool = false
+var is_unvulnerable: bool = true
 var is_invisible: bool = false
 var is_recently_hit: bool = false
 var is_allowed_to_move: bool = false
@@ -333,7 +333,7 @@ func attack():
 	get_parent().add_child(shot)
 
 func hit(enemyDirection: int, damage: int):
-	if is_recently_hit:
+	if is_recently_hit or is_unvulnerable:
 		return
 	
 	print(enemyDirection)

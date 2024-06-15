@@ -22,7 +22,7 @@
 [ext_resource path="res://scenes/pickable/GlowingOrb.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/level2 - dungeon/objects/crystal2.png" type="Texture" id=21]
 [ext_resource path="res://assets/level2 - dungeon/objects/crystal1.png" type="Texture" id=22]
-[ext_resource path="res://scenes/enemies/level 2/shadow_creature/ShadowCreature.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/enemies/level 2/drone/Drone.tscn" type="PackedScene" id=23]
 [ext_resource path="res://scenes/boundary/Boundary.tscn" type="PackedScene" id=24]
 
 [sub_resource type="SegmentShape2D" id=1]
@@ -2677,7 +2677,7 @@ texture = ExtResource( 16 )
 position = Vector2( 49, 121 )
 
 [node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 356, 403 )
+position = Vector2( 317, 356 )
 
 [node name="Spike" parent="." instance=ExtResource( 7 )]
 position = Vector2( 410, 593 )
@@ -5244,5 +5244,6 @@ position = Vector2( 146, -281 )
 [node name="Boundary5" parent="Boundary" instance=ExtResource( 24 )]
 position = Vector2( 626, 0 )
 
-[node name="ShadowCreature" parent="." instance=ExtResource( 23 )]
-position = Vector2( 558, 393 )
+[node name="Drone" parent="." instance=ExtResource( 23 )]
+position = Vector2( 26, 346 )
+rotation = -1.5708
