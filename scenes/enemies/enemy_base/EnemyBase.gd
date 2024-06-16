@@ -31,7 +31,6 @@ func die():
 	set_physics_process(false)
 	animation_player.play("Die")
 	
-	
 func remove_from_scene():
 	hide()
 	queue_free()

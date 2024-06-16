@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="Super Nova"
 config/icon="res://icon.png"
 
+[autoload]
+
+LevelManager="*res://scenes/singletons/LevelManager.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
