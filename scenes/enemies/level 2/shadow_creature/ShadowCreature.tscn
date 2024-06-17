@@ -30,9 +30,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 18, 41.5 )
-
 [sub_resource type="Animation" id=5]
 resource_name = "attack"
 tracks/0/type = "value"
@@ -47,6 +44,9 @@ tracks/0/keys = {
 "update": 1,
 "values": [ "attack", "default" ]
 }
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 18, 41.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 18, 41.5 )
@@ -67,12 +67,12 @@ gravity = 400
 [node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 6 )
 
-[node name="Body" parent="." index="1"]
+[node name="AnimationPlayer" parent="." index="1"]
+anims/attack = SubResource( 5 )
+
+[node name="Body" parent="." index="2"]
 position = Vector2( -3, 6.5 )
 shape = SubResource( 1 )
-
-[node name="AnimationPlayer" parent="." index="2"]
-anims/attack = SubResource( 5 )
 
 [node name="GroundDetect" type="RayCast2D" parent="." index="3"]
 position = Vector2( 16, 45 )

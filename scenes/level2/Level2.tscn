@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://scenes/canvas_layer/CanvasLayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/nova/Nova.tscn" type="PackedScene" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://assets/level2 - dungeon/objects/crystal1.png" type="Texture" id=22]
 [ext_resource path="res://scenes/enemies/level 2/drone/Drone.tscn" type="PackedScene" id=23]
 [ext_resource path="res://scenes/boundary/Boundary.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/enemies/level 2/boss/Eagle.tscn" type="PackedScene" id=25]
 
 [sub_resource type="SegmentShape2D" id=1]
 b = Vector2( 0, 601 )
@@ -2676,9 +2677,6 @@ texture = ExtResource( 16 )
 [node name="Portal" parent="." instance=ExtResource( 18 )]
 position = Vector2( 49, 121 )
 
-[node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 317, 356 )
-
 [node name="Spike" parent="." instance=ExtResource( 7 )]
 position = Vector2( 410, 593 )
 
@@ -3551,6 +3549,54 @@ tile_type = "Tile 2"
 
 [node name="DungeonSquareTile157" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
 position = Vector2( 5712, 576 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile184" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 5712, 383 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile185" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 5760, 383 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile186" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 5808, 383 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile187" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 6048, 385 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile188" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 6096, 385 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile189" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 6144, 385 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile190" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 5712, 192 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile191" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 5760, 192 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile192" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 5808, 192 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile193" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 6048, 192 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile194" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 6096, 192 )
+tile_type = "Tile 2"
+
+[node name="DungeonSquareTile195" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
+position = Vector2( 6144, 192 )
 tile_type = "Tile 2"
 
 [node name="DungeonSquareTile158" parent="DungeonSquareTile/DungeonSquareTile17" instance=ExtResource( 6 )]
@@ -5247,3 +5293,11 @@ position = Vector2( 626, 0 )
 [node name="Drone" parent="." instance=ExtResource( 23 )]
 position = Vector2( 26, 346 )
 rotation = -1.5708
+
+[node name="BossRoom" type="Node2D" parent="."]
+position = Vector2( 6266, 288 )
+
+[node name="Eagle" parent="BossRoom" instance=ExtResource( 25 )]
+
+[node name="Nova" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5754, 263 )

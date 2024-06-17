@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scenes/enemies/boss_base/BossBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/enemies/level 2/boss/Eagle.gd" type="Script" id=2]
+[ext_resource path="res://assets/level2 - dungeon/enemies/boss/eagle-attack.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 40, 41 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 40, 0, 40, 41 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 80, 0, 40, 41 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 120, 0, 40, 41 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 65.0
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 65.0
+
+[node name="Eagle" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+health = 500
+speed = 1000.0
+damage = 35
+
+[node name="AnimatedSprite" parent="." index="0"]
+scale = Vector2( 4, 4 )
+frames = SubResource( 5 )
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource( 7 )
+
+[node name="AttackTimer" type="Timer" parent="." index="4"]
+wait_time = 0.5
+one_shot = true
+
+[node name="LockOnTimer" type="Timer" parent="." index="5"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="ReturnTimer" type="Timer" parent="." index="6"]
+one_shot = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="7"]
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]
+[connection signal="timeout" from="LockOnTimer" to="." method="_on_LockOnTimer_timeout"]
+[connection signal="timeout" from="ReturnTimer" to="." method="_on_ReturnTimer_timeout"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

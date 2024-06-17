@@ -40,18 +40,24 @@ scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 
 [node name="Body" parent="." index="1"]
+visible = false
 position = Vector2( -10, 13.5 )
 shape = SubResource( 1 )
 
 [node name="GroundDetect" type="RayCast2D" parent="." index="3"]
+visible = false
 position = Vector2( -26, 49 )
 enabled = true
+
+[node name="Hitbox" parent="." index="4"]
+visible = false
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2( -10, 13.5 )
 shape = SubResource( 5 )
 
 [node name="DetectionRange" parent="." index="5"]
+visible = false
 monitorable = true
 
 [node name="CollisionShape2D" parent="DetectionRange" index="0"]
