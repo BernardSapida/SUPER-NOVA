@@ -6,7 +6,7 @@ var velocity: Vector2
 var speed_ref = speed
 var attacking: bool = false
 var can_attack: bool = true
-var bullet_scene = preload("res://scenes/enemies/bullets/laser/LaserBullet.tscn")
+var bullet_scene = preload("res://scenes/enemies/projectiles/laser/LaserBullet.tscn")
 
 onready var ground_detection = $GroundDetect
 onready var attack_range = $AttackRange

@@ -37,6 +37,9 @@ func die():
 	explosion.global_position = global_position
 	get_tree().current_scene.add_child(explosion)
 	
+	animated_sprite.play("default")
+	animated_sprite.stop()
+	animated_sprite.frame = 0
 	animation_player.play("die")
 	
 func remove_from_scene():

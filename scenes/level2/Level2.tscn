@@ -5294,10 +5294,10 @@ position = Vector2( 626, 0 )
 position = Vector2( 26, 346 )
 rotation = -1.5708
 
-[node name="BossRoom" type="Node2D" parent="."]
+[node name="Boss" type="Node2D" parent="."]
 position = Vector2( 6266, 288 )
 
-[node name="Eagle" parent="BossRoom" instance=ExtResource( 25 )]
+[node name="Eagle" parent="Boss" instance=ExtResource( 25 )]
 
 [node name="Nova" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5754, 263 )

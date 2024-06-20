@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/level3 - factory/background/background.png" type="Texture" id=1]
 [ext_resource path="res://scenes/nova/Nova.tscn" type="PackedScene" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://scenes/pickable/Coin.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/boundary/Boundary.tscn" type="PackedScene" id=30]
 [ext_resource path="res://scenes/enemies/level 3/gunner/Gunner.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scenes/enemies/level 3/boss/Frog.tscn" type="PackedScene" id=32]
 
 [sub_resource type="SegmentShape2D" id=1]
 b = Vector2( 0, 601 )
@@ -1955,15 +1956,6 @@ position = Vector2( 864, -240 )
 [node name="Spike18" parent="Spike" instance=ExtResource( 27 )]
 position = Vector2( 816, -384 )
 
-[node name="Spike19" parent="Spike" instance=ExtResource( 27 )]
-position = Vector2( 1246, -217 )
-
-[node name="Spike20" parent="Spike" instance=ExtResource( 27 )]
-position = Vector2( 1725, -216 )
-
-[node name="Spike21" parent="Spike" instance=ExtResource( 27 )]
-position = Vector2( 1486, -217 )
-
 [node name="Spike3" parent="Spike" instance=ExtResource( 27 )]
 position = Vector2( -288, -48 )
 
@@ -2983,10 +2975,6 @@ tile_type = "Tile 2"
 position = Vector2( 6192, -48 )
 tile_type = "Tile 2"
 
-[node name="FactorySquareTile531" parent="FactorySquareTile" instance=ExtResource( 6 )]
-position = Vector2( 6429, -25 )
-tile_type = "Tile 2"
-
 [node name="FactorySquareTile493" parent="FactorySquareTile" instance=ExtResource( 6 )]
 position = Vector2( 6144, 48 )
 tile_type = "Tile 2"
@@ -3009,30 +2997,6 @@ tile_type = "Tile 2"
 
 [node name="FactorySquareTile505" parent="FactorySquareTile" instance=ExtResource( 6 )]
 position = Vector2( 6192, -192 )
-tile_type = "Tile 2"
-
-[node name="FactorySquareTile530" parent="FactorySquareTile" instance=ExtResource( 6 )]
-position = Vector2( 6334, -168 )
-tile_type = "Tile 2"
-
-[node name="FactorySquareTile536" parent="FactorySquareTile" instance=ExtResource( 6 )]
-position = Vector2( 6430, -313 )
-tile_type = "Tile 2"
-
-[node name="FactorySquareTile532" parent="FactorySquareTile" instance=ExtResource( 6 )]
-position = Vector2( 6574, -168 )
-tile_type = "Tile 2"
-
-[node name="FactorySquareTile533" parent="FactorySquareTile" instance=ExtResource( 6 )]
-position = Vector2( 6718, -312 )
-tile_type = "Tile 2"
-
-[node name="FactorySquareTile534" parent="FactorySquareTile" instance=ExtResource( 6 )]
-position = Vector2( 6717, -25 )
-tile_type = "Tile 2"
-
-[node name="FactorySquareTile535" parent="FactorySquareTile" instance=ExtResource( 6 )]
-position = Vector2( 6814, -169 )
 tile_type = "Tile 2"
 
 [node name="FactorySquareTile506" parent="FactorySquareTile" instance=ExtResource( 6 )]
@@ -4729,8 +4693,11 @@ tile_type = "Tile 2"
 position = Vector2( 4848, 48 )
 tile_type = "Tile 2"
 
+[node name="Frog" parent="." instance=ExtResource( 32 )]
+position = Vector2( 6832, 216 )
+
 [node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 724, 137 )
+position = Vector2( 640, 93 )
 
 [node name="FactoryTile" parent="." instance=ExtResource( 8 )]
 position = Vector2( 314, 465 )

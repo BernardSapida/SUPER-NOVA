@@ -4,10 +4,12 @@ var score: int = 0
 var health: float = 100
 var fuel: float = 100
 var is_raging: bool = false
-var is_unvulnerable: bool = true
+var is_unvulnerable: bool = false
 var is_invisible: bool = false
 var is_recently_hit: bool = false
 var is_allowed_to_move: bool = false
+var is_poisoned: bool = false
+var poison_duration: int = 0
 
 # Nova items
 var heart_item = 0
@@ -32,6 +34,7 @@ onready var ui = get_node("/root/Level" + str(current_level) + "/CanvasLayer/UI"
 onready var animated_sprite = $AnimatedSprite
 onready var animated_gun = animated_sprite.get_node("AnimatedGun")
 onready var animation_player = $AnimationPlayer
+onready var poison_tick_timer = $PoisonTickTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -339,20 +342,41 @@ func hit(enemyDirection: int, damage: int):
 	print(enemyDirection)
 	
 	animation_player.play("Hit")
-	set_allowed_to_move()
-	set_recently_hit()
 	
 	reduce_life(damage)
+	
+	set_allowed_to_move()
+	set_recently_hit()
 	velocity.x = 70 * enemyDirection
 	velocity.y = -200
-	
 
+func poisoned():
+	if is_unvulnerable:
+		return
+		
+	is_poisoned = true
+	poison_duration = 10
+	poison_tick_timer.start()
+	
 func set_recently_hit():
+	if health <= 0:
+		return
 	is_recently_hit = true
 	yield(get_tree().create_timer(2), "timeout")
 	is_recently_hit = false 
 
 func set_allowed_to_move():
+	if health <= 0:
+		return
 	is_allowed_to_move = true
 	yield(get_tree().create_timer(0.5), "timeout")
 	is_allowed_to_move = false
+
+
+func _on_PoisonTickTimer_timeout():
+	reduce_life(1)
+	animation_player.play("Poisoned")
+	poison_duration -= 1
+	
+	if poison_duration == 0:
+		poison_tick_timer.stop()	

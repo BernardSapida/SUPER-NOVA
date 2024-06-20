@@ -4,22 +4,23 @@ var _direction: Vector2 = Vector2.DOWN
 var _life_span: float = 20.0
 var _life_time: float = 0.0
 var _damage: int
-var animation_name
+var animation_name = "drone"
+var is_ready: bool = false
 
 onready var animated_sprite = $AnimatedSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	animated_sprite.play(animation_name)
-	if animation_name == "drone":
+	if animation_name == "drone" or animation_name == "boss":
 		animated_sprite.scale.x = 1
 		animated_sprite.scale.y = 1
 	elif animation_name == "gunner":
 		animated_sprite.scale.x = 0.6
 		animated_sprite.scale.y = 1.1
-		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	is_ready = true
 	check_expired(delta)
 	position += _direction * delta
 
@@ -36,11 +37,14 @@ func check_expired(delta: float) -> void:
 	if _life_time > _life_span:
 		queue_free()
 
-func _on_LaserBullet_body_entered(body):	
-	queue_free()
-	if body.name == "Nova":
+func _on_LaserBullet_body_entered(body):
+	if "Tile" in body.name or "Border" in body.name:
+		queue_free()
+		return
+	if body.name == "Nova" and not body.is_unvulnerable and not body.is_recently_hit and is_ready:
 		var knockback_x_direction = global_position.x - body.global_position.x
 		if knockback_x_direction >= 0:
 			body.hit(-1, _damage)
 		else:
 			body.hit(1, _damage)
+		queue_free()

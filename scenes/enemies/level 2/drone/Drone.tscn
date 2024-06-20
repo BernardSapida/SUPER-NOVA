@@ -40,7 +40,7 @@ speed = 0.0
 position = Vector2( 4.76837e-06, 2.95639e-05 )
 frames = SubResource( 1 )
 
-[node name="Body" parent="." index="1"]
+[node name="Body" parent="." index="2"]
 position = Vector2( 0, 7.5 )
 shape = SubResource( 2 )
 

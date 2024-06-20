@@ -2,7 +2,7 @@ extends EnemyBase
 
 var can_attack: bool = true
 var attacking: bool = false
-var laser_scene = preload("res://scenes/enemies/bullets/laser/LaserBullet.tscn")
+var laser_scene = preload("res://scenes/enemies/projectiles/laser/LaserBullet.tscn")
 var facing_dir: float
 
 onready var attack_timer = $AttackTimer

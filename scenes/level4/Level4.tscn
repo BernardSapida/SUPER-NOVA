@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/level1/Border.gd" type="Script" id=1]
 [ext_resource path="res://scenes/level1/Camera2D.gd" type="Script" id=2]
@@ -19,15 +19,14 @@
 [ext_resource path="res://assets/level4 - volcano/objects/background-tile3.png" type="Texture" id=17]
 [ext_resource path="res://assets/level4 - volcano/objects/base1.png" type="Texture" id=18]
 [ext_resource path="res://assets/level4 - volcano/objects/box2.png" type="Texture" id=19]
-[ext_resource path="res://assets/level4 - volcano/objects/crystal1.png" type="Texture" id=20]
 [ext_resource path="res://assets/level4 - volcano/objects/bone1.png" type="Texture" id=21]
-[ext_resource path="res://assets/level4 - volcano/objects/crystal2.png" type="Texture" id=22]
 [ext_resource path="res://assets/level4 - volcano/objects/box3.png" type="Texture" id=23]
 [ext_resource path="res://assets/level4 - volcano/objects/base2.png" type="Texture" id=24]
 [ext_resource path="res://assets/level4 - volcano/objects/base3.png" type="Texture" id=25]
 [ext_resource path="res://assets/level4 - volcano/objects/base4.png" type="Texture" id=26]
 [ext_resource path="res://scenes/pickable/GlowingOrb.tscn" type="PackedScene" id=27]
 [ext_resource path="res://scenes/pickable/Coin.tscn" type="PackedScene" id=28]
+[ext_resource path="res://scenes/enemies/level 4/boss/Golem.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/enemies/level 4/lava_monster/LavaMonster.tscn" type="PackedScene" id=30]
 
 [sub_resource type="SegmentShape2D" id=1]
@@ -122,22 +121,6 @@ texture = ExtResource( 21 )
 
 [node name="Bone15" type="Sprite" parent="Bone1"]
 position = Vector2( 9754, -186 )
-texture = ExtResource( 21 )
-
-[node name="Bone16" type="Sprite" parent="Bone1"]
-position = Vector2( 10750, -84 )
-texture = ExtResource( 21 )
-
-[node name="Bone17" type="Sprite" parent="Bone1"]
-position = Vector2( 11086, -84 )
-texture = ExtResource( 21 )
-
-[node name="Bone18" type="Sprite" parent="Bone1"]
-position = Vector2( 12014, -84 )
-texture = ExtResource( 21 )
-
-[node name="Bone19" type="Sprite" parent="Bone1"]
-position = Vector2( 12350, -84 )
 texture = ExtResource( 21 )
 
 [node name="Bone2" type="Sprite" parent="Bone1"]
@@ -1376,35 +1359,6 @@ position = Vector2( 1280, 0 )
 [node name="Lava12" parent="Lava" instance=ExtResource( 10 )]
 position = Vector2( 1408, 0 )
 
-[node name="Lava14" parent="Lava" instance=ExtResource( 10 )]
-position = Vector2( 2281, 50 )
-
-[node name="Lava15" parent="Lava" instance=ExtResource( 10 )]
-position = Vector2( 2153, 50 )
-
-[node name="Lava16" parent="Lava" instance=ExtResource( 10 )]
-position = Vector2( 2025, 50 )
-
-[node name="Lava17" parent="Lava" instance=ExtResource( 10 )]
-position = Vector2( 1897, 50 )
-
-[node name="Lava18" parent="Lava" instance=ExtResource( 10 )]
-position = Vector2( 2865, 50 )
-
-[node name="Lava19" parent="Lava" instance=ExtResource( 10 )]
-position = Vector2( 2737, 50 )
-
-[node name="Lava20" parent="Lava" instance=ExtResource( 10 )]
-position = Vector2( 2609, 50 )
-
-[node name="Lava21" parent="Lava" instance=ExtResource( 10 )]
-position = Vector2( 2481, 50 )
-
-[node name="Lava3" type="Sprite" parent="Lava/Lava21"]
-position = Vector2( -73.7499, 75.75 )
-scale = Vector2( 4.31445, 0.330078 )
-texture = ExtResource( 9 )
-
 [node name="Lava13" parent="Lava" instance=ExtResource( 10 )]
 position = Vector2( 1536, 0 )
 
@@ -1412,146 +1366,6 @@ position = Vector2( 1536, 0 )
 position = Vector2( -660.5, 101.5 )
 scale = Vector2( 7.36328, 0.511719 )
 texture = ExtResource( 9 )
-
-[node name="Crystal1" type="Sprite" parent="."]
-position = Vector2( 6937, 446 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 20 )
-
-[node name="Crystal2" type="Sprite" parent="Crystal1"]
-position = Vector2( -288, 0 )
-texture = ExtResource( 20 )
-
-[node name="Crystal4" type="Sprite" parent="Crystal1"]
-position = Vector2( 496, -288 )
-texture = ExtResource( 22 )
-
-[node name="Crystal3" type="Sprite" parent="Crystal1"]
-position = Vector2( -880, -288 )
-texture = ExtResource( 22 )
-
-[node name="Crystal5" type="Sprite" parent="Crystal1"]
-position = Vector2( -2332, -96 )
-texture = ExtResource( 20 )
-
-[node name="Crystal6" type="Sprite" parent="Crystal1"]
-position = Vector2( -3104, -96 )
-texture = ExtResource( 20 )
-
-[node name="Crystal7" type="Sprite" parent="Crystal1"]
-position = Vector2( -3862, -94 )
-texture = ExtResource( 22 )
-
-[node name="Crystal8" type="Sprite" parent="Crystal1"]
-position = Vector2( -4628, -94 )
-texture = ExtResource( 22 )
-
-[node name="Crystal9" type="Sprite" parent="Crystal1"]
-position = Vector2( -3344, -480 )
-texture = ExtResource( 20 )
-
-[node name="Crystal11" type="Sprite" parent="Crystal1"]
-position = Vector2( -2576, -478 )
-texture = ExtResource( 22 )
-
-[node name="Crystal10" type="Sprite" parent="Crystal1"]
-position = Vector2( -4112, -480 )
-texture = ExtResource( 20 )
-
-[node name="Crystal12" type="Sprite" parent="Crystal1"]
-position = Vector2( -7392, -724 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal13" type="Sprite" parent="Crystal1"]
-position = Vector2( -7488, -628 )
-rotation = 3.14159
-texture = ExtResource( 22 )
-
-[node name="Crystal16" type="Sprite" parent="Crystal1"]
-position = Vector2( -8160, -340 )
-rotation = 3.14159
-texture = ExtResource( 22 )
-
-[node name="Crystal17" type="Sprite" parent="Crystal1"]
-position = Vector2( -8256, -244 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal18" type="Sprite" parent="Crystal1"]
-position = Vector2( -10174, -820 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal26" type="Sprite" parent="Crystal1"]
-position = Vector2( -9982, -820 )
-rotation = 3.14159
-texture = ExtResource( 22 )
-
-[node name="Crystal27" type="Sprite" parent="Crystal1"]
-position = Vector2( -9566, -820 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal28" type="Sprite" parent="Crystal1"]
-position = Vector2( -9374, -820 )
-rotation = 3.14159
-texture = ExtResource( 22 )
-
-[node name="Crystal29" type="Sprite" parent="Crystal1"]
-position = Vector2( -8926, -820 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal30" type="Sprite" parent="Crystal1"]
-position = Vector2( -8734, -820 )
-rotation = 3.14159
-texture = ExtResource( 22 )
-
-[node name="Crystal19" type="Sprite" parent="Crystal1"]
-position = Vector2( -11040, -628 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal20" type="Sprite" parent="Crystal1"]
-position = Vector2( -11808, -628 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal21" type="Sprite" parent="Crystal1"]
-position = Vector2( -12766, -146 )
-rotation = 3.14159
-texture = ExtResource( 22 )
-
-[node name="Crystal22" type="Sprite" parent="Crystal1"]
-position = Vector2( -11812, -148 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal23" type="Sprite" parent="Crystal1"]
-position = Vector2( -11812, -146 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal24" type="Sprite" parent="Crystal1"]
-position = Vector2( -11524, -146 )
-rotation = 3.14159
-texture = ExtResource( 22 )
-
-[node name="Crystal25" type="Sprite" parent="Crystal1"]
-position = Vector2( -11236, -146 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal14" type="Sprite" parent="Crystal1"]
-position = Vector2( -7104, -724 )
-rotation = 3.14159
-texture = ExtResource( 20 )
-
-[node name="Crystal15" type="Sprite" parent="Crystal1"]
-position = Vector2( -7008, -628 )
-rotation = 3.14159
-texture = ExtResource( 22 )
 
 [node name="Base1" type="Sprite" parent="."]
 position = Vector2( 4008, 104 )
@@ -1718,15 +1532,6 @@ position = Vector2( 4847, 48 )
 [node name="Spike34" parent="Spike" instance=ExtResource( 7 )]
 position = Vector2( 4895, 48 )
 
-[node name="Spike35" parent="Spike" instance=ExtResource( 7 )]
-position = Vector2( 5327, 96 )
-
-[node name="Spike36" parent="Spike" instance=ExtResource( 7 )]
-position = Vector2( 5663, -48 )
-
-[node name="Spike37" parent="Spike" instance=ExtResource( 7 )]
-position = Vector2( 5903, 96 )
-
 [node name="Spike22" parent="Spike" instance=ExtResource( 7 )]
 position = Vector2( 2591, 48 )
 
@@ -1803,9 +1608,6 @@ texture = ExtResource( 19 )
 [node name="Box4" type="Sprite" parent="Box2"]
 position = Vector2( -318, -574 )
 texture = ExtResource( 19 )
-
-[node name="Nova" parent="." instance=ExtResource( 4 )]
-position = Vector2( 635, 426 )
 
 [node name="VolcanoSquareTile19" parent="." instance=ExtResource( 6 )]
 position = Vector2( -23, 1 )
@@ -3561,14 +3363,6 @@ tile_type = "Tile 2"
 position = Vector2( 7344, 0 )
 tile_type = "Tile 2"
 
-[node name="VolcanoSquareTile530" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7392, 0 )
-tile_type = "Tile 2"
-
-[node name="VolcanoSquareTile531" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 0 )
-tile_type = "Tile 2"
-
 [node name="VolcanoSquareTile517" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
 position = Vector2( 6864, 576 )
 tile_type = "Tile 2"
@@ -3597,18 +3391,6 @@ tile_type = "Tile 2"
 position = Vector2( 6336, 288 )
 tile_type = "Tile 2"
 
-[node name="VolcanoSquareTile507" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7152, 336 )
-
-[node name="VolcanoSquareTile509" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7200, 336 )
-
-[node name="VolcanoSquareTile510" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 6576, 336 )
-
-[node name="VolcanoSquareTile511" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 6528, 336 )
-
 [node name="VolcanoSquareTile444" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
 position = Vector2( 6096, 432 )
 
@@ -3632,51 +3414,47 @@ position = Vector2( 6336, 240 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile532" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 96 )
+position = Vector2( 7344, 96 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile533" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 48 )
+position = Vector2( 7344, 48 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile534" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 192 )
+position = Vector2( 7344, 192 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile535" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 144 )
+position = Vector2( 7344, 144 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile536" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 288 )
+position = Vector2( 7344, 288 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile537" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 240 )
+position = Vector2( 7344, 240 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile538" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 384 )
+position = Vector2( 7344, 384 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile539" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 336 )
+position = Vector2( 7344, 336 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile540" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 480 )
+position = Vector2( 7344, 480 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile541" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 432 )
-tile_type = "Tile 2"
-
-[node name="VolcanoSquareTile542" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 576 )
+position = Vector2( 7344, 432 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile543" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 7440, 528 )
+position = Vector2( 7344, 528 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile458" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
@@ -3692,30 +3470,64 @@ position = Vector2( 6336, 480 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile479" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 6960, 480 )
-
-[node name="VolcanoSquareTile486" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 6864, 528 )
-tile_type = "Tile 2"
+position = Vector2( 6528, 576 )
 
 [node name="VolcanoSquareTile488" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 6864, 480 )
+position = Vector2( 6432, 576 )
 
-[node name="VolcanoSquareTile524" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 6912, 528 )
+[node name="VolcanoSquareTile523" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6768, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile548" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6816, 576 )
+tile_type = "Tile 2"
+
+[node name="VolcanoSquareTile549" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7344, 576 )
 tile_type = "Tile 2"
 
 [node name="VolcanoSquareTile525" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 6912, 480 )
-
-[node name="VolcanoSquareTile508" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 6864, 192 )
-
-[node name="VolcanoSquareTile544" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 6912, 192 )
+position = Vector2( 6480, 576 )
 
 [node name="VolcanoSquareTile489" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
-position = Vector2( 6816, 480 )
+position = Vector2( 6384, 576 )
+
+[node name="VolcanoSquareTile512" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6720, 576 )
+
+[node name="VolcanoSquareTile513" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6624, 576 )
+
+[node name="VolcanoSquareTile545" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6672, 576 )
+
+[node name="VolcanoSquareTile514" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6576, 576 )
+
+[node name="VolcanoSquareTile515" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7104, 576 )
+
+[node name="VolcanoSquareTile516" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7008, 576 )
+
+[node name="VolcanoSquareTile546" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7056, 576 )
+
+[node name="VolcanoSquareTile518" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 6960, 576 )
+
+[node name="VolcanoSquareTile520" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7296, 576 )
+
+[node name="VolcanoSquareTile521" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7200, 576 )
+
+[node name="VolcanoSquareTile547" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7248, 576 )
+
+[node name="VolcanoSquareTile522" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
+position = Vector2( 7152, 576 )
 
 [node name="VolcanoSquareTile364" parent="VolcanoSquareTile19" instance=ExtResource( 6 )]
 position = Vector2( 4032, 528 )
@@ -3911,3 +3723,11 @@ position = Vector2( -191, 292 )
 
 [node name="LavaMonster" parent="." instance=ExtResource( 30 )]
 position = Vector2( 682, 151 )
+
+[node name="Nova" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6625, 399 )
+
+[node name="Boss" type="Node2D" parent="."]
+position = Vector2( 7249, 477 )
+
+[node name="Golem" parent="Boss" instance=ExtResource( 29 )]

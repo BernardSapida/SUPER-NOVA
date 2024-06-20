@@ -39,7 +39,7 @@ gravity = 400
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
 
-[node name="Body" parent="." index="1"]
+[node name="Body" parent="." index="2"]
 visible = false
 position = Vector2( -10, 13.5 )
 shape = SubResource( 1 )
