@@ -11,6 +11,7 @@ func _ready():
 	animated_sprite.play("default")
 	speed_ref = speed
 	facing = default_facing
+	
 
 func _physics_process(delta):
 	velocity.x = 0
@@ -74,3 +75,5 @@ func die():
 	set_physics_process(false)
 	animation_player.play("Die")
 	animated_sprite.play("die")
+	
+	LevelManager.add_current_points(points)

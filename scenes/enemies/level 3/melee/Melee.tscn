@@ -61,21 +61,22 @@ extents = Vector2( 31.5, 74.5 )
 extents = Vector2( 31.5, 74 )
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 312.002
+radius = 288.028
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 39, 46 )
+extents = Vector2( 46, 46 )
 
 [node name="Melee" instance=ExtResource( 1 )]
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 30 )
 speed = 100.0
+damage = 15
 gravity = 400
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 1 )
 
-[node name="Body" parent="." index="1"]
+[node name="Body" parent="." index="2"]
 position = Vector2( 0, 3 )
 shape = SubResource( 2 )
 
@@ -96,7 +97,7 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" index="0"]
-position = Vector2( -71, 0 )
+position = Vector2( -78, 0 )
 shape = SubResource( 5 )
 
 [connection signal="body_entered" from="AttackRange" to="." method="_on_AttackRange_body_entered"]

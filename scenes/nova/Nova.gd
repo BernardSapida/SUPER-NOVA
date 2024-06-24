@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
 var score: int = 0
-var health: float = 100
+var health: float = 1
 var fuel: float = 100
 var is_raging: bool = false
-var is_unvulnerable: bool = false
+var is_unvulnerable: bool = true
 var is_invisible: bool = false
 var is_recently_hit: bool = false
 var is_allowed_to_move: bool = false
@@ -35,10 +35,11 @@ onready var animated_sprite = $AnimatedSprite
 onready var animated_gun = animated_sprite.get_node("AnimatedGun")
 onready var animation_player = $AnimationPlayer
 onready var poison_tick_timer = $PoisonTickTimer
+onready var transition = get_node("/root/Level" + str(current_level) + "/CanvasLayer/Transition")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	print(LevelManager.DIFFICULTY)
 
 func _process(delta):
 	regen_fuel()
@@ -285,8 +286,14 @@ func reduce_life(damage: int):
 func die():
 #	dead_sound.play()
 #	animated_sprite.play("dead")
-#	yield(get_tree().create_timer(0.5), "timeout") 
-	get_tree().reload_current_scene()
+#	yield(get_tree().create_timer(0.5), "timeout")
+	set_physics_process(false)
+	animated_sprite.stop()
+	animation_player.play("Die")
+	
+func replay():
+	ui.hide()
+	transition.transition_to("res://scenes/menu_screens/death_screen/DeathScreen.tscn")
 
 func sync_gun():
 	if is_raging:
@@ -339,8 +346,6 @@ func hit(enemyDirection: int, damage: int):
 	if is_recently_hit or is_unvulnerable:
 		return
 	
-	print(enemyDirection)
-	
 	animation_player.play("Hit")
 	
 	reduce_life(damage)
@@ -351,8 +356,6 @@ func hit(enemyDirection: int, damage: int):
 	velocity.y = -200
 
 func poisoned():
-	if is_unvulnerable:
-		return
 		
 	is_poisoned = true
 	poison_duration = 10

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://scenes/level1/Border.gd" type="Script" id=1]
 [ext_resource path="res://scenes/level1/Camera2D.gd" type="Script" id=2]
@@ -19,7 +19,9 @@
 [ext_resource path="res://assets/level4 - volcano/objects/background-tile3.png" type="Texture" id=17]
 [ext_resource path="res://assets/level4 - volcano/objects/base1.png" type="Texture" id=18]
 [ext_resource path="res://assets/level4 - volcano/objects/box2.png" type="Texture" id=19]
+[ext_resource path="res://scenes/enemies/level 4/slime/Slime.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/level4 - volcano/objects/bone1.png" type="Texture" id=21]
+[ext_resource path="res://scenes/boundary/Boundary.tscn" type="PackedScene" id=22]
 [ext_resource path="res://assets/level4 - volcano/objects/box3.png" type="Texture" id=23]
 [ext_resource path="res://assets/level4 - volcano/objects/base2.png" type="Texture" id=24]
 [ext_resource path="res://assets/level4 - volcano/objects/base3.png" type="Texture" id=25]
@@ -28,6 +30,9 @@
 [ext_resource path="res://scenes/pickable/Coin.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/enemies/level 4/boss/Golem.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/enemies/level 4/lava_monster/LavaMonster.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scenes/boss_room_entrance/entrance.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scenes/transition/transition.tscn" type="PackedScene" id=33]
+[ext_resource path="res://scenes/menu_screens/pause_screen/PauseScreen.tscn" type="PackedScene" id=34]
 
 [sub_resource type="SegmentShape2D" id=1]
 b = Vector2( 0, 601 )
@@ -62,6 +67,11 @@ current = true
 script = ExtResource( 2 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+
+[node name="Transition" parent="CanvasLayer" instance=ExtResource( 33 )]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 34 )]
+visible = false
 
 [node name="Portal" parent="." instance=ExtResource( 8 )]
 position = Vector2( 296, 78 )
@@ -3721,13 +3731,178 @@ position = Vector2( -623, 294 )
 [node name="Coin5" parent="Coins" instance=ExtResource( 28 )]
 position = Vector2( -191, 292 )
 
-[node name="LavaMonster" parent="." instance=ExtResource( 30 )]
-position = Vector2( 682, 151 )
+[node name="Coin16" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 1491, 101 )
+
+[node name="Coin19" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 1691, 298 )
+
+[node name="Coin20" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 914, 296 )
+
+[node name="Coin23" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 722, 110 )
+
+[node name="Coin32" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 530, 298 )
+
+[node name="Coin33" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 1298, 296 )
+
+[node name="Coin34" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( -45, 272 )
+
+[node name="Coin35" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 1947, 102 )
+
+[node name="Boundary" parent="." instance=ExtResource( 22 )]
+position = Vector2( 913, 183 )
+
+[node name="Boundary2" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 240, 8 )
+
+[node name="Boundary3" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 48, 270 )
+
+[node name="Boundary4" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 480, 297 )
+
+[node name="Boundary5" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 384, -9 )
+
+[node name="Boundary6" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 624, -4 )
+
+[node name="Boundary7" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 864, 13 )
+
+[node name="Boundary8" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 1104, 10 )
+
+[node name="Boundary9" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 1200, 16 )
+
+[node name="Boundary10" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 1392, 18 )
+
+[node name="Boundary11" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 1488, 18 )
+
+[node name="Boundary12" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 1728, 18 )
+
+[node name="Boundary13" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 1967, -9 )
+
+[node name="Boundary14" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 2112, 252 )
+
+[node name="Boundary15" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 2300, 275 )
+
+[node name="Boundary16" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 2496, 270 )
+
+[node name="Boundary17" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 2688, 270 )
+
+[node name="Boundary18" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 3504, 191 )
+
+[node name="Boundary19" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 3696, 212 )
+
+[node name="Boundary20" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 3792, 210 )
+
+[node name="Boundary21" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 4272, 1 )
+
+[node name="Boundary22" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 4366, 7 )
+
+[node name="Boundary23" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 4848, 212 )
+
+[node name="Boundary24" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 4944, 215 )
+
+[node name="Boundary25" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 5136, 45 )
+
+[node name="Boundary26" parent="Boundary" instance=ExtResource( 22 )]
+position = Vector2( 5136, 215 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Slime" parent="Enemies" instance=ExtResource( 20 )]
+position = Vector2( 97, 222 )
+
+[node name="Slime2" parent="Enemies" instance=ExtResource( 20 )]
+position = Vector2( 144, 369 )
+
+[node name="Slime3" parent="Enemies" instance=ExtResource( 20 )]
+position = Vector2( 761, 450 )
+
+[node name="Slime4" parent="Enemies" instance=ExtResource( 20 )]
+position = Vector2( 1561, 504 )
+
+[node name="Slime5" parent="Enemies" instance=ExtResource( 20 )]
+position = Vector2( 2064, 183 )
+
+[node name="Slime6" parent="Enemies" instance=ExtResource( 20 )]
+position = Vector2( 2352, 183 )
+
+[node name="Slime7" parent="Enemies" instance=ExtResource( 20 )]
+position = Vector2( 4200, 507 )
+
+[node name="Slime8" parent="Enemies" instance=ExtResource( 20 )]
+position = Vector2( 4657, 369 )
+
+[node name="Slime9" parent="Enemies" instance=ExtResource( 20 )]
+position = Vector2( 5817, 369 )
+
+[node name="LavaMonster" parent="Enemies" instance=ExtResource( 30 )]
+position = Vector2( 313, 503 )
+
+[node name="LavaMonster2" parent="Enemies" instance=ExtResource( 30 )]
+position = Vector2( 701, 163 )
+
+[node name="LavaMonster3" parent="Enemies" instance=ExtResource( 30 )]
+position = Vector2( 1657, 161 )
+
+[node name="LavaMonster4" parent="Enemies" instance=ExtResource( 30 )]
+position = Vector2( 2784, 165 )
+
+[node name="LavaMonster5" parent="Enemies" instance=ExtResource( 30 )]
+position = Vector2( 3122, 404 )
+
+[node name="LavaMonster6" parent="Enemies" instance=ExtResource( 30 )]
+position = Vector2( 3484, 411 )
+
+[node name="LavaMonster7" parent="Enemies" instance=ExtResource( 30 )]
+position = Vector2( 4022, 61 )
+
+[node name="LavaMonster8" parent="Enemies" instance=ExtResource( 30 )]
+position = Vector2( 5233, 151 )
+
+[node name="LavaMonster9" parent="Enemies" instance=ExtResource( 30 )]
+position = Vector2( 6204, 208 )
+
+[node name="BossRoom" type="Node2D" parent="."]
+position = Vector2( 6817, 289 )
+
+[node name="entrance" parent="BossRoom" instance=ExtResource( 32 )]
+position = Vector2( -504, 144 )
+
+[node name="Portal" parent="BossRoom" instance=ExtResource( 8 )]
+position = Vector2( 0, 211 )
+is_portal = true
+
+[node name="BossOriginalPosition" type="Node2D" parent="BossRoom"]
+position = Vector2( 432, 190 )
+
+[node name="Golem" parent="BossRoom/BossOriginalPosition" instance=ExtResource( 29 )]
 
 [node name="Nova" parent="." instance=ExtResource( 4 )]
-position = Vector2( 6625, 399 )
-
-[node name="Boss" type="Node2D" parent="."]
-position = Vector2( 7249, 477 )
-
-[node name="Golem" parent="Boss" instance=ExtResource( 29 )]
+position = Vector2( 6313, 371 )

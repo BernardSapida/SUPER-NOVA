@@ -38,20 +38,20 @@ script = ExtResource( 10 )
 default_facing = 1
 health = 200
 speed = 60.0
-damage = 30
 gravity = 400
 
 [node name="AnimatedSprite" parent="." index="0"]
 scale = Vector2( 2, 2 )
 frames = SubResource( 1 )
 
-[node name="Body" parent="." index="1"]
+[node name="Body" parent="." index="2"]
 position = Vector2( 1, 0 )
 shape = SubResource( 2 )
 
 [node name="GroundDetect" type="RayCast2D" parent="." index="3"]
 position = Vector2( 23, 30 )
 enabled = true
+cast_to = Vector2( 0, 20 )
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2( 1, 0 )

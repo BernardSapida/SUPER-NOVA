@@ -61,6 +61,7 @@ extents = Vector2( 16.5, 5 )
 script = ExtResource( 2 )
 default_facing = 1
 health = 80
+speed = 110.0
 damage = 15
 gravity = 400
 

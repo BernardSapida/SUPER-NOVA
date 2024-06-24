@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/enemies/boss_base/BossBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/enemies/level 4/boss/Golem.gd" type="Script" id=2]
@@ -18,8 +18,39 @@ extents = Vector2( 46, 62 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 46, 62 )
 
+[sub_resource type="Animation" id=27]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "activate"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
 [sub_resource type="Animation" id=6]
 resource_name = "bullet_attack"
+length = 13.5
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -27,37 +58,64 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1, 3, 5, 7, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "values": [ {
 "args": [  ],
-"method": "vertical_bullet_rain"
+"method": "check_facing"
+}, {
+"args": [  ],
+"method": "deferred_bullet_attack"
+}, {
+"args": [  ],
+"method": "deferred_bullet_attack"
+}, {
+"args": [  ],
+"method": "deferred_bullet_attack"
+}, {
+"args": [  ],
+"method": "deferred_bullet_attack"
+}, {
+"args": [  ],
+"method": "deferred_bullet_attack"
 } ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -176 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimatedSprite:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 13, 13.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=2]
 resource_name = "dash_attack"
 length = 10.0
 step = 0.25
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 1.5, 2, 3, 3.5, 4, 5, 5.5, 6, 7, 7.5, 8, 9, 9.5, 10 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "values": [ {
@@ -92,36 +150,166 @@ tracks/1/keys = {
 "method": "dash_attack"
 } ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2, 3, 3.5, 4, 5, 5.5, 6, 7, 7.5, 8, 9, 9.5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
-[sub_resource type="Animation" id=7]
-resource_name = "rock_attack"
+[sub_resource type="Animation" id=22]
+resource_name = "die"
+
+[sub_resource type="Animation" id=13]
+resource_name = "start_state"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=8]
-resource_name = "starting_position"
+resource_name = "weakness"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 0.8 ), Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
+}
 
-[sub_resource type="AnimationNodeAnimation" id=11]
-animation = "RESET"
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "activate"
 
-[sub_resource type="AnimationNodeAnimation" id=12]
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "bullet_attack"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "dash_attack"
 
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "die"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "start_state"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "weakness"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+advance_condition = "dying"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+advance_condition = "dying"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+advance_condition = "dying"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+switch_mode = 2
+advance_condition = "active"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+switch_mode = 2
+auto_advance = true
+
 [sub_resource type="AnimationNodeStateMachine" id=9]
-states/RESET/node = SubResource( 11 )
-states/RESET/position = Vector2( 103, -171 )
-states/dash_attack/node = SubResource( 12 )
-states/dash_attack/position = Vector2( 342, -171 )
-start_node = "RESET"
-graph_offset = Vector2( 0, -262 )
+states/activate/node = SubResource( 29 )
+states/activate/position = Vector2( 201, -212 )
+states/bullet_attack/node = SubResource( 14 )
+states/bullet_attack/position = Vector2( 636, -212 )
+states/dash_attack/node = SubResource( 15 )
+states/dash_attack/position = Vector2( 394, -212 )
+states/die/node = SubResource( 23 )
+states/die/position = Vector2( 636, -95 )
+states/start_state/node = SubResource( 16 )
+states/start_state/position = Vector2( 25, -212 )
+states/weakness/node = SubResource( 17 )
+states/weakness/position = Vector2( 394, -95 )
+transitions = [ "dash_attack", "bullet_attack", SubResource( 18 ), "bullet_attack", "weakness", SubResource( 19 ), "weakness", "dash_attack", SubResource( 20 ), "dash_attack", "die", SubResource( 24 ), "bullet_attack", "die", SubResource( 25 ), "weakness", "die", SubResource( 26 ), "start_state", "activate", SubResource( 30 ), "activate", "dash_attack", SubResource( 31 ) ]
+start_node = "start_state"
+graph_offset = Vector2( -128.115, -262 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=10]
 
 [node name="Golem" instance=ExtResource( 1 )]
+modulate = Color( 0.694118, 0.184314, 0.00392157, 1 )
 collision_mask = 4
 script = ExtResource( 2 )
+health = 50
 speed = 1.0
 damage = 25
 
 [node name="AnimatedSprite" parent="." index="0"]
+rotation = 0.0
 frames = SubResource( 1 )
 
 [node name="CollisionShape2D" parent="." index="2"]
@@ -135,13 +323,19 @@ position = Vector2( -1, 11 )
 shape = SubResource( 5 )
 
 [node name="States" type="AnimationPlayer" parent="." index="4"]
+reset_on_save = false
+anims/RESET = SubResource( 27 )
+anims/activate = SubResource( 28 )
 anims/bullet_attack = SubResource( 6 )
 anims/dash_attack = SubResource( 2 )
-anims/rock_attack = SubResource( 7 )
-anims/starting_position = SubResource( 8 )
+anims/die = SubResource( 22 )
+anims/start_state = SubResource( 13 )
+anims/weakness = SubResource( 8 )
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="5"]
 tree_root = SubResource( 9 )
 anim_player = NodePath("../States")
 active = true
 parameters/playback = SubResource( 10 )
+parameters/conditions/active = false
+parameters/conditions/dying = false

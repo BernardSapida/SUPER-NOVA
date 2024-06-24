@@ -12,7 +12,8 @@ export var damage: int = 20
 var facing = default_facing
 var dying: bool = false
 var hit_player: bool = false
-#var player_position
+var points = 100
+var active: bool = false
 
 onready var player_ref = get_tree().get_nodes_in_group("Player")[0]
 onready var animated_sprite = $AnimatedSprite
@@ -23,7 +24,20 @@ var death_explosion = preload("res://scenes/enemies/boss_death_effect/DeathEffec
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	animated_sprite.play("default")
+	
+	health *= LevelManager.DIFFICULTY
+	damage *= LevelManager.DIFFICULTY
+	points *= LevelManager.DIFFICULTY
+	
 	#player_position = player_ref.position
+
+func activate():
+	animation_player.play("entrance")
+	yield(animation_player, "animation_finished")
+	active = true
+
+func deactivate():
+	active = false
 
 func die():
 	if dying:
@@ -34,6 +48,7 @@ func die():
 	set_physics_process(false)
 	
 	var explosion = death_explosion.instance()
+
 	explosion.global_position = global_position
 	get_tree().current_scene.add_child(explosion)
 	
@@ -41,6 +56,7 @@ func die():
 	animated_sprite.stop()
 	animated_sprite.frame = 0
 	animation_player.play("die")
+	LevelManager.add_current_points(points)
 	
 func remove_from_scene():
 	hide()

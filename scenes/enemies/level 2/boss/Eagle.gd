@@ -12,9 +12,11 @@ onready var eagle = $"."
 
 func _ready():
 	animated_sprite.play("default")
-	print(speed)
 	
 func _physics_process(delta):
+	if not active:
+		return
+	
 	velocity = Vector2.ZERO
 	
 	if not locked_on:
@@ -25,15 +27,44 @@ func _physics_process(delta):
 		
 	move_and_slide(velocity)
 	
-	print(position)
+func activate():
+	animation_player.play("entrance")
+	yield(animation_player, "animation_finished")
+	active = true
+	lock_on_timer.start()
+		
+		
+func die():
+	if dying:
+		return
+		
+	dying = true
+	
+	set_physics_process(false)
+	
+	var explosion = death_explosion.instance()
+
+	explosion.global_position = global_position
+	get_tree().current_scene.add_child(explosion)
+	
+	animated_sprite.play("default")
+	animated_sprite.stop()
+	animated_sprite.frame = 0
+	attack_timer.stop()
+	lock_on_timer.stop()
+	return_timer.stop()
+	animation_player.play("die")
+	LevelManager.add_current_points(points)
+
+		
 		
 func return_to_position():
 	var tween = get_tree().create_tween()
 	if facing == FACING.RIGHT:
-		tween.tween_property(eagle, "position", Vector2.ZERO, 1.0 )
+		tween.tween_property(eagle, "position", Vector2(360, 0), 1.0 )
 		flip_me()
 	elif facing == FACING.LEFT:
-		tween.tween_property(eagle, "position", Vector2(-720, 0), 1.0 )
+		tween.tween_property(eagle, "position", Vector2(-360, 0), 1.0 )
 		flip_me()
 	tween.connect("finished", self, "lock_on_player")
 

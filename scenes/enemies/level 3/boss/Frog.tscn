@@ -66,11 +66,12 @@ extents = Vector2( 79, 56.5 )
 [node name="Frog" instance=ExtResource( 1 )]
 collision_mask = 1
 script = ExtResource( 2 )
+health = 1
 speed = 0.0
 damage = 20
 
 [node name="AnimatedSprite" parent="." index="0"]
-modulate = Color( 0.572549, 0.866667, 0.568627, 1 )
+rotation = 0.0
 scale = Vector2( 7, 7 )
 frames = SubResource( 6 )
 

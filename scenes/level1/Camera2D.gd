@@ -5,8 +5,10 @@ onready var nova = get_node("/root/Level"+str(current_level)+"/Nova")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	LevelManager.is_player_in_boss_room = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x = nova.position.x+150
+	if not LevelManager.is_player_in_boss_room:
+		position.x = nova.position.x+150
+

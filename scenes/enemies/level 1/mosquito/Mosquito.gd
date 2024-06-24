@@ -9,8 +9,14 @@ onready var stop_timer = $StopTimer
 func _ready():
 	animated_sprite.play("default")
 	speed_ref = speed
+	
+	health *= LevelManager.DIFFICULTY
+	damage *= LevelManager.DIFFICULTY
 
 func _physics_process(delta):
+	if not active:
+		return
+	
 	velocity = Vector2(0, 0)
 		
 	move()
@@ -33,6 +39,8 @@ func die():
 	set_physics_process(false)
 	animation_player.play("Die")
 	animated_sprite.play("die")
+	
+	LevelManager.add_current_points(points)
 	
 func face_player():
 	if player_ref.global_position.x > global_position.x and facing == FACING.LEFT:
@@ -64,6 +72,7 @@ func _on_DetectionRange_body_entered(body):
 	stop_timer.stop()
 
 func _on_DetectionRange_body_exited(body):
-	player_detected = false
-	speed = 0
-	stop_timer.start()
+	if not dying:
+		player_detected = false
+		speed = 0
+		stop_timer.start()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://scenes/tiles/level1/ForestSquareTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/nova/Nova.tscn" type="PackedScene" id=2]
@@ -36,6 +36,9 @@
 [ext_resource path="res://scenes/enemies/level 1/mosquito/Mosquito.tscn" type="PackedScene" id=34]
 [ext_resource path="res://scenes/enemies/level 1/dinosaur/Dinosaur.tscn" type="PackedScene" id=35]
 [ext_resource path="res://scenes/boundary/Boundary.tscn" type="PackedScene" id=36]
+[ext_resource path="res://scenes/boss_room_entrance/entrance.tscn" type="PackedScene" id=37]
+[ext_resource path="res://scenes/menu_screens/pause_screen/PauseScreen.tscn" type="PackedScene" id=38]
+[ext_resource path="res://scenes/transition/transition.tscn" type="PackedScene" id=39]
 
 [sub_resource type="SegmentShape2D" id=2]
 a = Vector2( 165, 0 )
@@ -78,8 +81,15 @@ scale = Vector2( 0.878216, 0.771208 )
 texture = ExtResource( 4 )
 flip_h = true
 
+[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+
+[node name="Transition" parent="CanvasLayer" instance=ExtResource( 39 )]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 38 )]
+visible = false
+
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 512, 301 )
+position = Vector2( 174, 290 )
 current = true
 script = ExtResource( 5 )
 
@@ -5151,6 +5161,48 @@ tile_type = "Tile 3"
 [node name="ForestSquareTile68" parent="ForestSquareTile/ForestSquareTile87" instance=ExtResource( 1 )]
 position = Vector2( 2544, 0 )
 
+[node name="ForestSquareTile75" parent="ForestSquareTile/ForestSquareTile87" instance=ExtResource( 1 )]
+position = Vector2( 2208, -192 )
+
+[node name="ForestSquareTile73" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile75" instance=ExtResource( 1 )]
+position = Vector2( 96, 0 )
+
+[node name="ForestSquareTile74" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile75" instance=ExtResource( 1 )]
+position = Vector2( 48, 0 )
+
+[node name="ForestSquareTile76" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile75" instance=ExtResource( 1 )]
+position = Vector2( 144, 0 )
+
+[node name="ForestSquareTile77" parent="ForestSquareTile/ForestSquareTile87" instance=ExtResource( 1 )]
+position = Vector2( 2592, -192 )
+
+[node name="ForestSquareTile73" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile77" instance=ExtResource( 1 )]
+position = Vector2( 96, 0 )
+
+[node name="ForestSquareTile74" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile77" instance=ExtResource( 1 )]
+position = Vector2( 48, 0 )
+
+[node name="ForestSquareTile76" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile77" instance=ExtResource( 1 )]
+position = Vector2( 144, 0 )
+
+[node name="ForestSquareTile76" parent="ForestSquareTile/ForestSquareTile87" instance=ExtResource( 1 )]
+position = Vector2( 2352, -384 )
+
+[node name="ForestSquareTile73" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile76" instance=ExtResource( 1 )]
+position = Vector2( 96, 0 )
+
+[node name="ForestSquareTile74" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile76" instance=ExtResource( 1 )]
+position = Vector2( 48, 0 )
+
+[node name="ForestSquareTile76" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile76" instance=ExtResource( 1 )]
+position = Vector2( 144, 0 )
+
+[node name="ForestSquareTile77" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile76" instance=ExtResource( 1 )]
+position = Vector2( 192, 0 )
+
+[node name="ForestSquareTile78" parent="ForestSquareTile/ForestSquareTile87/ForestSquareTile76" instance=ExtResource( 1 )]
+position = Vector2( 240, 0 )
+
 [node name="ForestSquareTile34" parent="ForestSquareTile/ForestSquareTile87" instance=ExtResource( 1 )]
 position = Vector2( 960, 0 )
 
@@ -5355,7 +5407,7 @@ position = Vector2( 0, 144 )
 tile_type = "Tile 2"
 
 [node name="ForestSquareTile48" parent="ForestSquareTile" instance=ExtResource( 1 )]
-position = Vector2( 1584, -288 )
+position = Vector2( 1585, -288 )
 
 [node name="ForestSquareTile1" parent="ForestSquareTile/ForestSquareTile48" instance=ExtResource( 1 )]
 position = Vector2( 0, 48 )
@@ -5368,8 +5420,6 @@ tile_type = "Tile 2"
 [node name="ForestSquareTile3" parent="ForestSquareTile/ForestSquareTile48" instance=ExtResource( 1 )]
 position = Vector2( 1, 144 )
 tile_type = "Tile 3"
-
-[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
 
 [node name="Coins" type="Node2D" parent="."]
 position = Vector2( 161, 285 )
@@ -5523,22 +5573,103 @@ item = "Shield"
 position = Vector2( 4223, 121 )
 item = "Cloak"
 
-[node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1720, 411 )
-
-[node name="Mosquito" parent="." instance=ExtResource( 34 )]
-position = Vector2( 80, 96 )
-
-[node name="Dinosaur" parent="." instance=ExtResource( 35 )]
-position = Vector2( 2054, 403 )
-
 [node name="Boundary" parent="." instance=ExtResource( 36 )]
 position = Vector2( 1871, 414 )
 
-[node name="Boundary2" parent="." instance=ExtResource( 36 )]
-position = Vector2( 1773, 411 )
+[node name="Boundary2" parent="Boundary" instance=ExtResource( 36 )]
+position = Vector2( -98, -3 )
 
-[node name="Boundary3" parent="." instance=ExtResource( 36 )]
-position = Vector2( 3359, 509 )
+[node name="Boundary3" parent="Boundary" instance=ExtResource( 36 )]
+position = Vector2( 1488, 95 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Dinosaur" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 493, 99 )
+
+[node name="Dinosaur2" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 813, 393 )
+
+[node name="Dinosaur3" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 1581, 401 )
+
+[node name="Dinosaur4" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 2138, 401 )
+
+[node name="Dinosaur5" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 2498, 54 )
+
+[node name="Dinosaur6" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 2885, 496 )
+
+[node name="Dinosaur7" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 3438, 234 )
+
+[node name="Dinosaur8" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 3659, 494 )
+
+[node name="Dinosaur9" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 4417, 491 )
+
+[node name="Dinosaur11" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 4865, 493 )
+
+[node name="Dinosaur13" parent="Enemies" instance=ExtResource( 35 )]
+position = Vector2( 4656, 199 )
+
+[node name="Mosquito" parent="Enemies" instance=ExtResource( 34 )]
+position = Vector2( 1359, 273 )
+
+[node name="Mosquito2" parent="Enemies" instance=ExtResource( 34 )]
+position = Vector2( 649, 204 )
+
+[node name="Mosquito3" parent="Enemies" instance=ExtResource( 34 )]
+position = Vector2( 1763, 76 )
+
+[node name="Mosquito4" parent="Enemies" instance=ExtResource( 34 )]
+position = Vector2( 2863, 87 )
+
+[node name="Mosquito5" parent="Enemies" instance=ExtResource( 34 )]
+position = Vector2( 3128, 62 )
+
+[node name="Mosquito6" parent="Enemies" instance=ExtResource( 34 )]
+position = Vector2( 4018, 96 )
+
+[node name="Mosquito7" parent="Enemies" instance=ExtResource( 34 )]
+position = Vector2( 4385, 250 )
+
+[node name="BossRoom" type="Node2D" parent="."]
+position = Vector2( 5522, 287 )
+
+[node name="entrance" parent="BossRoom" instance=ExtResource( 37 )]
+position = Vector2( -412, -142 )
+
+[node name="Portal" parent="BossRoom" instance=ExtResource( 33 )]
+position = Vector2( 0, 217 )
+is_portal = true
+
+[node name="Mosquito9" parent="BossRoom" instance=ExtResource( 34 )]
+position = Vector2( 224, -215 )
+
+[node name="Mosquito10" parent="BossRoom" instance=ExtResource( 34 )]
+position = Vector2( 0, -3 )
+
+[node name="Dinosaur10" parent="BossRoom" instance=ExtResource( 35 )]
+position = Vector2( -174, 17 )
+
+[node name="Dinosaur13" parent="BossRoom" instance=ExtResource( 35 )]
+position = Vector2( 8, 211 )
+
+[node name="Dinosaur11" parent="BossRoom" instance=ExtResource( 35 )]
+position = Vector2( 8, -168 )
+
+[node name="Dinosaur12" parent="BossRoom" instance=ExtResource( 35 )]
+position = Vector2( 200, 12 )
+
+[node name="Mosquito8" parent="BossRoom" instance=ExtResource( 34 )]
+position = Vector2( -174, -215 )
+
+[node name="Nova" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5106, 73 )
 
 [connection signal="body_entered" from="DeadEnd" to="DeadEnd" method="_on_DeadEnd_body_entered"]

@@ -4,25 +4,33 @@ var gravity = 800
 
 const JUMP_VELOCITY: Vector2 = Vector2(150, -400)
 const SUPER_JUMP_VELOCITY: Vector2 = Vector2(250, -1600)
-const JUMP_WAIT_RANGE: Vector2 = Vector2(0.5, 3.0)
+const JUMP_WAIT_RANGE: Vector2 = Vector2(1.0, 3.0)
 
 var velocity: Vector2
 var super_jump: bool = false
-var jump_counter: int = 1
+var jump_counter: int = 5
 var _jump: bool = false
 var is_recently_super_jump: bool = false
+var just_active: bool = false
 
 onready var jump_timer = $JumpTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomize()
 	animated_sprite.play("default")
+	
+func activate():
+	animation_player.play("entrance")
+	yield(animation_player, "animation_finished")
+	active = true
+	just_active = true
 	start_timer()
 	
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if not active:
+		return
 	
 	if is_on_floor() == false:
 		velocity.y += gravity * delta
@@ -30,7 +38,7 @@ func _physics_process(delta):
 		velocity.x = 0
 		animated_sprite.play("default")	
 	
-	if velocity.y > 0:
+	if velocity.y > 0 and not just_active:
 		animated_sprite.play("falling")
 		
 	apply_jump()
@@ -40,6 +48,8 @@ func _physics_process(delta):
 	flip_me()
 
 func apply_jump() -> void:
+	if just_active:
+		just_active = false
 	
 	if not is_on_floor():
 		return
@@ -60,7 +70,7 @@ func apply_jump() -> void:
 	
 	animated_sprite.play("jump")
 	
-	jump_timer.start()
+	start_timer()
 	
 func apply_super_jump():
 	
@@ -72,7 +82,7 @@ func apply_super_jump():
 	
 	gravity *= 4
 	velocity = SUPER_JUMP_VELOCITY
-	jump_counter = 1
+	jump_counter = 5
 	
 	if animated_sprite.flip_h == false:
 		velocity.x = velocity.x * -1
@@ -81,7 +91,7 @@ func apply_super_jump():
 	is_recently_super_jump = true
 	
 	animated_sprite.play("jump")
-	jump_timer.start()
+	start_timer()
 
 func apply_stomp():
 	if not is_recently_super_jump:
@@ -119,7 +129,7 @@ func flip_me() -> void:
 
 func start_timer() -> void:
 	if is_recently_super_jump:
-		jump_timer.wait_time = rand_range(JUMP_WAIT_RANGE.x + 2.0, JUMP_WAIT_RANGE.y)
+		jump_timer.wait_time = rand_range(JUMP_WAIT_RANGE.x + 2.0, JUMP_WAIT_RANGE.y + 1.0)
 	else: 
 		jump_timer.wait_time = rand_range(JUMP_WAIT_RANGE.x, JUMP_WAIT_RANGE.y)
 	jump_timer.start()

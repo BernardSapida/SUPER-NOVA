@@ -13,6 +13,8 @@ func _on_ThornyVines_body_entered(body):
 	
 		while touched:
 			body.reduce_life(1)
+			if body.health <= 0:
+				return
 			yield(get_tree().create_timer(2), "timeout")
 
 func _on_ThornyVines_body_exited(body):

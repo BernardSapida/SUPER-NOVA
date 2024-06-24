@@ -13,7 +13,8 @@ func _ready():
 	animated_sprite.play("default")
 	facing = default_facing
 	speed_ref = speed
-
+	
+	
 func _physics_process(delta):
 	velocity.x = 0
 
@@ -28,12 +29,12 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 	if not attacking:
-		animated_sprite.play("default")
-		
-	if not attacking:
 		speed = speed_ref
 
 func move():
+	if player_within_attacking_range:
+		return
+		
 	if player_detected:
 		if not abs(player_ref.global_position.x - global_position.x) >= 10:	
 			return
@@ -59,7 +60,7 @@ func flip_me():
 		$AttackRange.position.x = 0
 	else:
 		facing = FACING.LEFT
-		$AttackRange.position.x = -59
+		$AttackRange.position.x = -64
 
 func die():
 	if dying:
@@ -70,6 +71,8 @@ func die():
 	set_physics_process(false)
 	animation_player.play("Die")
 	animated_sprite.play("die")
+	
+	LevelManager.add_current_points(points)
 
 func hit(damage: int):
 	health -= damage
@@ -83,20 +86,22 @@ func hit(damage: int):
 func _on_AttackRange_body_entered(body):
 	if body.name == "Nova" and not dying and is_on_floor():
 		player_within_attacking_range = true
-		attacking = true
 		speed = 0
-		animated_sprite.play("attack")
-		print("hi")
-		
-		yield(get_tree().create_timer(0.4), "timeout")
-		if player_within_attacking_range:
-			var knockback_x_direction = global_position.x - body.global_position.x
-			if knockback_x_direction >= 0:
-				body.hit(-1, damage)
-			else:
-				body.hit(1, damage)
-		yield(get_tree().create_timer(0.1), "timeout")
-		attacking = false
+		while player_within_attacking_range:
+			attacking = true
+			animated_sprite.play("attack")
+			yield(get_tree().create_timer(0.4), "timeout")
+			if player_within_attacking_range:
+				var knockback_x_direction = global_position.x - body.global_position.x
+				if knockback_x_direction >= 0:
+					body.hit(-1, damage)
+				else:
+					body.hit(1, damage)
+			yield(get_tree().create_timer(0.1), "timeout")
+			attacking = false
+			animated_sprite.play("default")
+			yield(get_tree().create_timer(1.0), "timeout")
+			
 
 func _on_AttackRange_body_exited(body):
 	player_within_attacking_range = false

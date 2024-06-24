@@ -3,16 +3,16 @@ extends EnemyBase
 export var gravity: int = 400
 
 var velocity: Vector2
-var speed_ref = speed
 var attacking: bool = false
 var player_within_attacking_range: bool = false
+var speed_ref
 
 onready var ground_detection = $GroundDetect
 
 func _ready():
 	animated_sprite.play("default")
 	speed_ref = speed
-
+	
 func _physics_process(delta):
 	velocity.x = 0
 
@@ -28,7 +28,7 @@ func _physics_process(delta):
 
 	if velocity.x == 0 and not attacking:
 		animated_sprite.play("default")
-	elif not attacking:
+	elif velocity.x != 0 and not attacking:
 		animated_sprite.play("run")
 		
 	if animated_sprite.animation != "attack":
@@ -40,8 +40,12 @@ func _physics_process(delta):
 		
 	if not attacking:
 		speed = speed_ref
-
+		
+		
 func move():
+	if player_within_attacking_range:
+		return
+	
 	if player_detected:
 		if not abs(player_ref.global_position.x - global_position.x) >= 10:	
 			return
@@ -64,7 +68,7 @@ func flip_me():
 	
 	if facing == FACING.LEFT:
 		facing = FACING.RIGHT
-		$AttackRange.position.x = 142
+		$AttackRange.position.x = 155
 	else:
 		facing = FACING.LEFT
 		$AttackRange.position.x = 0 
@@ -78,23 +82,31 @@ func die():
 	set_physics_process(false)
 	animation_player.play("Die")
 	animated_sprite.play("die")
+	
+	LevelManager.add_current_points(points)
+	
+func attack():
+	pass
 
 
 func _on_AttackRange_body_entered(body):
 	if body.name == "Nova" and not dying and is_on_floor():
 		player_within_attacking_range = true
-		attacking = true
 		speed = 0
-		animated_sprite.play("attack")
-		yield(get_tree().create_timer(0.4), "timeout")
-		if player_within_attacking_range:
-			var knockback_x_direction = global_position.x - body.global_position.x
-			if knockback_x_direction >= 0:
-				body.hit(-1, damage)
-			else:
-				body.hit(1, damage)
-		yield(get_tree().create_timer(0.6), "timeout")
-		attacking = false
+		while player_within_attacking_range:
+			attacking = true
+			animated_sprite.play("attack")
+			yield(get_tree().create_timer(0.4), "timeout")
+			if player_within_attacking_range:
+				var knockback_x_direction = global_position.x - body.global_position.x
+				if knockback_x_direction >= 0:
+					body.hit(-1, damage)
+				else:
+					body.hit(1, damage)
+			yield(get_tree().create_timer(0.6), "timeout")
+			attacking = false
+			animated_sprite.play("default")
+			yield(get_tree().create_timer(1.0), "timeout")
 
 func _on_AttackRange_body_exited(body):
 	player_within_attacking_range = false

@@ -3,19 +3,16 @@ extends EnemyBase
 export var gravity: int = 400
 
 var velocity: Vector2
-var speed_ref = speed
 var attacking: bool = false
 var can_attack: bool = true
 var bullet_scene = preload("res://scenes/enemies/projectiles/laser/LaserBullet.tscn")
 
 onready var ground_detection = $GroundDetect
 onready var attack_range = $AttackRange
-onready var attack_timer = $AttackTimer
-onready var fire_timer = $FireTimer
+onready var state = $State
 
 func _ready():
 	animated_sprite.play("default")
-	speed_ref = speed
 
 func _physics_process(delta):
 	velocity.x = 0
@@ -32,25 +29,20 @@ func _physics_process(delta):
 
 	if velocity.x == 0 and is_on_floor() and not attacking:
 		animated_sprite.play("default")
-	elif not attacking:
+	elif velocity.x != 0 and not attacking:
 		animated_sprite.play("run")
 		
-	if attacking:
-		speed = 0
-	else:
-		speed = speed_ref
-	
 	if animated_sprite.animation == "attack":
 		animated_sprite.offset.x = -28
 		animated_sprite.offset.y = 7
 	else:
 		animated_sprite.offset.x = 0
 		animated_sprite.offset.y = 0
-		
-	if player_detected and can_attack and attacking:
-		deferred_attack()
-		
+	
 func move():
+	if attacking:
+		return
+		
 	if player_detected:
 		if not abs(player_ref.global_position.x - global_position.x) >= 10:	
 			return
@@ -75,7 +67,7 @@ func flip_me():
 	
 	if facing == FACING.LEFT:
 		facing = FACING.RIGHT
-		attack_range.position.x = 572
+		attack_range.position.x = 498
 	else:
 		facing = FACING.LEFT
 		attack_range.position.x = 0 
@@ -90,18 +82,12 @@ func die():
 	animation_player.play("Die")
 	animated_sprite.play("die")
 	
+	LevelManager.add_current_points(points)
+	
 func deferred_attack():
 	call_deferred("attack")
 	
 func attack():
-	if not can_attack:
-		return
-	
-	can_attack = false
-	animated_sprite.play("attack")
-	fire_timer.start()
-	
-func create_bullet():
 	var bullet = bullet_scene.instance()
 	var dir: float
 	if facing == FACING.LEFT:
@@ -109,22 +95,23 @@ func create_bullet():
 	elif facing == FACING.RIGHT:
 		dir = 0	
 	bullet.setup(dir, 20, 400, damage, "gunner")
-	bullet.position.x = 55 * facing
-	bullet.position.y = -7
-	add_child(bullet)
+	bullet.position.x = position.x + 55 * facing
+	bullet.position.y = position.y - 7
+	get_parent().add_child(bullet)
+	
 
 func _on_AttackRange_body_entered(body):
 	if body.name == "Nova" and not dying and is_on_floor():
-		speed = 0
+		state.get_animation("attack").loop = true
+		state.play("attack")
 		attacking = true
+		velocity = Vector2.ZERO
 
 func _on_AttackRange_body_exited(body):
+	state.get_animation("attack").loop = false
+	yield(state, "animation_finished")
+	state.stop()
 	attacking = false
 
-func _on_FireTimer_timeout():
-	can_attack = false
-	attack_timer.start()
-	create_bullet()
-
-func _on_AttackTimer_timeout():
-	can_attack = true
+func attack_finished():
+	attacking = false

@@ -36,7 +36,7 @@ func _process(delta):
 func _on_Shot_body_entered(body):
 	#I dont know why this works when its supposed to run only
 	#when the body is not of TILE but it is what it is
-	if "Tile" in body.name or "Border" in body.name:
+	if "Tile" in body.name or "Border" in body.name or "Barrier" in body.name:
 		queue_free()
 		return
 	if body.dying:

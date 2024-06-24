@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/tiles/level3/FactorySquareTile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/boundary/Boundary.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/nova/Nova.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/enemies/level 4/lava_monster/LavaMonster.tscn" type="PackedScene" id=4]
+
+[node name="testing" type="Node2D"]
+
+[node name="FactorySquareTile" parent="." instance=ExtResource( 1 )]
+position = Vector2( 152, 552 )
+
+[node name="FactorySquareTile2" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 48, 0 )
+
+[node name="FactorySquareTile3" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 96, 0 )
+
+[node name="FactorySquareTile4" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 144, 0 )
+
+[node name="FactorySquareTile5" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 192, 0 )
+
+[node name="FactorySquareTile6" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 240, 0 )
+
+[node name="FactorySquareTile7" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 288, 0 )
+
+[node name="FactorySquareTile8" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 336, 0 )
+
+[node name="FactorySquareTile9" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 384, 0 )
+
+[node name="FactorySquareTile10" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 432, 0 )
+
+[node name="FactorySquareTile11" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 136, -360 )
+
+[node name="FactorySquareTile12" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 328, -360 )
+
+[node name="FactorySquareTile13" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 184, -360 )
+
+[node name="FactorySquareTile14" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 232, -360 )
+
+[node name="FactorySquareTile15" parent="FactorySquareTile" instance=ExtResource( 1 )]
+position = Vector2( 280, -360 )
+
+[node name="Boundary" parent="FactorySquareTile" instance=ExtResource( 2 )]
+position = Vector2( 112, -384 )
+
+[node name="Boundary2" parent="FactorySquareTile" instance=ExtResource( 2 )]
+position = Vector2( 352, -384 )
+
+[node name="Nova" parent="." instance=ExtResource( 3 )]
+position = Vector2( 288, 472 )
+
+[node name="LavaMonster" parent="." instance=ExtResource( 4 )]
+position = Vector2( 504, 448 )

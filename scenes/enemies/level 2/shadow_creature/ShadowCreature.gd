@@ -10,6 +10,7 @@ onready var ground_detection = $GroundDetect
 func _ready():
 	animated_sprite.play("default")
 	facing = default_facing
+	
 
 func _physics_process(delta):
 	velocity.x = 0
@@ -68,6 +69,8 @@ func die():
 	set_physics_process(false)
 	animation_player.play("Die")
 	animated_sprite.play("die")
+	
+	LevelManager.add_current_points(points)
 
 func _on_Attack_body_entered(body):
 	if body.name == "Nova" and not dying:

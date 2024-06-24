@@ -7,6 +7,9 @@ var velocity: Vector2
 onready var ground_detection = $GroundDetect
 
 func _physics_process(delta):
+	if not active:
+		return
+	
 	velocity.x = 0
 
 	if not is_on_floor():
