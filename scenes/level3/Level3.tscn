@@ -5097,7 +5097,7 @@ is_portal = true
 position = Vector2( 336, 181 )
 
 [node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 722, 118 )
+position = Vector2( 724, 138 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 pause_mode = 2

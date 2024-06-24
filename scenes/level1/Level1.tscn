@@ -5671,7 +5671,7 @@ position = Vector2( 200, 12 )
 position = Vector2( -174, -215 )
 
 [node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 53, 416 )
+position = Vector2( 50, 419 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 pause_mode = 2

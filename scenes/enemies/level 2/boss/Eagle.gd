@@ -47,12 +47,14 @@ func die():
 	explosion.global_position = global_position
 	get_tree().current_scene.add_child(explosion)
 	
+	
 	animated_sprite.play("default")
 	animated_sprite.stop()
 	animated_sprite.frame = 0
 	attack_timer.stop()
 	lock_on_timer.stop()
 	return_timer.stop()
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_DEAD)
 	animation_player.play("die")
 	LevelManager.add_current_points(points)
 

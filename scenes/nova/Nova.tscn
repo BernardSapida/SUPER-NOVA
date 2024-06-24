@@ -268,7 +268,6 @@ tracks/0/keys = {
 [node name="Nova" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 130
 script = ExtResource( 1 )
-damage = 1300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

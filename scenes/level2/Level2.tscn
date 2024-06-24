@@ -5429,7 +5429,7 @@ physics_interpolation_mode = 0
 position = Vector2( 360, 0 )
 
 [node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 49, 129 )
+position = Vector2( 49, 135 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2

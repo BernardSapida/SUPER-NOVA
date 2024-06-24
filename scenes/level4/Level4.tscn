@@ -3906,7 +3906,7 @@ position = Vector2( 432, 190 )
 [node name="Golem" parent="BossRoom/BossOriginalPosition" instance=ExtResource( 29 )]
 
 [node name="Nova" parent="." instance=ExtResource( 4 )]
-position = Vector2( 296, 74 )
+position = Vector2( 298, 89 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
