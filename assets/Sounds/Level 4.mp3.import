@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Level 4.mp3-633f8429f29aabed810e9910cd67d669.mp3str"
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
