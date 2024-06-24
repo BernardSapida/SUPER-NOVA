@@ -42,7 +42,6 @@ onready var sound_player = $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	LevelManager.CURRENT_LEVEL = 4
 	heart_item = InventoryManager.heart_item
 	cloak_item = InventoryManager.cloak_item
 	shield_item = InventoryManager.shield_item
