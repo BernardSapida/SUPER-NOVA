@@ -38,10 +38,11 @@ onready var animated_gun = animated_sprite.get_node("AnimatedGun")
 onready var animation_player = $AnimationPlayer
 onready var poison_tick_timer = $PoisonTickTimer
 onready var transition = get_node("/root/Level" + str(current_level) + "/CanvasLayer/Transition")
+onready var sound_player = $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(LevelManager.DIFFICULTY)
+	LevelManager.CURRENT_LEVEL = 4
 	heart_item = InventoryManager.heart_item
 	cloak_item = InventoryManager.cloak_item
 	shield_item = InventoryManager.shield_item
@@ -223,6 +224,7 @@ func obtain_item(item: String):
 			fuel_item += 1
 			InventoryManager.fuel_item += 1
 	
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_POWERUP)
 	ui.add_item(item)
 	
 func reduce_speed():
@@ -288,6 +290,7 @@ func face_left():
 func collect_coin(value):
 	score += value
 	ui.set_coin_count(score)
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_LOOT)
 
 func collect_life(value):
 	health += value
@@ -314,6 +317,7 @@ func die():
 	set_physics_process(false)
 	animated_sprite.stop()
 	animation_player.play("Die")
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_LOSE)
 	
 func replay():
 	ui.hide()
@@ -337,6 +341,7 @@ func deferred_attack():
 	call_deferred("attack")
 
 func attack():
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_SHOOT)
 	var shot = shot_scene.instance()
 	
 #		laser_sound.play()

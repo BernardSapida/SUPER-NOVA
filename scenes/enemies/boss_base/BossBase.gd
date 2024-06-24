@@ -18,6 +18,9 @@ var active: bool = false
 onready var player_ref = get_tree().get_nodes_in_group("Player")[0]
 onready var animated_sprite = $AnimatedSprite
 onready var animation_player = $AnimationPlayer
+onready var sound_player = $AudioStreamPlayer
+
+
 var death_explosion = preload("res://scenes/enemies/boss_death_effect/DeathEffect.tscn")
 
 
@@ -52,6 +55,7 @@ func die():
 	explosion.global_position = global_position
 	get_tree().current_scene.add_child(explosion)
 	
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_DEAD)
 	animated_sprite.play("default")
 	animated_sprite.stop()
 	animated_sprite.frame = 0
@@ -63,10 +67,8 @@ func remove_from_scene():
 	queue_free()
 	
 func hit(damage: int):
-	print(str(health) + " " + str(damage))
 	health -= damage
 	animation_player.play("hurt")
-	print(health)
 	if health <= 0:
 		die()
 		return

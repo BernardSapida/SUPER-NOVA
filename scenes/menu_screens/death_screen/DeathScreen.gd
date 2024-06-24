@@ -6,16 +6,18 @@ onready var home = $Home
 onready var quit = $Quit
 onready var transition = $Transition
 onready var animation_player = $AnimationPlayer
+onready var sound_player = $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_GAMEOVER)
 	try_again.connect("pressed", self, "on_tryAgainButton_pressed")
 	home.connect("pressed", self, "on_homeButton_pressed")
 	quit.connect("pressed", self, "on_quitButton_pressed")
 
 
 func on_tryAgainButton_pressed():
+	sound_player.stop()
 	title.hide()
 	try_again.hide()
 	home.hide()
@@ -25,6 +27,7 @@ func on_tryAgainButton_pressed():
 	
 
 func on_homeButton_pressed():
+	sound_player.stop()
 	title.hide()
 	try_again.hide()
 	home.hide()

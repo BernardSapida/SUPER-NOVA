@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://scenes/level1/Border.gd" type="Script" id=1]
 [ext_resource path="res://scenes/level1/Camera2D.gd" type="Script" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://scenes/pickable/Coin.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/enemies/level 4/boss/Golem.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/enemies/level 4/lava_monster/LavaMonster.tscn" type="PackedScene" id=30]
+[ext_resource path="res://assets/Sounds/Level 4.mp3" type="AudioStream" id=31]
 [ext_resource path="res://scenes/boss_room_entrance/entrance.tscn" type="PackedScene" id=32]
 [ext_resource path="res://scenes/transition/transition.tscn" type="PackedScene" id=33]
 [ext_resource path="res://scenes/menu_screens/pause_screen/PauseScreen.tscn" type="PackedScene" id=34]
@@ -175,7 +176,7 @@ position = Vector2( 640, -6.10352e-05 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile28" type="Sprite" parent="Background-tile1"]
-position = Vector2( 720, -6.10352e-05 )
+position = Vector2( 2600, 27.8341 )
 texture = ExtResource( 13 )
 
 [node name="Background-tile10" type="Sprite" parent="Background-tile1"]
@@ -3905,4 +3906,9 @@ position = Vector2( 432, 190 )
 [node name="Golem" parent="BossRoom/BossOriginalPosition" instance=ExtResource( 29 )]
 
 [node name="Nova" parent="." instance=ExtResource( 4 )]
-position = Vector2( 296, 89 )
+position = Vector2( 6313, 361 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 31 )
+autoplay = true

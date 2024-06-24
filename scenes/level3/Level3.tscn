@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://assets/level3 - factory/background/background.png" type="Texture" id=1]
 [ext_resource path="res://scenes/nova/Nova.tscn" type="PackedScene" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://scenes/boss_room_entrance/entrance.tscn" type="PackedScene" id=34]
 [ext_resource path="res://scenes/transition/transition.tscn" type="PackedScene" id=35]
 [ext_resource path="res://scenes/menu_screens/pause_screen/PauseScreen.tscn" type="PackedScene" id=36]
+[ext_resource path="res://assets/Sounds/Level 3.mp3" type="AudioStream" id=37]
 
 [sub_resource type="SegmentShape2D" id=1]
 b = Vector2( 0, 601 )
@@ -5094,7 +5095,11 @@ is_portal = true
 
 [node name="Frog" parent="BossRoom" instance=ExtResource( 32 )]
 position = Vector2( 336, 181 )
-default_facing = -1
 
 [node name="Nova" parent="." instance=ExtResource( 2 )]
 position = Vector2( 722, 118 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 37 )
+autoplay = true

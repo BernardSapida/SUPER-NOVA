@@ -20,6 +20,7 @@ var active: bool = true
 onready var player_ref = get_tree().get_nodes_in_group("Player")[0]
 onready var animated_sprite = $AnimatedSprite
 onready var animation_player = $AnimationPlayer
+onready var sound_player = $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,7 +46,7 @@ func die():
 	set_physics_process(false)
 	
 	animation_player.play("Die")
-	
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_DEAD)
 	LevelManager.add_current_points(points)
 	
 func remove_from_scene():

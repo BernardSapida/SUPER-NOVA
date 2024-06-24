@@ -117,3 +117,5 @@ custom_styles/pressed = ExtResource( 3 )
 custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 5 )
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

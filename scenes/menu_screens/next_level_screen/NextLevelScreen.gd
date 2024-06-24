@@ -7,6 +7,7 @@ onready var home = $Home
 onready var quit = $Quit
 onready var transition = $Transition
 onready var animation_player = $AnimationPlayer
+onready var sound_player = $AudioStreamPlayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,8 +17,12 @@ func _ready():
 	continue_button.connect("pressed", self, "on_continueButton_pressed")
 	home.connect("pressed", self, "on_homeButton_pressed")
 	quit.connect("pressed", self, "on_quitButton_pressed")
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_WIN)
+	yield(sound_player, "finished")
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_BGM)
 
 func on_continueButton_pressed():
+	sound_player.stop()
 	title.hide()
 	continue_button.hide()
 	home.hide()
@@ -25,6 +30,7 @@ func on_continueButton_pressed():
 	transition.transition_to("res://scenes/level"+str(LevelManager.CURRENT_LEVEL)+"/Level"+str(LevelManager.CURRENT_LEVEL)+".tscn")
 
 func on_homeButton_pressed():
+	sound_player.stop()
 	title.hide()
 	continue_button.hide()
 	home.hide()

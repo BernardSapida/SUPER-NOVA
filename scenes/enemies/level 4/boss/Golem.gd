@@ -10,7 +10,6 @@ onready var states = $States
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(health)
 	randomize()
 	animated_sprite.play("default")
 	
@@ -35,6 +34,7 @@ func die():
 	explosion.global_position = global_position
 	get_tree().current_scene.add_child(explosion)
 	
+	SoundManager.play_clip(sound_player, SoundManager.SOUND_DEAD)
 	animated_sprite.play("default")
 	animated_sprite.stop()
 	animated_sprite.frame = 0
