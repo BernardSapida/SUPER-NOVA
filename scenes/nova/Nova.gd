@@ -1,15 +1,16 @@
 extends KinematicBody2D
 
 var score: int = 0
-var health: float = 1
+
 var fuel: float = 100
 var is_raging: bool = false
-var is_unvulnerable: bool = true
+var is_unvulnerable: bool = false
 var is_invisible: bool = false
 var is_recently_hit: bool = false
 var is_allowed_to_move: bool = false
 var is_poisoned: bool = false
 var poison_duration: int = 0
+var is_dead: bool = false
 
 # Nova items
 var heart_item = 0
@@ -19,6 +20,7 @@ var rage_item = 0
 var speed_item = 0
 var fuel_item = 0
 
+export var health: float = 100
 export var rocket_burst: int = 200
 export var damage: int = 10
 export var speed: int = 120
@@ -40,6 +42,13 @@ onready var transition = get_node("/root/Level" + str(current_level) + "/CanvasL
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print(LevelManager.DIFFICULTY)
+	heart_item = InventoryManager.heart_item
+	cloak_item = InventoryManager.cloak_item
+	shield_item = InventoryManager.shield_item
+	rage_item = InventoryManager.rage_item
+	speed_item = InventoryManager.speed_item
+	fuel_item = InventoryManager.fuel_item
+	ui.set_item_count()
 
 func _process(delta):
 	regen_fuel()
@@ -108,6 +117,7 @@ func use_heart_item():
 		health = 100
 	
 	heart_item -= 1
+	InventoryManager.heart_item -= 1
 	ui.reduce_item("Heart")
 	ui.set_health(health)
 	
@@ -116,12 +126,15 @@ func use_cloak_item():
 		return null
 	
 	cloak_item -= 1
+	InventoryManager.cloak_item -= 1
 	ui.reduce_item("Cloak")
 	
 	animation_player.play("invisible")
 	
 	is_invisible = true
+	set_collision_layer_bit(7, false)
 	yield(get_tree().create_timer(10), "timeout")
+	set_collision_layer_bit(7, true)
 	is_invisible = false
 	
 func use_shield_item():
@@ -129,6 +142,7 @@ func use_shield_item():
 		return null
 	
 	shield_item -= 1
+	InventoryManager.shield_item -= 1
 	ui.reduce_item("Shield")
 	animation_player.play("Barrier")
 	
@@ -141,6 +155,7 @@ func use_rage_item():
 		return null
 	
 	rage_item -= 1
+	InventoryManager.rage_item -= 1
 	ui.reduce_item("Rage")
 	
 	damage = 20
@@ -154,6 +169,7 @@ func use_speed_item():
 		return null
 	
 	speed_item -= 1
+	InventoryManager.speed_item -= 1
 	ui.reduce_item("Speed")
 	
 	is_boosted = true
@@ -166,18 +182,19 @@ func use_fuel_item():
 	if fuel_item <= 0:
 		return null
 	
-	if fuel < 75:
+	if fuel >= 75:
 		fuel += 25
 	else:
 		fuel = 100
 
 	fuel_item -= 1
+	InventoryManager.fuel_item -= 1
 	ui.reduce_item("Fuel")
 	ui.set_fuel(fuel)
 
 func regen_fuel():
 	if fuel < 100:
-		fuel += .001
+		fuel += .01
 		ui.set_fuel(fuel)
 
 func regen_health():
@@ -189,16 +206,22 @@ func obtain_item(item: String):
 	match item:
 		"Heart":
 			heart_item += 1
+			InventoryManager.heart_item += 1
 		"Cloak":
 			cloak_item += 1
+			InventoryManager.cloak_item += 1
 		"Shield":
 			shield_item += 1
+			InventoryManager.shield_item += 1
 		"Rage":
 			rage_item += 1
+			InventoryManager.rage_item += 1
 		"Speed":
 			speed_item += 1
+			InventoryManager.speed_item += 1
 		"Fuel":
 			fuel_item += 1
+			InventoryManager.fuel_item += 1
 	
 	ui.add_item(item)
 	
@@ -287,6 +310,7 @@ func die():
 #	dead_sound.play()
 #	animated_sprite.play("dead")
 #	yield(get_tree().create_timer(0.5), "timeout")
+	is_dead = true
 	set_physics_process(false)
 	animated_sprite.stop()
 	animation_player.play("Die")
@@ -343,7 +367,7 @@ func attack():
 	get_parent().add_child(shot)
 
 func hit(enemyDirection: int, damage: int):
-	if is_recently_hit or is_unvulnerable:
+	if is_recently_hit or is_unvulnerable or is_dead:
 		return
 	
 	animation_player.play("Hit")
@@ -356,7 +380,8 @@ func hit(enemyDirection: int, damage: int):
 	velocity.y = -200
 
 func poisoned():
-		
+	if is_unvulnerable:
+		return
 	is_poisoned = true
 	poison_duration = 10
 	poison_tick_timer.start()
@@ -377,9 +402,11 @@ func set_allowed_to_move():
 
 
 func _on_PoisonTickTimer_timeout():
+	if poison_duration == 0 or is_dead:
+		poison_tick_timer.stop()
+		return
+	
 	reduce_life(1)
 	animation_player.play("Poisoned")
 	poison_duration -= 1
 	
-	if poison_duration == 0:
-		poison_tick_timer.stop()	

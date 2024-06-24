@@ -5670,6 +5670,7 @@ position = Vector2( 200, 12 )
 position = Vector2( -174, -215 )
 
 [node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5106, 73 )
+position = Vector2( 53, 416 )
+damage = 10
 
 [connection signal="body_entered" from="DeadEnd" to="DeadEnd" method="_on_DeadEnd_body_entered"]

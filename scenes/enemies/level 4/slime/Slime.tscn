@@ -31,13 +31,14 @@ extents = Vector2( 17, 31 )
 extents = Vector2( 17, 31 )
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 196.003
+radius = 130.035
 
 [node name="Slime" instance=ExtResource( 1 )]
 script = ExtResource( 10 )
 default_facing = 1
-health = 200
+health = 150
 speed = 60.0
+damage = 15
 gravity = 400
 
 [node name="AnimatedSprite" parent="." index="0"]

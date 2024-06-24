@@ -5002,7 +5002,7 @@ position = Vector2( 3893, -79 )
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Gunner" parent="Enemies" instance=ExtResource( 31 )]
-position = Vector2( 394, 129 )
+position = Vector2( 98, 122 )
 
 [node name="Gunner2" parent="Enemies" instance=ExtResource( 31 )]
 position = Vector2( 904, 501 )
@@ -5093,7 +5093,8 @@ position = Vector2( 0, 199 )
 is_portal = true
 
 [node name="Frog" parent="BossRoom" instance=ExtResource( 32 )]
-position = Vector2( 327, 174 )
+position = Vector2( 336, 181 )
+default_facing = -1
 
 [node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 6229, 79 )
+position = Vector2( 722, 118 )

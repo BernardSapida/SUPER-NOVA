@@ -61,7 +61,7 @@ extents = Vector2( 31.5, 74.5 )
 extents = Vector2( 31.5, 74 )
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 288.028
+radius = 282.064
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 46, 46 )
@@ -70,7 +70,7 @@ extents = Vector2( 46, 46 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 30 )
 speed = 100.0
-damage = 15
+damage = 10
 gravity = 400
 
 [node name="AnimatedSprite" parent="." index="0"]

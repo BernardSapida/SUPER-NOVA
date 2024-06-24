@@ -33,7 +33,7 @@ func move():
 			return
 			
 		face_player()
-	elif not ground_detection.is_colliding():
+	elif is_on_floor() and not ground_detection.is_colliding():
 		flip_me()
 	
 	velocity.x = speed * facing

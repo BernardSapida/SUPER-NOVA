@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://assets/ui/Menu_Screens.png" type="Texture" id=1]
+[ext_resource path="res://assets/menu_screens/Game Over.jpg" type="Texture" id=1]
 [ext_resource path="res://scenes/transition/transition.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/menu_screen_resources/pressed_button.tres" type="StyleBox" id=3]
 [ext_resource path="res://assets/menu_screen_resources/focus_and_hover_button.tres" type="StyleBox" id=4]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/fonts/button_font.tres" type="DynamicFont" id=6]
 [ext_resource path="res://assets/fonts/subtitle_font.tres" type="DynamicFont" id=7]
 [ext_resource path="res://scenes/menu_screens/gameover_screen/GameOverScreen.gd" type="Script" id=8]
+[ext_resource path="res://assets/ui/Victory.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -58,65 +59,46 @@ stretch_mode = 7
 
 [node name="Transition" parent="." instance=ExtResource( 2 )]
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -310.5
-margin_top = -250.0
-margin_right = 310.5
-margin_bottom = -69.0
-custom_fonts/font = ExtResource( 7 )
-text = "You won!!!
-Your final score is:"
-align = 1
+margin_left = -203.0
+margin_top = -230.0
+margin_right = 203.0
+margin_bottom = 54.0
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 7
 
-[node name="FinalScore" type="Label" parent="."]
+[node name="Score" type="Label" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -74.0
-margin_top = -60.0
-margin_right = 74.0
-margin_bottom = 29.0
+margin_left = -178.0
+margin_top = 20.0
+margin_right = 178.0
+margin_bottom = 107.0
 custom_fonts/font = ExtResource( 7 )
-text = "1001"
-align = 1
-
-[node name="PlayAgain" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -140.0
-margin_top = 57.0
-margin_right = 140.0
-margin_bottom = 99.0
-custom_fonts/font = ExtResource( 6 )
-custom_styles/hover = ExtResource( 4 )
-custom_styles/pressed = ExtResource( 3 )
-custom_styles/focus = ExtResource( 4 )
-custom_styles/normal = ExtResource( 5 )
-action_mode = 0
-text = "Play again"
+text = "Score: 1023"
 
 [node name="Home" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.0
-margin_top = 127.0
-margin_right = 140.0
-margin_bottom = 169.0
+margin_left = 15.0
+margin_top = 105.0
+margin_right = 185.0
+margin_bottom = 205.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 6 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 5 )
-action_mode = 0
 text = "Home"
 
 [node name="Quit" type="Button" parent="."]
@@ -124,14 +106,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.0
-margin_top = 197.0
-margin_right = 140.0
-margin_bottom = 239.0
+margin_left = -185.0
+margin_top = 105.0
+margin_right = -15.0
+margin_bottom = 205.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 6 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/focus = ExtResource( 4 )
 custom_styles/normal = ExtResource( 5 )
-action_mode = 0
 text = "Quit"

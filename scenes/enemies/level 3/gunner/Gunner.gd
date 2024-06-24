@@ -95,8 +95,8 @@ func attack():
 	elif facing == FACING.RIGHT:
 		dir = 0	
 	bullet.setup(dir, 20, 400, damage, "gunner")
-	bullet.position.x = position.x + 55 * facing
-	bullet.position.y = position.y - 7
+	bullet.position.x = position.x + 50 * facing
+	bullet.position.y = position.y - 4
 	get_parent().add_child(bullet)
 	
 

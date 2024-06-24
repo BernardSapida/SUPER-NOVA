@@ -5299,60 +5299,26 @@ position = Vector2( 146, -281 )
 [node name="Boundary5" parent="Boundary" instance=ExtResource( 24 )]
 position = Vector2( 626, 0 )
 
+[node name="Boundary6" parent="Boundary" instance=ExtResource( 24 )]
+position = Vector2( 4704, -58 )
+
+[node name="Boundary7" parent="Boundary" instance=ExtResource( 24 )]
+position = Vector2( 4609, -64 )
+
+[node name="Boundary8" parent="Boundary" instance=ExtResource( 24 )]
+position = Vector2( 4513, -139 )
+
+[node name="Boundary9" parent="Boundary" instance=ExtResource( 24 )]
+position = Vector2( 4417, -163 )
+
+[node name="Boundary10" parent="Boundary" instance=ExtResource( 24 )]
+position = Vector2( 4321, -45 )
+
+[node name="Boundary11" parent="Boundary" instance=ExtResource( 24 )]
+position = Vector2( 4225, -45 )
+
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2( 49, 137 )
-
-[node name="ShadowCreature" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 141, 287 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature2" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 721, 234 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature3" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 1249, -7 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature4" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 1731, -60 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature5" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 1667, 234 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature6" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 1790, 383 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature7" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 2809, 323 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature8" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 3703, -15 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature9" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 4249, 260 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature10" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 4065, -6 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature11" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 4801, 90 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature12" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 4621, 184 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="ShadowCreature13" parent="Enemies" instance=ExtResource( 26 )]
-position = Vector2( 5005, 188 )
-scale = Vector2( 0.6, 0.6 )
 
 [node name="Drone" parent="Enemies" instance=ExtResource( 23 )]
 position = Vector2( 145, -97 )
@@ -5403,6 +5369,50 @@ rotation = -1.5708
 position = Vector2( 2733, -60 )
 rotation = 1.5708
 
+[node name="ShadowCreature" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 269, -12 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="ShadowCreature2" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 169, 265 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="ShadowCreature3" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 612, 250 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="ShadowCreature4" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 913, 249 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="ShadowCreature5" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 1721, -70 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="ShadowCreature6" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 1571, 361 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="ShadowCreature7" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 2593, 352 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="ShadowCreature8" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 3673, -12 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="ShadowCreature9" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 4169, -20 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="ShadowCreature10" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 4297, 252 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="ShadowCreature11" parent="Enemies" instance=ExtResource( 26 )]
+position = Vector2( 4806, 78 )
+scale = Vector2( 0.8, 0.8 )
+
 [node name="BossRoom" type="Node2D" parent="."]
 position = Vector2( 5906, 292 )
 
@@ -5416,6 +5426,7 @@ is_portal = true
 [node name="Eagle" parent="BossRoom" instance=ExtResource( 25 )]
 physics_interpolation_mode = 0
 position = Vector2( 360, 0 )
+default_facing = -1
 
 [node name="Nova" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5498, 304 )
+position = Vector2( 49, 129 )

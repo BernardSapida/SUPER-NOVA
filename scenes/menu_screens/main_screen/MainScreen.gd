@@ -10,11 +10,13 @@ onready var title = $Title
 func _ready():
 	start.connect("pressed", self, "on_startButton_pressed")
 	quit.connect("pressed", self, "on_quitButton_pressed")
+	transition.hide()
 	
 	yield(animation_player, "animation_finished")
 
 func on_startButton_pressed():
 	#get_tree().change_scene("res://scenes/level1/Level1.tscn")
+	transition.show()
 	start.hide()
 	quit.hide()
 	title.hide()

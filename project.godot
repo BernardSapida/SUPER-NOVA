@@ -34,6 +34,8 @@ config/icon="res://icon.png"
 
 LevelManager="*res://scenes/singletons/LevelManager.gd"
 ScoreCounter="*res://scenes/singletons/ScoreCounter.gd"
+SoundManager="*res://scenes/singletons/SoundManager.gd"
+InventoryManager="*res://scenes/singletons/InventoryManager.gd"
 
 [display]
 
@@ -42,6 +44,12 @@ window/stretch/mode="2d"
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[importer_defaults]
+
+mp3={
+"loop": false
+}
 
 [input]
 
@@ -94,6 +102,7 @@ fuel_item={
 2d_physics/layer_5="enemy_detection"
 2d_physics/layer_6="boundary"
 2d_physics/layer_7="enemy_hitbox"
+2d_physics/layer_8="player_detect"
 
 [physics]
 

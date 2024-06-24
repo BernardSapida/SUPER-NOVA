@@ -27,7 +27,7 @@ extents = Vector2( 24, 36.5 )
 extents = Vector2( 24, 36.5 )
 
 [sub_resource type="CircleShape2D" id=6]
-radius = 232.215
+radius = 166.003
 
 [node name="Dinosaur" instance=ExtResource( 1 )]
 script = ExtResource( 2 )

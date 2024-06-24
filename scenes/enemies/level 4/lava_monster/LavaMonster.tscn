@@ -48,7 +48,7 @@ extents = Vector2( 21.5, 39.5 )
 extents = Vector2( 21.5, 39.5 )
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 198.003
+radius = 143.003
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 28.5 )
@@ -56,8 +56,9 @@ extents = Vector2( 10, 28.5 )
 [node name="LavaMonster" instance=ExtResource( 2 )]
 script = ExtResource( 1 )
 default_facing = 1
-speed = 100.0
-damage = 15
+health = 120
+speed = 90.0
+damage = 12
 gravity = 400
 
 [node name="AnimatedSprite" parent="." index="0"]

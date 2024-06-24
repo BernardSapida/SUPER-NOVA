@@ -29,7 +29,7 @@ radius = 19.0
 radius = 19.0
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 174.011
+radius = 160.078
 
 [node name="Mosquito" instance=ExtResource( 1 )]
 script = ExtResource( 2 )

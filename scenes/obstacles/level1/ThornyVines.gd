@@ -7,7 +7,7 @@ func _ready():
 	pass
 
 func _on_ThornyVines_body_entered(body):
-	if body.name == "Nova":
+	if body.name == "Nova" and not body.is_unvulnerable:
 		touched = true
 		body.reduce_speed()
 	

@@ -35,7 +35,6 @@ func reset_difficulty():
 	
 func add_current_points(points: int):
 	current_points += points
-	print(current_points)
 	
 func level_cleared():
 	ScoreCounter.add_to_final_score(current_points)

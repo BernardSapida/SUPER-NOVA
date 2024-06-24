@@ -12,7 +12,7 @@ onready var animation_player = $AnimationPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().paused = false
-	title.text = "You beat level " + str(LevelManager.CURRENT_LEVEL - 1) + "! \nContinue to the next level?"
+	title.text = "YOU beat level " + str(LevelManager.CURRENT_LEVEL - 1) + "! \nContinue to the next level?"
 	continue_button.connect("pressed", self, "on_continueButton_pressed")
 	home.connect("pressed", self, "on_homeButton_pressed")
 	quit.connect("pressed", self, "on_quitButton_pressed")

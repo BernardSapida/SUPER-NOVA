@@ -4,7 +4,7 @@ var gravity = 800
 
 const JUMP_VELOCITY: Vector2 = Vector2(150, -400)
 const SUPER_JUMP_VELOCITY: Vector2 = Vector2(250, -1600)
-const JUMP_WAIT_RANGE: Vector2 = Vector2(1.0, 3.0)
+const JUMP_WAIT_RANGE: Vector2 = Vector2(1.5, 3.0)
 
 var velocity: Vector2
 var super_jump: bool = false
@@ -56,7 +56,7 @@ func apply_jump() -> void:
 		
 	if not _jump or jump_counter == 0:
 		return
-	
+	print(jump_timer.wait_time)
 	if gravity > 800:
 		gravity = 800
 	
@@ -129,7 +129,7 @@ func flip_me() -> void:
 
 func start_timer() -> void:
 	if is_recently_super_jump:
-		jump_timer.wait_time = rand_range(JUMP_WAIT_RANGE.x + 2.0, JUMP_WAIT_RANGE.y + 1.0)
+		jump_timer.wait_time = rand_range(JUMP_WAIT_RANGE.x + 2.0, JUMP_WAIT_RANGE.y + 2.0)
 	else: 
 		jump_timer.wait_time = rand_range(JUMP_WAIT_RANGE.x, JUMP_WAIT_RANGE.y)
 	jump_timer.start()

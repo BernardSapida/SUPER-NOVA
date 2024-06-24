@@ -4,6 +4,7 @@ export var gravity: int = 400
 
 var velocity: Vector2
 var attacking: bool = false
+var player_within_attacking_range: bool = false
 
 onready var ground_detection = $GroundDetect
 
@@ -29,12 +30,15 @@ func _physics_process(delta):
 		animated_sprite.play("default")
 
 func move():
+	if player_within_attacking_range:
+		return
+		
 	if player_detected:
 		if not abs(player_ref.global_position.x - global_position.x) >= 10:	
 			return
 			
 		face_player()
-	elif not ground_detection.is_colliding():
+	elif is_on_floor() and not ground_detection.is_colliding():
 		flip_me()
 	
 	velocity.x = speed * facing
@@ -74,13 +78,20 @@ func die():
 
 func _on_Attack_body_entered(body):
 	if body.name == "Nova" and not dying:
-		attacking = true
-		animated_sprite.play("attack")
-		yield(get_tree().create_timer(0.2), "timeout")
-		var knockback_x_direction = global_position.x - body.global_position.x
-		if knockback_x_direction >= 0:
-			body.hit(-1, damage)
-		else:
-			body.hit(1, damage)
-		attacking = false	
+		player_within_attacking_range = true
+		while player_within_attacking_range:
+			velocity.x = 0
+			attacking = true
+			animated_sprite.play("attack")
+			yield(get_tree().create_timer(0.1), "timeout")
+			var knockback_x_direction = global_position.x - body.global_position.x
+			if knockback_x_direction >= 0:
+				body.hit(-1, damage)
+			else:
+				body.hit(1, damage)
+			attacking = false
+			yield(get_tree().create_timer(1.0), "timeout")
 
+
+func _on_Attack_body_exited(body):
+	player_within_attacking_range = false

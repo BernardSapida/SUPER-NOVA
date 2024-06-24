@@ -228,10 +228,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2.5, 3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.8, 0.8 ), Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 0.8, 0.8 ), Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="AnimationNodeAnimation" id=29]
@@ -304,9 +304,8 @@ graph_offset = Vector2( -128.115, -262 )
 modulate = Color( 0.694118, 0.184314, 0.00392157, 1 )
 collision_mask = 4
 script = ExtResource( 2 )
-health = 50
 speed = 1.0
-damage = 25
+damage = 20
 
 [node name="AnimatedSprite" parent="." index="0"]
 rotation = 0.0

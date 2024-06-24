@@ -63,9 +63,10 @@ func remove_from_scene():
 	queue_free()
 	
 func hit(damage: int):
+	print(str(health) + " " + str(damage))
 	health -= damage
 	animation_player.play("hurt")
-	
+	print(health)
 	if health <= 0:
 		die()
 		return

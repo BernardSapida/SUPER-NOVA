@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lose.mp3-ec8c39a9ba937864ef2eaed9958d727d.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/Lose.mp3"
+dest_files=[ "res://.import/Lose.mp3-ec8c39a9ba937864ef2eaed9958d727d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

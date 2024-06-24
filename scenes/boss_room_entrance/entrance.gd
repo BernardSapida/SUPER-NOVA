@@ -14,6 +14,8 @@ onready var invi_barrier = $InviBarrier
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
+	pause_mode = Node.PAUSE_MODE_PROCESS
+	
 	var tile = forest_tile
 	match LevelManager.CURRENT_LEVEL:
 		1:
@@ -27,7 +29,7 @@ func _ready():
 			
 	for n in 2:
 		var new_tile = tile.instance()
-		new_tile.position = Vector2(position.x, position.y + n * 48)
+		new_tile.position = Vector2(0, n * 48)
 		add_child(new_tile)
 	
 	for children in boss_room.get_children():
@@ -43,12 +45,16 @@ func _ready():
 func _on_PlayerTrigger_body_entered(body):
 	if body.name == "Nova" and body.health >= 1:
 		LevelManager.player_entered_boss_room()
-		$AnimationPlayer.play("block_entrance")
+		
 		player_trigger.queue_free()
 		invi_barrier.queue_free()
+		
 		var tween = get_tree().create_tween()
 		tween.set_pause_mode(SceneTreeTween.TWEEN_PAUSE_PROCESS)
+		tween.tween_property(self, "position", Vector2(position.x, position.y - 96), 1.0)
+		tween.set_parallel()
 		tween.tween_property(camera, "position", Vector2(boss_room.global_position.x, camera.position.y), 2.0)
+		
 		get_tree().paused = true
 		yield(tween, "finished")
 		for children in boss_room.get_children():

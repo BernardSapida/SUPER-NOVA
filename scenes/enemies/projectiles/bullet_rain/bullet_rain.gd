@@ -23,7 +23,6 @@ func _ready():
 	bullet.monitoring = false
 	if position.y == -452 or position.y == 76:
 		warning.rect_size.x = 528
-	print(position)
 
 func setup_bullet(start_position: Vector2, dir: float, life_span: float, speed: float, damage: int, attacker):
 	position = start_position

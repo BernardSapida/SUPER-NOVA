@@ -52,7 +52,7 @@ extents = Vector2( 18, 41.5 )
 extents = Vector2( 18, 41.5 )
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 213.038
+radius = 171.073
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 16.5, 5 )
@@ -62,7 +62,7 @@ script = ExtResource( 2 )
 default_facing = 1
 health = 80
 speed = 110.0
-damage = 15
+damage = 10
 gravity = 400
 
 [node name="AnimatedSprite" parent="." index="0"]
@@ -96,3 +96,4 @@ position = Vector2( 32, 10 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Attack" to="." method="_on_Attack_body_entered"]
+[connection signal="body_exited" from="Attack" to="." method="_on_Attack_body_exited"]

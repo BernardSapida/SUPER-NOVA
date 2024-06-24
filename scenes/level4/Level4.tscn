@@ -3905,4 +3905,4 @@ position = Vector2( 432, 190 )
 [node name="Golem" parent="BossRoom/BossOriginalPosition" instance=ExtResource( 29 )]
 
 [node name="Nova" parent="." instance=ExtResource( 4 )]
-position = Vector2( 6313, 371 )
+position = Vector2( 296, 89 )

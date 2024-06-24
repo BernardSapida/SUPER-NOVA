@@ -7,7 +7,11 @@ onready var animation_player = $AnimationPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
+	get_tree().paused = true
+	
 	animation_player.play_backwards("fade")
+	yield(animation_player, "animation_finished")
+	get_tree().paused = false
 	
 func exit():
 	animation_player.play_backwards("fade")

@@ -25,6 +25,8 @@ func _physics_process(delta):
 
 func move():
 	if player_detected:
+		if not abs(player_ref.global_position.x - global_position.x) >= 10:	
+			return
 		velocity = (player_ref.global_position - global_position).normalized() * speed
 		face_player()
 	else:

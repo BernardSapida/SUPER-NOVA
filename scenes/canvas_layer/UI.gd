@@ -82,6 +82,18 @@ func add_item(item: String):
 	sync_items_sprite()
 	append_announcement("You've obtained " + item + " item from the glowing orb!")
 
+
+#DONE EVERY RESET TO SET THE UI VALUES OF EACH POWERUPS TO THE GLOBAL INVENTORY
+func set_item_count():
+	health_count_label.text = str(InventoryManager.heart_item)
+	cloak_count_label.text = str(InventoryManager.cloak_item)
+	shield_count_label.text = str(InventoryManager.shield_item)
+	rage_count_label.text = str(InventoryManager.rage_item)
+	speed_count_label.text = str(InventoryManager.speed_item)
+	fuel_count_label.text = str(InventoryManager.fuel_item)
+	
+	sync_items_sprite()
+
 func reduce_item(item: String):
 	match item:
 		"Heart":
